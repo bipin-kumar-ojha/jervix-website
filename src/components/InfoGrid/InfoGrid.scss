@@ -1,0 +1,138 @@
+.info-grid {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+
+  &__header {
+    margin-bottom: 2.5rem;
+  }
+
+  &__badge {
+    display: inline-block;
+    background: #e0f7fa;
+    color: #0891b2;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 999px;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+    }
+  }
+
+  &__block {
+    background: #f8fafc;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 2rem 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #e0e7ef;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: 0 8px 24px rgba(16,185,129,0.08);
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background: #e0f7fa;
+    font-size: 2rem;
+
+    &--finance {
+      background: #e0f7fa;
+      &::before {
+        content: "\1F4B0";
+        font-size: 2rem;
+      }
+    }
+    &--healthcare {
+      background: #e0f7fa;
+      &::before {
+        content: "\2764";
+        font-size: 2rem;
+        color: #0891b2;
+      }
+    }
+    &--technology {
+      background: #e0f7fa;
+      &::before {
+        content: "\1F4BB";
+        font-size: 2rem;
+      }
+    }
+    &--legal {
+      background: #e0f7fa;
+      &::before {
+        content: "\2696";
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__category {
+    color: #0891b2;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  &__block-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+
+  &__block-desc {
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1.5rem;
+    color: #0891b2;
+    font-size: 0.98rem;
+    font-weight: 500;
+  }
+}
