@@ -34,7 +34,7 @@ export default function HeroSection() {
         <div className="hero__right">
           <div className="hero__right-image-container">
             <img
-              src="/src/assets/hero-banner.jpeg"
+              src="/assets/hero-banner.jpeg"
               alt="Illustration of platform"
               className="hero__right__image"
             />
