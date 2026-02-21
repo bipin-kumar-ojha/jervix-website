@@ -2,6 +2,7 @@ import "./subscription.scss";
 
 const Subscription = () => (
   <section className="subscription">
+    <div className="subscription__background"></div>
     <div className="subscription__container">
       <h2 className="subscription__title">Ready to Secure Your<br />Enterprise?</h2>
       <p className="subscription__desc">

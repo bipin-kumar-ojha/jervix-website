@@ -1,3 +1,37 @@
+// Achievements grid styles
+.hero__achievement-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #f2f9fa 0%, #edf7f8 100%);
+  border-radius: 1rem;
+  padding: 2rem 0;
+  margin: 2rem 0 0 0;
+  box-shadow: 0 2px 16px 0px #eafaf7;
+  gap: 0;
+}
+
+.hero__achievement-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.hero__achievement-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0e172b;
+  margin-bottom: 0.5rem;
+}
+
+.hero__achievement-label {
+  font-size: 1.25rem;
+  color: #3a4a62;
+  font-weight: 500;
+}
 .hero {
   padding: 4rem 2rem;
   position: relative;
@@ -129,16 +163,28 @@
       .hero__cert {
         display: flex;
         align-items: center;
-        font-size: 0.875rem;
+        font-size: 1rem;
         color: #555;
+        font-weight: 500;
+      }
 
-        &::before {
-          content: "\2713";
-          display: inline-block;
-          margin-right: 0.5rem;
-          color: #28a745;
-          font-weight: 700;
-        }
+      .hero__cert-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #eafaf7;
+        border: 2px solid #28a745;
+        margin-right: 0.5rem;
+      }
+
+      .hero__cert-tick {
+        color: #28a745;
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1;
       }
     }
   }

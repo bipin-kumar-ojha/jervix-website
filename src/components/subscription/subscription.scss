@@ -1,5 +1,5 @@
 .subscription {
-  background: linear-gradient(135deg, #1a2a3a 0%, #0f1820 100%);
+  background: #192f4a;
   min-height: 420px;
   display: flex;
   align-items: center;
@@ -7,6 +7,15 @@
   padding: 5rem 2rem 3rem 2rem;
   position: relative;
   overflow: hidden;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, #ffffff0a 1px, transparent 1px), linear-gradient(to bottom, #ffffff0a 1px, transparent 1px);
+    background-size: cover;
+    background-size: 48px 48px;
+    z-index: 0;
+  } 
 
   &__container {
     text-align: center;

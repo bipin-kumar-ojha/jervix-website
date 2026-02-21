@@ -1,3 +1,103 @@
+.blog__badge-row {
+  max-width: 1200px;
+  margin: 0 auto 0.5rem auto;
+  display: flex;
+  align-items: flex-start;
+}
+// Blog header row styles
+.blog__header-row {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.blog__header-left {
+  flex: 1 1 350px;
+  min-width: 250px;
+}
+
+.blog__header-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 220px;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .blog__header-right {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog__header-right {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .blog__header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .blog__header-right {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+// Responsive blog cards
+.blog__posts {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog__post {
+  flex: 1 1 350px;
+  min-width: 280px;
+  max-width: 420px;
+}
+
+@media (max-width: 900px) {
+  .blog__posts {
+    gap: 1rem;
+  }
+  .blog__post {
+    min-width: 220px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog__header-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .blog__posts {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .blog__post {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
 .blog {
   padding: 4rem 2rem;
   background: #fff;
@@ -27,6 +127,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: #1e293b;
+    margin: 0;
     margin-bottom: 0.5rem;
   }
 
@@ -37,9 +138,7 @@
   }
 
   &__all-btn {
-    position: absolute;
-    right: 0;
-    top: 0.5rem;
+    
     background: #1e293b;
     color: #fff;
     font-weight: 600;

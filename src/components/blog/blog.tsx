@@ -3,7 +3,7 @@ import "./blog.scss";
 const blogPosts = [
   {
     category: "Security",
-    image: "https://images.unsplash.com/photo-1465101046530-73398c7f1a56?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/blog1.jpeg",
     title: "Complete Guide to Zero Trust Architecture",
     desc: "Learn how to implement zero trust security principles in your organization with our comprehensive guide.",
     date: "Feb 15, 2026",
@@ -11,7 +11,7 @@ const blogPosts = [
   },
   {
     category: "Compliance",
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/blog2.jpeg",
     title: "SOC 2 Compliance Checklist for 2026",
     desc: "Everything you need to know about achieving SOC 2 Type II certification for your SaaS platform.",
     date: "Feb 10, 2026",
@@ -19,7 +19,7 @@ const blogPosts = [
   },
   {
     category: "Best Practices",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/blog3.jpeg",
     title: "Top 10 Security Threats in Enterprise SaaS",
     desc: "Understand the latest security threats facing enterprise organizations and how to protect against them.",
     date: "Feb 5, 2026",
@@ -29,13 +29,19 @@ const blogPosts = [
 
 const Blog = () => (
   <section className="blog">
-    <div className="blog__header">
+    <div className="blog__badge-row">
       <span className="blog__badge">Resources</span>
-      <h2 className="blog__title">Latest Insights</h2>
-      <p className="blog__subtitle">
-        Expert guidance on security, compliance, and best practices
-      </p>
-      <button className="blog__all-btn">View All Resources <span>→</span></button>
+    </div>
+    <div className="blog__header-row">
+      <div className="blog__header-left">
+        <h2 className="blog__title">Latest Insights</h2>
+        <p className="blog__subtitle">
+          Expert guidance on security, compliance, and best practices
+        </p>
+      </div>
+      <div className="blog__header-right">
+        <button className="blog__all-btn">View All Resources <span>→</span></button>
+      </div>
     </div>
     <div className="blog__posts">
       {blogPosts.map((post, idx) => (

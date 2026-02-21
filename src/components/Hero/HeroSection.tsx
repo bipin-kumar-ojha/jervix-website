@@ -25,10 +25,37 @@ export default function HeroSection() {
           </div>
 
           <div className="hero__left__certs">
-            <div className="hero__cert">SOC 2 Certified</div>
-            <div className="hero__cert">ISO 27001</div>
-            <div className="hero__cert">GDPR Compliant</div>
+            <div className="hero__cert">
+              <span className="hero__cert-circle"><span className="hero__cert-tick">&#10003;</span></span>
+              SOC 2 Certified
+            </div>
+            <div className="hero__cert">
+              <span className="hero__cert-circle"><span className="hero__cert-tick">&#10003;</span></span>
+              ISO 27001
+            </div>
+            <div className="hero__cert">
+              <span className="hero__cert-circle"><span className="hero__cert-tick">&#10003;</span></span>
+              GDPR Compliant
+            </div>
           </div>
+          {/* achievements start */}
+          <div className="hero__achievements">
+            <div className="hero__achievement-grid">
+              <div className="hero__achievement-col">
+                <div className="hero__achievement-number">99.99%</div>
+                <div className="hero__achievement-label">Uptime</div>
+              </div>
+              <div className="hero__achievement-col">
+                <div className="hero__achievement-number">500+</div>
+                <div className="hero__achievement-label">Enterprises</div>
+              </div>
+              <div className="hero__achievement-col">
+                <div className="hero__achievement-number">24/7</div>
+                <div className="hero__achievement-label">Support</div>
+              </div>
+            </div>
+          </div>  
+          {/* achievements end */}
         </div>
 
         <div className="hero__right">
