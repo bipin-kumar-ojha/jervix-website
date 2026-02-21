@@ -1,7 +1,6 @@
-import React from 'react';
 import './services.scss';
 
-const Services: React.FC = () => {
+const Services = () => {
   const services = [
     {
       id: 'cloud',

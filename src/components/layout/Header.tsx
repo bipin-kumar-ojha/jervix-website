@@ -1,9 +1,8 @@
-import React from 'react';
 import '../layout/Header.scss';
 
 const navLinks = ['Platform', 'Solutions', 'Customers', 'Resources', 'Pricing'];
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header className="header">
       <div className="header__container">

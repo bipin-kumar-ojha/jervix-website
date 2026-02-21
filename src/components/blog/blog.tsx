@@ -1,4 +1,3 @@
-import React from "react";
 import "./blog.scss";
 
 const blogPosts = [

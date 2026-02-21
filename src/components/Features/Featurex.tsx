@@ -1,7 +1,6 @@
-import React from 'react';
 import './Featurex.scss';
 
-const Featurex: React.FC = () => {
+const Featurex = () => {
   const features = [
     {
       id: 'risk',

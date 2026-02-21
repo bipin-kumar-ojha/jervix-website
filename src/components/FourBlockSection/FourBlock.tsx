@@ -1,7 +1,6 @@
-import React from 'react';
 import './FourBlock.scss';
 
-const FourBlock: React.FC = () => {
+const FourBlock = () => {
   const features = [
     {
       id: 'threat',
