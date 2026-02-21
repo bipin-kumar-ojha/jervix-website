@@ -15,7 +15,7 @@ const Footer = () => (
           Enterprise-grade security, compliance, and governance platform trusted by leading organizations worldwide.
         </p>
         <ul className="footer__contact-list">
-          <li><span className="footer__contact-icon">📍</span> <span className="footer__contact-link"><strong>123 Business Ave, San Francisco, CA 94107</strong></span></li>
+          <li><span className="footer__contact-icon">📍</span> <span className="footer__contact-link"><strong>India</strong></span></li>
           <li><span className="footer__contact-icon">📞</span> <span className="footer__contact-link">+1 (555) 123-4567</span></li>
           <li><span className="footer__contact-icon">✉️</span> <span className="footer__contact-link">contact@jervix.com</span></li>
         </ul>
