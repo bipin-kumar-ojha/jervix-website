@@ -3,46 +3,46 @@ import './services.scss';
 const Services = () => {
   const services = [
     {
-      id: 'cloud',
-      icon: '☁️',
-      title: 'Cloud Security',
+      id: 'implementation',
+      icon: '🚀',
+      title: 'Structured Implementation',
       description:
-        'Comprehensive security solutions for AWS, Azure, and Google Cloud with automated posture management and compliance monitoring.',
+        'A smooth setup process designed to align the platform with your organization’s structure and operational workflow.',
     },
     {
-      id: 'managed',
+      id: 'configuration',
       icon: '⚙️',
-      title: 'Managed Security Services',
+      title: 'Custom Role Configuration',
       description:
-        'Expert security operations team providing 24/7 monitoring, threat hunting, and incident response services.',
+        'Define roles, reporting managers, and multi-level hierarchy structures tailored to your company’s internal framework.',
     },
     {
-      id: 'compliance',
+      id: 'workflow',
       icon: '📋',
-      title: 'Compliance Advisory',
+      title: 'Workflow Optimization',
       description:
-        'Strategic guidance and support for achieving SOC 2, ISO 27001, HIPAA, and other compliance certifications.',
+        'Organize task assignments and internal issue tracking to reduce delays and improve operational clarity.',
     },
     {
-      id: 'training',
-      icon: '🎓',
-      title: 'Security Training',
+      id: 'data-management',
+      icon: '📁',
+      title: 'Centralized Data Management',
       description:
-        'Comprehensive training programs for employees and security teams to build a culture of security awareness.',
+        'Maintain accurate employee records and structured documentation in a single, controlled environment.',
     },
     {
-      id: 'incident',
-      icon: '⚡',
-      title: 'Incident Response',
+      id: 'reporting-support',
+      icon: '📊',
+      title: 'Performance & Activity Reporting',
       description:
-        'Rapid incident response services with forensic analysis, containment, and remediation support.',
+        'Gain visibility into employee actions, task progress, and operational performance through structured reports.',
     },
     {
-      id: 'enterprise',
+      id: 'ongoing-support',
       icon: '🎧',
-      title: 'Enterprise Support',
+      title: 'Ongoing Platform Support',
       description:
-        'Dedicated account management, priority support, and custom SLAs for enterprise customers.',
+        'Reliable assistance to ensure your team continues to operate efficiently as your organization grows.',
     },
   ];
 
@@ -50,10 +50,11 @@ const Services = () => {
     <section className="services">
       <div className="services__container">
         <div className="services__header">
-          <div className="services__badge">Professional Services</div>
-          <h2 className="services__title">Expert Services & Support</h2>
+          <div className="services__badge">Platform Capabilities</div>
+          <h2 className="services__title">Built to Support Growing Organizations</h2>
           <p className="services__subtitle">
-            Comprehensive services to help you maximize security and maintain compliance.
+            Jervix is designed to strengthen internal structure, improve accountability, 
+            and simplify workforce management across departments.
           </p>
         </div>
 

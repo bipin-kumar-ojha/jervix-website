@@ -24,6 +24,9 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.2rem;
+    img{
+      max-height: 70px;
+    }
   }
   &__logo-icon {
     background: #38bdf8;

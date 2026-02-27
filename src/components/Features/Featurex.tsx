@@ -3,60 +3,60 @@ import './Featurex.scss';
 const Featurex = () => {
   const features = [
     {
-      id: 'risk',
-      icon: '⚠️',
-      title: 'Risk Assessment',
+      id: 'employee-records',
+      icon: '👤',
+      title: 'Centralized Employee Records',
       description:
-        'Continuous risk monitoring with AI-powered threat intelligence and predictive analytics.',
+        'Maintain structured and secure employee information in one unified system for easy access and management.',
     },
     {
-      id: 'compliance',
+      id: 'onboarding',
+      icon: '📝',
+      title: 'Onboarding to Exit Tracking',
+      description:
+        'Manage the complete employee journey — including role changes, promotions, and exit processes — with clarity.',
+    },
+    {
+      id: 'role-management',
+      icon: '🏢',
+      title: 'Role & Hierarchy Management',
+      description:
+        'Build multi-level organizational structures with clear reporting relationships and defined responsibilities.',
+    },
+    {
+      id: 'task-management',
       icon: '📋',
-      title: 'Compliance Management',
+      title: 'Task Assignment & Monitoring',
       description:
-        'Automated compliance tracking for SOC 2, ISO 27001, HIPAA, GDPR, and more.',
+        'Assign tasks to individuals or teams and track progress with full visibility and status updates.',
     },
     {
-      id: 'asset',
-      icon: '📦',
-      title: 'Asset Discovery',
+      id: 'incident-tracking',
+      icon: '⚡',
+      title: 'Incident & Issue Tracking',
       description:
-        'Automatic discovery and inventory of all digital assets across your infrastructure.',
+        'Create and manage internal tickets efficiently to ensure timely resolution and accountability.',
     },
     {
-      id: 'identity',
-      icon: '👥',
-      title: 'Identity & Access',
-      description:
-        'Role-based access control with multi-factor authentication and SSO integration.',
-    },
-    {
-      id: 'monitoring',
-      icon: '📈',
-      title: 'Security Monitoring',
-      description:
-        '24/7 real-time monitoring with instant alerts and incident response automation.',
-    },
-    {
-      id: 'data',
-      icon: '🔒',
-      title: 'Data Protection',
-      description:
-        'End-to-end encryption, data loss prevention, and secure backup solutions.',
-    },
-    {
-      id: 'vulnerability',
-      icon: '🔍',
-      title: 'Vulnerability Management',
-      description:
-        'Continuous vulnerability scanning with prioritized remediation workflows.',
-    },
-    {
-      id: 'analytics',
+      id: 'activity-logs',
       icon: '📊',
-      title: 'Analytics & Insights',
+      title: 'Activity Logs & Transparency',
       description:
-        'Executive dashboards with comprehensive security metrics and compliance reports.',
+        'Track key actions across the system and maintain clear visibility into operational activities.',
+    },
+    {
+      id: 'reporting',
+      icon: '📈',
+      title: 'Operational Reports',
+      description:
+        'Generate structured reports to monitor employee activity, task performance, and organizational insights.',
+    },
+    {
+      id: 'access-control',
+      icon: '🔐',
+      title: 'Role-Based Access Control',
+      description:
+        'Ensure the right people have access to the right information based on their role within the organization.',
     },
   ];
 
@@ -66,10 +66,10 @@ const Featurex = () => {
         <div className="platform-features__header">
           <div className="platform-features__badge">Platform Features</div>
           <h2 className="platform-features__title">
-            Complete Security Platform
+            Everything You Need to Manage Your Workforce Efficiently
           </h2>
           <p className="platform-features__subtitle">
-            Everything you need to secure, monitor, and manage your enterprise infrastructure.
+            Jervix brings structure, visibility, and accountability to employee management — helping organizations operate with clarity and confidence.
           </p>
         </div>
 

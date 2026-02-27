@@ -3,67 +3,72 @@ import "./InfoGrid.scss";
 const InfoGrid = () => (
   <section className="info-grid">
     <div className="info-grid__header">
-      <span className="info-grid__badge">Industry Solutions</span>
-      <h2 className="info-grid__title">Tailored for Your Industry</h2>
+      <span className="info-grid__badge">Industry Applications</span>
+      <h2 className="info-grid__title">Designed for Structured Organizations</h2>
       <p className="info-grid__subtitle">
-        Industry-specific security and compliance solutions that meet regulatory requirements
+        Jervix adapts to different industries where employee structure, accountability, 
+        and operational visibility are essential.
       </p>
     </div>
+
     <div className="info-grid__blocks">
       <div className="info-grid__block">
-        <div className="info-grid__icon info-grid__icon--finance" />
-        <span className="info-grid__category">Financial Services</span>
-        <h3 className="info-grid__block-title">Banking & Finance</h3>
+        <div className="info-grid__icon info-grid__icon--corporate" />
+        <span className="info-grid__category">Corporate Enterprises</span>
+        <h3 className="info-grid__block-title">Large & Mid-Sized Businesses</h3>
         <p className="info-grid__block-desc">
-          Comprehensive security and compliance solutions for financial institutions with automated regulatory reporting.
+          Maintain structured employee records, clear reporting hierarchies, and transparent task tracking across departments.
         </p>
         <ul className="info-grid__features">
-          <li>PCI-DSS compliance</li>
-          <li>Fraud detection</li>
-          <li>SOX compliance</li>
-          <li>Transaction monitoring</li>
+          <li>Department-level role management</li>
+          <li>Multi-level reporting structure</li>
+          <li>Internal task tracking</li>
+          <li>Activity monitoring</li>
         </ul>
       </div>
+
       <div className="info-grid__block">
-        <div className="info-grid__icon info-grid__icon--healthcare" />
-        <span className="info-grid__category">Healthcare</span>
-        <h3 className="info-grid__block-title">Healthcare & Life Sciences</h3>
+        <div className="info-grid__icon info-grid__icon--startup" />
+        <span className="info-grid__category">Startups & Growing Teams</span>
+        <h3 className="info-grid__block-title">Scaling Organizations</h3>
         <p className="info-grid__block-desc">
-          HIPAA-compliant security platform with patient data protection and medical device security.
+          Build operational structure early with defined roles, organized workflows, and clear accountability.
         </p>
         <ul className="info-grid__features">
-          <li>HIPAA compliance</li>
-          <li>Medical IoT security</li>
-          <li>PHI protection</li>
-          <li>Breach prevention</li>
+          <li>Structured onboarding process</li>
+          <li>Role clarity as teams grow</li>
+          <li>Centralized employee data</li>
+          <li>Task assignment visibility</li>
         </ul>
       </div>
+
       <div className="info-grid__block">
-        <div className="info-grid__icon info-grid__icon--technology" />
-        <span className="info-grid__category">Technology</span>
-        <h3 className="info-grid__block-title">Technology & SaaS</h3>
+        <div className="info-grid__icon info-grid__icon--services" />
+        <span className="info-grid__category">Professional Services</span>
+        <h3 className="info-grid__block-title">Consulting & Service Firms</h3>
         <p className="info-grid__block-desc">
-          Cloud-native security solutions for technology companies with DevSecOps integration.
+          Improve coordination between managers and teams with structured task delegation and progress tracking.
         </p>
         <ul className="info-grid__features">
-          <li>Cloud security</li>
-          <li>API security</li>
-          <li>DevSecOps</li>
-          <li>Container security</li>
+          <li>Manager-to-team reporting</li>
+          <li>Project-related task tracking</li>
+          <li>Performance visibility</li>
+          <li>Clear responsibility mapping</li>
         </ul>
       </div>
+
       <div className="info-grid__block">
-        <div className="info-grid__icon info-grid__icon--legal" />
-        <span className="info-grid__category">Legal & Professional</span>
-        <h3 className="info-grid__block-title">Legal Services</h3>
+        <div className="info-grid__icon info-grid__icon--operations" />
+        <span className="info-grid__category">Operations-Driven Organizations</span>
+        <h3 className="info-grid__block-title">Process-Focused Companies</h3>
         <p className="info-grid__block-desc">
-          Attorney-client privilege protection with document security and confidentiality controls.
+          Strengthen operational control with structured workflows, issue tracking, and real-time activity monitoring.
         </p>
         <ul className="info-grid__features">
-          <li>Document encryption</li>
-          <li>Audit trails</li>
-          <li>Access controls</li>
-          <li>Data residency</li>
+          <li>Incident tracking</li>
+          <li>Workflow clarity</li>
+          <li>Action transparency</li>
+          <li>Operational reporting</li>
         </ul>
       </div>
     </div>

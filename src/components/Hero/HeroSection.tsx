@@ -2,74 +2,71 @@ import './HeroSection.scss';
 
 export default function HeroSection() {
   return (
-    <section className="hero">
+   <section className="hero">
       <div className="hero__container">
         <div className="hero__left">
-          <div className="hero__left-badge">Trusted by 500+ Global Enterprises</div>
+          <div className="hero__left-badge">
+            Workforce Management Platform
+          </div>
+
           <h1 className="hero__left__title">
-            Enterprise Security,{' '}
-            <span className="hero__left__title-highlight">Simplified</span>
+            Manage Your Workforce with{' '}
+            <span className="hero__left__title-highlight">Clarity & Control</span>
           </h1>
+
           <p className="hero__left__subtitle">
-            Comprehensive security, compliance, and governance platform. Protect your organization with
-            AI-powered threat detection and automated compliance management.
+            Jervix centralizes employee records, structure, and daily operations 
+            into one streamlined system built for modern organizations.
           </p>
 
           <div className="hero__left__buttons">
             <a href="/get-started" className="hero__button hero__button--primary">
-              Get Started Free
+              Get Early Access
             </a>
             <a href="/watch-demo" className="hero__button hero__button--outline">
-              Watch Demo
+              Explore Platform
             </a>
           </div>
 
           <div className="hero__left__certs">
             <div className="hero__cert">
-              <span className="hero__cert-circle"><span className="hero__cert-tick">&#10003;</span></span>
-              SOC 2 Certified
+              <span className="hero__cert-circle">
+                <span className="hero__cert-tick">&#10003;</span>
+              </span>
+              Employee Lifecycle
             </div>
+
             <div className="hero__cert">
-              <span className="hero__cert-circle"><span className="hero__cert-tick">&#10003;</span></span>
-              ISO 27001
+              <span className="hero__cert-circle">
+                <span className="hero__cert-tick">&#10003;</span>
+              </span>
+              Structured Role Management
             </div>
+
             <div className="hero__cert">
-              <span className="hero__cert-circle"><span className="hero__cert-tick">&#10003;</span></span>
-              GDPR Compliant
+              <span className="hero__cert-circle">
+                <span className="hero__cert-tick">&#10003;</span>
+              </span>
+              Task & Issue Tracking
             </div>
           </div>
-          {/* achievements start */}
-          <div className="hero__achievements">
-            <div className="hero__achievement-grid">
-              <div className="hero__achievement-col">
-                <div className="hero__achievement-number">99.99%</div>
-                <div className="hero__achievement-label">Uptime</div>
-              </div>
-              <div className="hero__achievement-col">
-                <div className="hero__achievement-number">500+</div>
-                <div className="hero__achievement-label">Enterprises</div>
-              </div>
-              <div className="hero__achievement-col">
-                <div className="hero__achievement-number">24/7</div>
-                <div className="hero__achievement-label">Support</div>
-              </div>
-            </div>
-          </div>  
-          {/* achievements end */}
+
         </div>
 
         <div className="hero__right">
           <div className="hero__right-image-container">
             <img
               src="/assets/hero-banner.jpeg"
-              alt="Illustration of platform"
+              alt="Jervix Workforce Management Dashboard"
               className="hero__right__image"
             />
+
             <div className="hero__right__card hero__right__card--top-right">
-              Real-time <span>Threat Detection</span>
+              Structured <span>Role Hierarchy</span>
             </div>
+
             <div className="hero__right__card hero__right__card--bottom-left">
-              100% <span>Compliance Rate</span>
+              Real-Time <span>Task Tracking</span>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ function App() {
  
   return (
     <>
-      <UnderDevelopmentPopup />
+      {/* <UnderDevelopmentPopup /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

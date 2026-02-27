@@ -3,32 +3,32 @@ import './FourBlock.scss';
 const FourBlock = () => {
   const features = [
     {
-      id: 'threat',
-      icon: '🛡️',
-      title: 'Advanced Threat Protection',
+      id: 'lifecycle',
+      icon: '👥',
+      title: 'Complete Employee Lifecycle',
       description:
-        'AI-powered security monitoring with real-time threat detection and automated response capabilities.',
+        'Manage every stage of an employee’s journey — from onboarding to exit — in one structured and organized system.',
     },
     {
-      id: 'compliance',
-      icon: '⚡',
-      title: 'Automated Compliance',
+      id: 'structure',
+      icon: '🏢',
+      title: 'Clear Organizational Structure',
       description:
-        'Streamline compliance with automated monitoring, reporting, and audit-ready documentation.',
+        'Define reporting managers, build multi-level roles, and maintain a clear hierarchy that reflects your real organization.',
     },
     {
-      id: 'trust',
-      icon: '🔒',
-      title: 'Zero Trust Architecture',
+      id: 'tasks',
+      icon: '📋',
+      title: 'Task & Issue Management',
       description:
-        'Implement zero trust security with granular access controls and continuous verification.',
+        'Create, assign, and track tasks or internal issues with full visibility and timely follow-ups.',
     },
     {
-      id: 'governance',
-      icon: '👤',
-      title: 'Unified Governance',
+      id: 'transparency',
+      icon: '📊',
+      title: 'Action Transparency',
       description:
-        'Centralized platform for security policies, risk management, and compliance frameworks.',
+        'Know who did what and when. Every important action is recorded for better accountability and reporting.',
     },
   ];
 
@@ -38,10 +38,12 @@ const FourBlock = () => {
         <div className="features__header">
           <div className="features__badge">Why Jervix</div>
           <h2 className="features__title">
-            Enterprise-Grade Security Made Simple
+            Built for Structured, Growing Organizations
           </h2>
           <p className="features__subtitle">
-            Comprehensive security and compliance solutions designed for modern enterprises.
+            Jervix helps organizations bring clarity to employee management, 
+            strengthen internal accountability, and simplify daily operations 
+            — all within one unified platform.
           </p>
         </div>
 

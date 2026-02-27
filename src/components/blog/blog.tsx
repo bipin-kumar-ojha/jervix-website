@@ -2,28 +2,28 @@ import "./blog.scss";
 
 const blogPosts = [
   {
-    category: "Security",
+    category: "Workforce Management",
     image: "/assets/blog1.jpeg",
-    title: "Complete Guide to Zero Trust Architecture",
-    desc: "Learn how to implement zero trust security principles in your organization with our comprehensive guide.",
+    title: "How to Build a Clear Organizational Structure",
+    desc: "A practical guide to defining reporting hierarchies, roles, and responsibilities for growing teams.",
     date: "Feb 15, 2026",
-    readTime: "8 min read",
+    readTime: "6 min read",
   },
   {
-    category: "Compliance",
+    category: "Operations",
     image: "/assets/blog2.jpeg",
-    title: "SOC 2 Compliance Checklist for 2026",
-    desc: "Everything you need to know about achieving SOC 2 Type II certification for your SaaS platform.",
+    title: "Improving Accountability in the Workplace",
+    desc: "Learn how structured task assignment and activity tracking can improve team performance.",
     date: "Feb 10, 2026",
-    readTime: "12 min read",
+    readTime: "7 min read",
   },
   {
     category: "Best Practices",
     image: "/assets/blog3.jpeg",
-    title: "Top 10 Security Threats in Enterprise SaaS",
-    desc: "Understand the latest security threats facing enterprise organizations and how to protect against them.",
+    title: "Managing Employee Data Without Chaos",
+    desc: "Best practices for maintaining organized employee records from onboarding to exit.",
     date: "Feb 5, 2026",
-    readTime: "6 min read",
+    readTime: "5 min read",
   },
 ];
 
@@ -32,17 +32,22 @@ const Blog = () => (
     <div className="blog__badge-row">
       <span className="blog__badge">Resources</span>
     </div>
+
     <div className="blog__header-row">
       <div className="blog__header-left">
-        <h2 className="blog__title">Latest Insights</h2>
+        <h2 className="blog__title">Insights for Growing Organizations</h2>
         <p className="blog__subtitle">
-          Expert guidance on security, compliance, and best practices
+          Practical guidance on employee management, organizational structure, and operational clarity.
         </p>
       </div>
+
       <div className="blog__header-right">
-        <button className="blog__all-btn">View All Resources <span>→</span></button>
+        <button className="blog__all-btn">
+          View All Articles <span>→</span>
+        </button>
       </div>
     </div>
+
     <div className="blog__posts">
       {blogPosts.map((post, idx) => (
         <div className="blog__post" key={idx}>

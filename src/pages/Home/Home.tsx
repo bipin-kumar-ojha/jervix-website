@@ -14,7 +14,7 @@ export default function Home() {
      <Featurex/>
      <Services/>
      <InfoGrid/>
-     <Price/>
+     {/* <Price/> */}
      <Blog/>
      <Subscription/>
     </>
