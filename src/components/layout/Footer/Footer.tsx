@@ -18,12 +18,12 @@ const Footer = () => (
         <ul className="footer__contact-list">
           <li>
             <span className="footer__contact-icon">📍</span>
-            <span className="footer__contact-link"><strong>India</strong></span>
+            <span className="footer__contact-link"><strong>Launching Soon</strong></span>
           </li>
 
           <li>
             <span className="footer__contact-icon">✉️</span>
-            <span className="footer__contact-link">contact@jervix.com</span>
+            <span className="footer__contact-link">info@jervix.com</span>
           </li>
         </ul>
 

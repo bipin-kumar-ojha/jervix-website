@@ -90,6 +90,9 @@
       font-weight: 700;
       color: #0e172b;
       margin: 0 0 1rem;
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
 
       &-highlight {
         color: #007fd7;

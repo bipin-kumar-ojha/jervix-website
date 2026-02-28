@@ -50,7 +50,6 @@ export default function HeroSection() {
               Task & Issue Tracking
             </div>
           </div>
-
         </div>
 
         <div className="hero__right">

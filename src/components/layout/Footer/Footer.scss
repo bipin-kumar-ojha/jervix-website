@@ -111,10 +111,21 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     min-width: 320px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding-left: 0;
+    }
   }
   &__col {
     min-width: 140px;
     margin-bottom: 1.5rem;
+    @media (max-width: 700px) {
+      width: 100%;
+      min-width: 0;
+      margin-bottom: 0.8rem;
+    }
   }
   &__col-title {
     color: #fff;
@@ -122,17 +133,26 @@
     font-size: 1.1rem;
     margin-bottom: 1rem;
     display: block;
+    @media (max-width: 700px) {
+      text-align: left;
+      padding-left: 0;
+    }
   }
   &__col ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    @media (max-width: 700px) {
+      text-align: left;
+      padding-left: 0;
+    }
     li {
       margin-bottom: 0.7rem;
       color: #60a5fa;
       font-weight: 500;
       cursor: pointer;
       transition: color 0.2s;
+      text-align: left;
       &:hover {
         color: #38bdf8;
       }

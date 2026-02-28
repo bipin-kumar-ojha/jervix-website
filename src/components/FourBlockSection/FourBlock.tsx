@@ -4,28 +4,28 @@ const FourBlock = () => {
   const features = [
     {
       id: 'lifecycle',
-      icon: '👥',
+      icon: '/assets/jervix-icon/lifecycle-icon.jpg',
       title: 'Complete Employee Lifecycle',
       description:
         'Manage every stage of an employee’s journey — from onboarding to exit — in one structured and organized system.',
     },
     {
       id: 'structure',
-      icon: '🏢',
+      icon: '/assets/jervix-icon/structure-icon.png',
       title: 'Clear Organizational Structure',
       description:
         'Define reporting managers, build multi-level roles, and maintain a clear hierarchy that reflects your real organization.',
     },
     {
       id: 'tasks',
-      icon: '📋',
+      icon: '/assets/jervix-icon/tasks-icon.jpg',
       title: 'Task & Issue Management',
       description:
         'Create, assign, and track tasks or internal issues with full visibility and timely follow-ups.',
     },
     {
       id: 'transparency',
-      icon: '📊',
+      icon: '/assets/jervix-icon/transparency-icon.png',
       title: 'Action Transparency',
       description:
         'Know who did what and when. Every important action is recorded for better accountability and reporting.',
@@ -51,7 +51,7 @@ const FourBlock = () => {
           {features.map((feature) => (
             <div key={feature.id} className={`features__card features__card--${feature.id}`}>
               <div className={`features__card-icon features__card-icon--${feature.id}`}>
-                {feature.icon}
+                <img src={feature.icon} alt={feature.title} />
               </div>
               <h3 className="features__card-title">{feature.title}</h3>
               <p className="features__card-text">{feature.description}</p>
