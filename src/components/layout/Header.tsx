@@ -31,7 +31,7 @@ const Header = () => {
 
         {/* Hide actions on mobile, show only on desktop */}
         <div className="header__actions">
-          <a href="/signin" className="header__sign-in">
+          <a href="/" className="header__sign-in">
             Sign In
           </a>
           <button className="header__button header__button--primary">
@@ -76,7 +76,7 @@ const Header = () => {
           ))}
         </ul>
         <div className="header__mobile-actions">
-          <a href="/signin" className="header__sign-in" onClick={() => setMobileMenuOpen(false)}>
+          <a href="/" className="header__sign-in" onClick={() => setMobileMenuOpen(false)}>
             Sign In
           </a>
           <button className="header__button header__button--primary" onClick={() => setMobileMenuOpen(false)}>
