@@ -21,7 +21,10 @@ const Header = () => {
           <ul className="header__nav-list">
             {navLinks.map((label) => (
               <li key={label} className="header__nav-item">
-                <a href={`/${label.toLowerCase()}`}>
+                {/* <a href={`/${label.toLowerCase()}`}>
+                  {label}
+                </a> */}
+                <a href="#">
                   {label}
                 </a>
               </li>
