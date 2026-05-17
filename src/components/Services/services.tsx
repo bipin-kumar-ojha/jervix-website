@@ -4,66 +4,66 @@ const services = [
   {
     id: 'implementation',
     icon: '🚀',
-    title: 'Structured Implementation',
+    title: 'Organization Registration',
     features: [
-      'Smooth setup process',
-      'Aligns with your workflow',
-      'Quick onboarding',
-      'Minimal disruption',
+      'Company workspace',
+      'Business profile',
+      'Admin setup',
+      'Quick launch',
     ],
   },
   {
     id: 'configuration',
     icon: '⚙️',
-    title: 'Custom Role Configuration',
+    title: 'Department & Role Setup',
     features: [
-      'Define custom roles',
-      'Multi-level hierarchy',
-      'Reporting managers',
-      'Flexible permissions',
+      'Departments',
+      'Designations',
+      'User roles',
+      'Access control',
     ],
   },
   {
     id: 'workflow',
     icon: '📋',
-    title: 'Workflow Optimization',
+    title: 'Project Task Management',
     features: [
-      'Task assignments',
-      'Internal issue tracking',
-      'Reduce delays',
-      'Improve clarity',
+      'Create projects',
+      'Assign tasks',
+      'Track progress',
+      'Improve ownership',
     ],
   },
   {
     id: 'data-management',
     icon: '📁',
-    title: 'Centralized Data Management',
+    title: 'Team & User Management',
     features: [
-      'Accurate records',
-      'Structured documentation',
-      'Single environment',
+      'Create teams',
+      'Add employees',
+      'Manage users',
       'Controlled access',
     ],
   },
   {
     id: 'reporting-support',
     icon: '📊',
-    title: 'Performance & Activity Reporting',
+    title: 'Budget & Performance Tracking',
     features: [
-      'Employee actions',
+      'Project budgets',
       'Task progress',
-      'Operational performance',
-      'Structured reports',
+      'Employee performance',
+      'Clear reports',
     ],
   },
   {
     id: 'ongoing-support',
     icon: '🎧',
-    title: 'Ongoing Platform Support',
+    title: 'Platform Support',
     features: [
       'Reliable assistance',
-      'Continuous updates',
-      'Efficient operation',
+      'Launch guidance',
+      'Module updates',
       'Growth support',
     ],
   },
@@ -74,26 +74,32 @@ const Services = () => (
     <div className="services__container">
       <div className="services__header">
         <div className="services__badge">Platform Capabilities</div>
-        <h2 className="services__title">Built to Support Growing Organizations</h2>
+        <h2 className="services__title">Core Modules for Growing Organizations</h2>
         <p className="services__subtitle">
-          Jervix is designed to strengthen internal structure, improve accountability, 
-          and simplify workforce management across departments.
+          Jervix helps teams register their organization, create departments,
+          designations, teams, users and roles, manage projects, assign tasks,
+          and track budgets and performance.
         </p>
       </div>
       <div className="services__grid">
-        {services.map((service) => (
-          <div key={service.id} className="services__card services__card--simple">
-            <div className="services__card-icon services__card-icon--large">{service.icon}</div>
-            <h3 className="services__card-title">{service.title}</h3>
+        {services.map((service, index) => (
+          <article key={service.id} className="services__card">
+            <div className="services__card-index">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div className="services__card-icon">{service.icon}</div>
+            </div>
+            <div className="services__card-content">
+              <h3 className="services__card-title">{service.title}</h3>
+            </div>
             <ul className="services__features-list">
-              {service.features.map((feature, idx) => (
-                <li key={idx} className="services__feature-item">
-                  <span className="services__feature-icon">✔️</span>
+              {service.features.map((feature) => (
+                <li key={feature} className="services__feature-item">
+                  <span className="services__feature-icon">✓</span>
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
-          </div>
+          </article>
         ))}
       </div>
     </div>

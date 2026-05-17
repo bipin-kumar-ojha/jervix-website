@@ -1,90 +1,97 @@
-
 import '../layout/Header.scss';
 import { useState } from 'react';
 
-const navLinks = ['Platform', 'Solutions', 'Customers', 'Resources', 'Pricing'];
-
-
+const navLinks = [
+  { label: 'Platform', href: '#platform' },
+  { label: 'Solutions', href: '#solutions' },
+  { label: 'Resources', href: '#resources' },
+  { label: 'Pricing', href: '#pricing' },
+];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
     <header className="header">
       <div className="header__container">
-        <div className="header__logo">
-          <a href="/" >
-            <img src="/assets/logo.png" alt="" />
-          </a>
-        </div>
+        <a href="/" className="header__logo" aria-label="Jervix home">
+          <img src="/assets/logo.png" alt="Jervix" />
+        </a>
 
-        <nav className="header__nav">
-          <ul className="header__nav-list">
-            {navLinks.map((label) => (
-              <li key={label} className="header__nav-item">
-                {/* <a href={`/${label.toLowerCase()}`}>
-                  {label}
-                </a> */}
-                <a href="#">
-                  {label}
-                </a>
+        <nav className="header__nav" aria-label="Primary navigation">
+          <ul>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a href={link.href}>{link.label}</a>
               </li>
             ))}
           </ul>
         </nav>
 
-        {/* Hide actions on mobile, show only on desktop */}
         <div className="header__actions">
-          <a href="/" className="header__sign-in">
-            Sign In
+          <a href="#pricing" className="header__link-button">
+            View Plans
           </a>
-          <button className="header__button header__button--primary">
+          <a href="#demo" className="header__button">
             Request Demo
-          </button>
+          </a>
         </div>
 
-        {/* Hamburger Icon */}
         <button
           className={`header__hamburger${mobileMenuOpen ? ' header__hamburger--open' : ''}`}
           aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-          onClick={() => setMobileMenuOpen((v) => !v)}
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((value) => !value)}
+          type="button"
         >
-          <span className="bar bar1" />
-          <span className="bar bar2" />
-          <span className="bar bar3" />
+          <span />
+          <span />
+          <span />
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`header__mobile-overlay${mobileMenuOpen ? ' header__mobile-overlay--active' : ''}`} onClick={() => setMobileMenuOpen(false)} />
+      <div
+        className={`header__mobile-overlay${mobileMenuOpen ? ' header__mobile-overlay--active' : ''}`}
+        onClick={closeMobileMenu}
+      />
 
-      {/* Mobile Menu Drawer */}
-      <nav className={`header__mobile-menu${mobileMenuOpen ? ' header__mobile-menu--open' : ''}`}>
-        <div className="header__mobile-menu-row">
-          <div className="header__mobile-logo">
-            <a href="/" onClick={() => setMobileMenuOpen(false)}>
-              <img src="/assets/logo.png" alt="Logo" />
-            </a>
-          </div>
-          <button className="header__mobile-close" aria-label="Close menu" onClick={() => setMobileMenuOpen(false)}>
-            <span>&times;</span>
+      <nav
+        className={`header__mobile-menu${mobileMenuOpen ? ' header__mobile-menu--open' : ''}`}
+        aria-label="Mobile navigation"
+      >
+        <div className="header__mobile-top">
+          <a href="/" className="header__mobile-logo" onClick={closeMobileMenu}>
+            <img src="/assets/logo.png" alt="Jervix" />
+          </a>
+          <button className="header__mobile-close" aria-label="Close menu" onClick={closeMobileMenu} type="button">
+            ×
           </button>
         </div>
+
         <ul className="header__mobile-list">
-          {navLinks.map((label) => (
-            <li key={label} className="header__mobile-item">
-              <a href={`/${label.toLowerCase()}`} onClick={() => setMobileMenuOpen(false)}>
-                {label}
+          {navLinks.map((link) => (
+            <li key={link.label}>
+              <a href={link.href} onClick={closeMobileMenu}>
+                {link.label}
               </a>
             </li>
           ))}
         </ul>
+
+        <div className="header__mobile-card">
+          <span>Starter from ₹1,999/month</span>
+          <p>Manage organization setup, projects, tasks, budgets, and performance.</p>
+        </div>
+
         <div className="header__mobile-actions">
-          <a href="/" className="header__sign-in" onClick={() => setMobileMenuOpen(false)}>
-            Sign In
+          <a href="#pricing" className="header__link-button" onClick={closeMobileMenu}>
+            View Plans
           </a>
-          <button className="header__button header__button--primary" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#demo" className="header__button" onClick={closeMobileMenu}>
             Request Demo
-          </button>
+          </a>
         </div>
       </nav>
     </header>

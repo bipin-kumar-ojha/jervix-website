@@ -16,16 +16,16 @@ const UnderDevelopmentPopup = () => {
         </div>
         <h2>Something Big is Coming!</h2>
         <p className="under-dev-popup__main-msg">
-          🚀 We’re building <span className="under-dev-popup__brand">Jervix</span> — a next-generation platform for enterprise security, compliance, and automation.<br/>
-          <span className="under-dev-popup__highlight">Launching soon with innovative products and features designed to empower your business.</span>
+          🚀 We’re building <span className="under-dev-popup__brand">Jervix</span> — a structured platform for organization setup, project task management, budgets, and performance tracking.<br/>
+          <span className="under-dev-popup__highlight">Launching soon with focused tools designed to organize your business operations.</span>
         </p>
         <ul className="under-dev-popup__features">
-          <li>AI-powered threat detection</li>
-          <li>Automated compliance management</li>
-          <li>Seamless integrations</li>
-          <li>Enterprise-grade security</li>
+          <li>Departments, designations, and teams</li>
+          <li>User and role management</li>
+          <li>Project task assignment</li>
+          <li>Budget and performance tracking</li>
         </ul>
-        <p className="under-dev-popup__sub-msg">Stay tuned and get ready to experience the future of secure business operations.<br/>Thank you for your excitement and support!</p>
+        <p className="under-dev-popup__sub-msg">Stay tuned and get ready to manage your organization from one clean workspace.<br/>Thank you for your excitement and support!</p>
       </div>
     </div>
   );

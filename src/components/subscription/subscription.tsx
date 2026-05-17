@@ -2,42 +2,48 @@ import "./subscription.scss";
 
 const Subscription = () => (
   <section className="subscription">
-    <div className="subscription__background"></div>
-
     <div className="subscription__container">
-      <h2 className="subscription__title">
-        Bring Structure to Your Workforce Management
-      </h2>
+      <div className="subscription__content">
+        <span className="subscription__badge">Ready to get started?</span>
+        <h2 className="subscription__title">
+          Launch your organization workspace with Jervix.
+        </h2>
 
-      <p className="subscription__desc">
-        Jervix helps organizations streamline employee management, 
-        strengthen accountability, and build a clear operational structure — 
-        all within one unified platform.
-      </p>
+        <p className="subscription__desc">
+          Start with departments, designations, teams, users, roles, projects,
+          task assignments, budgets, and performance tracking in one unified platform.
+        </p>
 
-      <div className="subscription__actions">
-        <button className="subscription__btn subscription__btn--primary">
-          Request Early Access <span className="subscription__btn-arrow">→</span>
-        </button>
+        <div className="subscription__actions">
+          <button className="subscription__btn subscription__btn--primary">
+            Request Demo <span className="subscription__btn-arrow">→</span>
+          </button>
 
-        <button className="subscription__btn subscription__btn--secondary">
-          Schedule a Demo
-        </button>
-      </div>
-
-      <div className="subscription__features">
-        <div className="subscription__feature">
-          <span className="subscription__check">✔</span> Structured employee lifecycle management
-        </div>
-
-        <div className="subscription__feature">
-          <span className="subscription__check">✔</span> Clear reporting hierarchy & role control
-        </div>
-
-        <div className="subscription__feature">
-          <span className="subscription__check">✔</span> Transparent task & activity tracking
+          <button className="subscription__btn subscription__btn--secondary">
+            View Starter Plans
+          </button>
         </div>
       </div>
+
+      <aside className="subscription__panel">
+        <span className="subscription__panel-label">Starter from</span>
+        <strong>₹1,999</strong>
+        <span className="subscription__panel-unit">per month for up to 50 employees</span>
+
+        <div className="subscription__features">
+          <div className="subscription__feature">
+            <span className="subscription__check">✓</span> Organization setup
+          </div>
+
+          <div className="subscription__feature">
+            <span className="subscription__check">✓</span> Project task management
+          </div>
+
+          <div className="subscription__feature">
+            <span className="subscription__check">✓</span> Budget and performance tracking
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 );

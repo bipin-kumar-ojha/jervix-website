@@ -28,39 +28,39 @@ const Success: React.FC = () => {
       category: 'Technology',
       rating: 5,
       quote:
-        'Jervix transformed our security infrastructure. We achieved SOC 2 compliance in record time, and the platform’s intuitive interface made the entire process seamless.',
+        'Jervix helped us create departments, teams, users, and roles quickly. Our project task ownership is now much clearer.',
       name: 'Sarah Mitchell',
-      title: 'Chief Information Security Officer',
+      title: 'Operations Director',
       company: 'TechCorp Global',
       avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah',
       metric: '40%',
-      metricLabel: 'Faster Compliance',
+      metricLabel: 'Faster Setup',
     },
     {
       id: 2,
       category: 'Finance',
       rating: 5,
       quote:
-        'The risk management capabilities are outstanding. We now have complete visibility into our security posture.',
+        'The role and project management flow gives our managers clear visibility into tasks, budgets, and employee performance.',
       name: 'Michael Chen',
-      title: 'VP of Security',
+      title: 'Project Head',
       company: 'FinanceSecure Inc',
       avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Michael',
       metric: '60%',
-      metricLabel: 'Risk Reduction',
+      metricLabel: 'Better Visibility',
     },
     {
       id: 3,
       category: 'Healthcare',
       rating: 5,
       quote:
-        'Best security platform we’ve implemented. Automation saves hundreds of hours every month.',
+        'We can assign employee tasks, review progress, and track project budgets from one organized workspace.',
       name: 'Jennifer Rodriguez',
-      title: 'Security Director',
+      title: 'Business Manager',
       company: 'HealthTech Solutions',
       avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jennifer',
       metric: '80%',
-      metricLabel: 'Time Saved',
+      metricLabel: 'Task Clarity',
     },
   ];
 
@@ -93,8 +93,8 @@ const Success: React.FC = () => {
     <section className="success">
       <div className="success__header">
         <span className="success__badge">Customer Success Stories</span>
-        <h2>Trusted by Security Leaders</h2>
-        <p>See how leading organizations achieve security excellence with Jervix</p>
+        <h2>Trusted by Operations Teams</h2>
+        <p>See how organizations use Jervix to manage structure, projects, tasks, budgets, and performance</p>
       </div>
 
       <div className="success__grid">
