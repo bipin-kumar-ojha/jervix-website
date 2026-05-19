@@ -8,8 +8,12 @@ export const employeeSizes = [
 export const requestDemoSuccessMessage =
   'Thank you for your interest. Our team will review your details and contact you shortly to schedule your demo.';
 
+const defaultWebsiteLeadEndpoint = import.meta.env.DEV
+  ? 'http://localhost:3000/api/website-leads'
+  : 'https://api.jervix.com/api/website-leads';
+
 const websiteLeadEndpoint =
-  import.meta.env.VITE_WEBSITE_LEAD_ENDPOINT || 'http://localhost:3000/api/website-leads';
+  import.meta.env.VITE_WEBSITE_LEAD_ENDPOINT || defaultWebsiteLeadEndpoint;
 
 type LeadResponse = {
   message?: string;
