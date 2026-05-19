@@ -265,6 +265,7 @@
 
   .request-demo__dialog {
     max-height: calc(100vh - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
   }
 
   .request-demo__content {
@@ -291,8 +292,12 @@
 
   .request-demo__dialog {
     border-radius: 0;
+    height: 100vh;
+    height: 100dvh;
     max-height: 100vh;
+    max-height: 100dvh;
     min-height: 100vh;
+    min-height: 100dvh;
   }
 
   .request-demo__close {
@@ -313,6 +318,6 @@
   }
 
   .request-demo__form {
-    padding: 1rem;
+    padding: 1rem 1rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
   }
 }
