@@ -7,11 +7,13 @@ import Subscription from "../../components/subscription/subscription";
 import Price from "../../components/Price/Price";
 // import Services from "../../components/Services/services";
 import ImageContentBlock from "../../components/imageContentBlock/ImageContentBlock";
+import ProductView from "../../components/productView/ProductView";
 export default function Home() {
   return (
     <>
      <HeroSection/>
      <FourBlock/>
+     <ProductView/>
      <Featurex/>
      {/* <Services/> */}
      <ImageContentBlock/>
