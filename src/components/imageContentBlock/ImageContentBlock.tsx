@@ -24,8 +24,8 @@ const ImageContentBlock = () => {
           <p className="image-content__text">
             Switch to smarter work management for your next growth chapter.
           </p>
-          <a href="#demo" className="image-content__button">
-            Talk to Us Today!
+          <a href="#demo" className="image-content__button" data-request-demo>
+            Request Demo
             <span aria-hidden="true">→</span>
           </a>
         </div>

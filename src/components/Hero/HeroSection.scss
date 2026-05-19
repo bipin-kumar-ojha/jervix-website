@@ -2,7 +2,7 @@
   --hero-green-900: #143c6c;
   --hero-green-800: #143c6c;
   --hero-green-700: #143c6c;
-  --hero-coral: #ef614d;
+  --hero-coral: #123762;
   --hero-cream: #fff8ed;
   --hero-mint: #eef8f3;
   --hero-ink: #17231f;
@@ -175,7 +175,7 @@
 
   &__demo-card {
     justify-self: end;
-    max-width: 420px;
+    max-width: 540px;
     padding: clamp(1.2rem, 3vw, 1.75rem);
     width: 100%;
     z-index: 2;
@@ -205,6 +205,15 @@
     gap: 1rem;
     margin-top: 1.25rem;
 
+    fieldset {
+      border: 0;
+      display: grid;
+      gap: 1rem;
+      margin: 0;
+      min-width: 0;
+      padding: 0;
+    }
+
     label {
       color: #45524d;
       display: grid;
@@ -225,6 +234,22 @@
       width: 100%;
     }
 
+    input:focus,
+    select:focus {
+      border-color: rgba(239, 97, 77, 0.62);
+      box-shadow: 0 0 0 3px rgba(239, 97, 77, 0.12);
+      outline: none;
+    }
+
+    fieldset:disabled {
+      input,
+      select,
+      button {
+        cursor: wait;
+        opacity: 0.76;
+      }
+    }
+
     button {
       background: var(--hero-coral);
       border: 0;
@@ -236,6 +261,71 @@
       min-height: 48px;
       padding: 0.85rem 1rem;
     }
+  }
+
+  &__form-row {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  &__demo-message {
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1.45;
+    margin: 0;
+    padding: 0.75rem 0.85rem;
+
+    &--success {
+      background: rgba(20, 60, 108, 0.08);
+      color: var(--hero-green-900);
+    }
+
+    &--error {
+      background: rgba(239, 97, 77, 0.12);
+      color: #b83c2d;
+    }
+  }
+
+  &__phone-field {
+    align-items: center;
+    background: #fbfdfb;
+    border: 1px solid #d9e6df;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    min-height: 46px;
+    overflow: hidden;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+
+    &:focus-within {
+      border-color: rgba(239, 97, 77, 0.62);
+      box-shadow: 0 0 0 3px rgba(239, 97, 77, 0.12);
+    }
+
+    input {
+      background: transparent;
+      border: 0;
+      min-height: 44px;
+      padding-left: 0.75rem;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__phone-prefix {
+    align-items: center;
+    align-self: stretch;
+    background: rgba(20, 60, 108, 0.07);
+    border-right: 1px solid #d9e6df;
+    color: var(--hero-green-900);
+    display: inline-flex;
+    font-size: 0.92rem;
+    font-weight: 800;
+    padding: 0 0.85rem;
   }
 
   &__demo-meta {
@@ -283,6 +373,10 @@
 
     &__stats,
     &__demo-meta {
+      grid-template-columns: 1fr;
+    }
+
+    &__form-row {
       grid-template-columns: 1fr;
     }
   }

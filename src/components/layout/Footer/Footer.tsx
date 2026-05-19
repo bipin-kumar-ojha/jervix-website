@@ -20,7 +20,7 @@ const Footer = () => (
     <div className="footer__container">
       <div className="footer__brand">
         <a href="/" className="footer__logo" aria-label="Jervix home">
-          <img src="/assets/logo.png" alt="Jervix" />
+          <img src="/assets/jervix-logo.png" alt="Jervix" />
         </a>
 
         <p>

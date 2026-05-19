@@ -17,7 +17,7 @@ const Header = () => {
     <header className="header">
       <div className="header__container">
         <a href="/" className="header__logo" aria-label="Jervix home">
-          <img src="/assets/logo.png" alt="Jervix" />
+          <img src="/assets/jervix-logo.png" alt="Jervix" />
         </a>
 
         <nav className="header__nav" aria-label="Primary navigation">
@@ -31,10 +31,10 @@ const Header = () => {
         </nav>
 
         <div className="header__actions">
-          <a href="#pricing" className="header__link-button">
+          <a href="#pricingSection" className="header__link-button">
             View Plans
           </a>
-          <a href="#demo" className="header__button">
+          <a href="#demo" className="header__button" data-request-demo>
             Request Demo
           </a>
         </div>
@@ -89,7 +89,7 @@ const Header = () => {
           <a href="#pricing" className="header__link-button" onClick={closeMobileMenu}>
             View Plans
           </a>
-          <a href="#demo" className="header__button" onClick={closeMobileMenu}>
+          <a href="#demo" className="header__button" onClick={closeMobileMenu} data-request-demo>
             Request Demo
           </a>
         </div>

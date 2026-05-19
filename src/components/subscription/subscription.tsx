@@ -15,7 +15,7 @@ const Subscription = () => (
         </p>
 
         <div className="subscription__actions">
-          <button className="subscription__btn subscription__btn--primary">
+          <button className="subscription__btn subscription__btn--primary" data-request-demo>
             Request Demo <span className="subscription__btn-arrow">→</span>
           </button>
 

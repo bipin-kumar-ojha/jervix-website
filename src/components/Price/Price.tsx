@@ -52,7 +52,7 @@ const plans = [
 ];
 
 const Price = () => (
-  <section className="pricing">
+  <section className="pricing" id="pricingSection">
     <div className="pricing__header">
       <span className="pricing__badge">Pricing Plans</span>
       <h2 className="pricing__title">Simple Starter Plans for Growing Teams</h2>

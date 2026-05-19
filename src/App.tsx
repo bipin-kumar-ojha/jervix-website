@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Footer from './components/layout/Footer/Footer';
 import BlogDetail from './pages/BlogDetail/BlogDetail';
+import RequestDemo from './components/RequestDemo/RequestDemo';
 
 function App() {
  
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
       </Routes>
+      <RequestDemo />
       <Footer/>
     </>
   )
