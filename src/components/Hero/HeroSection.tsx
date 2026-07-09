@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import {
-  employeeSizes,
   requestDemoSuccessMessage,
+  serviceInterests,
   submitWebsiteLead,
   type SubmitStatus,
 } from '../RequestDemo/requestDemoApi';
@@ -132,11 +132,11 @@ export default function HeroSection() {
                 </div>
 
                 <label>
-                  Employee size
-                  <select name="employeeSize" defaultValue="" required>
-                    <option value="" disabled>Select employee size</option>
-                    {employeeSizes.map((size) => (
-                      <option key={size}>{size}</option>
+                  Service you need
+                  <select name="serviceInterest" defaultValue="" required>
+                    <option value="" disabled>Select a service</option>
+                    {serviceInterests.map((service) => (
+                      <option key={service}>{service}</option>
                     ))}
                   </select>
                 </label>

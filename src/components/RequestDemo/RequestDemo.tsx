@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { FormEvent, MouseEvent as ReactMouseEvent } from 'react';
 import {
-  employeeSizes,
   requestDemoSuccessMessage,
+  serviceInterests,
   submitWebsiteLead,
   type SubmitStatus,
 } from './requestDemoApi';
@@ -15,13 +15,13 @@ export default function RequestDemo() {
   const [submitMessage, setSubmitMessage] = useState('');
   const dialogRef = useRef<HTMLDivElement>(null);
 
-  const closePopup = () => {
+  const closePopup = useCallback(() => {
     if (isSubmitting) {
       return;
     }
 
     setIsOpen(false);
-  };
+  }, [isSubmitting]);
 
   useEffect(() => {
     const openFromDemoTrigger = (event: MouseEvent) => {
@@ -66,7 +66,7 @@ export default function RequestDemo() {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', closeOnEscape);
     };
-  }, [isOpen, isSubmitting]);
+  }, [isOpen, isSubmitting, closePopup]);
 
   const handleOverlayClick = (event: ReactMouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
@@ -124,17 +124,17 @@ export default function RequestDemo() {
 
         <div className="request-demo__content">
           <div className="request-demo__intro">
-            <span className="request-demo__eyebrow">Request Demo</span>
-            <h2 id="request-demo-title">See how Jervix fits your organization.</h2>
+            <span className="request-demo__eyebrow">Service Consultation</span>
+            <h2 id="request-demo-title">Tell us what you want to build or grow.</h2>
             <p>
-              Share a few details and our team will help you map Jervix to your
-              structure, teams, projects, and rollout plan.
+              Share your requirement and our team will help you choose the right approach for web,
+              marketing, blockchain, mobile app, AI, or SaaS development.
             </p>
 
             <div className="request-demo__highlights" aria-label="Demo highlights">
-              <span>Organization setup</span>
-              <span>Role-based access</span>
-              <span>Project tracking</span>
+              <span>Service-fit consultation</span>
+              <span>Scope and estimate guidance</span>
+              <span>Clear next-step planning</span>
             </div>
           </div>
 
@@ -171,19 +171,29 @@ export default function RequestDemo() {
               </label>
 
               <label>
-                Employee size
-                <select name="employeeSize" defaultValue="" required>
+                Service you need
+                <select name="serviceInterest" defaultValue="" required>
                   <option value="" disabled>
-                    Select employee size
+                    Select a service
                   </option>
-                  {employeeSizes.map((size) => (
-                    <option key={size}>{size}</option>
+                  {serviceInterests.map((service) => (
+                    <option key={service}>{service}</option>
                   ))}
                 </select>
               </label>
 
+              <label>
+                Project requirement
+                <textarea
+                  name="projectBrief"
+                  placeholder="Tell us about your goal, current challenge, or the solution you want to build."
+                  rows={4}
+                  required
+                />
+              </label>
+
               <button className="request-demo__submit" type="submit">
-                {isSubmitting ? 'Submitting...' : 'Submit Request'}
+                {isSubmitting ? 'Submitting...' : 'Request Consultation'}
               </button>
             </fieldset>
 

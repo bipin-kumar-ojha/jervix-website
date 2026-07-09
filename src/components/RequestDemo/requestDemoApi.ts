@@ -1,12 +1,15 @@
-export const employeeSizes = [
-  '1-25 employees',
-  '26-100 employees',
-  '101-500 employees',
-  '500+ employees',
+export const serviceInterests = [
+  'Web Development',
+  'Digital Marketing',
+  'Blockchain Development',
+  'Mobile App Development',
+  'AI Development',
+  'SaaS Development',
+  'Not sure yet',
 ];
 
 export const requestDemoSuccessMessage =
-  'Thank you for your interest. Our team will review your details and contact you shortly to schedule your demo.';
+  'Thank you for sharing your project details. Our team will review your service requirement and contact you shortly with the next steps.';
 
 const defaultWebsiteLeadEndpoint = import.meta.env.DEV
   ? 'http://localhost:3000/api/website-leads'
@@ -35,7 +38,8 @@ export async function submitWebsiteLead(form: HTMLFormElement) {
       name: String(formData.get('name') || '').trim(),
       email: String(formData.get('email') || '').trim(),
       phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
-      employeeSize: String(formData.get('employeeSize') || '').trim(),
+      serviceInterest: String(formData.get('serviceInterest') || '').trim(),
+      projectBrief: String(formData.get('projectBrief') || '').trim(),
     }),
   });
 

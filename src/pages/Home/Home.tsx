@@ -1,26 +1,26 @@
-import HeroSection from "../../components/Hero/HeroSection";
-import FourBlock from "../../components/FourBlockSection/FourBlock";
-import Featurex from "../../components/Features/Featurex";
-import InfoGrid from "../../components/InfoGrid/InfoGrid";
-import Blog from "../../components/blog/blog";
-import Subscription from "../../components/subscription/subscription";
-import Price from "../../components/Price/Price";
-// import Services from "../../components/Services/services";
-import ImageContentBlock from "../../components/imageContentBlock/ImageContentBlock";
-import ProductView from "../../components/productView/ProductView";
+import AboutSection from "../../components/HomeSections/AboutSection";
+import ClientStrip from "../../components/HomeSections/ClientStrip";
+import HomeHero from "../../components/HomeSections/HomeHero";
+import IndustriesSection from "../../components/HomeSections/IndustriesSection";
+import ProcessSection from "../../components/HomeSections/ProcessSection";
+import ServicesSection from "../../components/HomeSections/ServicesSection";
+import StatsBand from "../../components/HomeSections/StatsBand";
+import TechStackSection from "../../components/HomeSections/TechStackSection";
+import ValuePillarsSection from "../../components/HomeSections/ValuePillarsSection";
+import "./Home.scss";
+
 export default function Home() {
   return (
-    <>
-     <HeroSection/>
-     <FourBlock/>
-     <ProductView/>
-     <Featurex/>
-     {/* <Services/> */}
-     <ImageContentBlock/>
-     <InfoGrid/>
-     <Price/>
-     <Blog/>
-     <Subscription/>
-    </>
+    <main className="home-redesign">
+      <HomeHero />
+      <ClientStrip />
+      <AboutSection />
+      <StatsBand />
+      <ServicesSection />
+      <ProcessSection />
+      <ValuePillarsSection />
+      <IndustriesSection />
+      <TechStackSection />
+    </main>
   );
 }

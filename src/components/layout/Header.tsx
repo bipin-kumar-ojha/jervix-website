@@ -1,11 +1,43 @@
 import '../layout/Header.scss';
 import { useState } from 'react';
 
-const navLinks = [
-  { label: 'Platform', href: '#platform' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Resources', href: '#resources' },
-  { label: 'Pricing', href: '#pricing' },
+const services = [
+  {
+    icon: '/assets/mega-icons/web-color.svg',
+    label: 'Web Development',
+    href: '/services/web-development',
+    description: 'Websites, web apps, dashboards, and scalable platforms.',
+  },
+  {
+    icon: '/assets/mega-icons/marketing-color.svg',
+    label: 'Digital Marketing',
+    href: '/services/digital-marketing',
+    description: 'SEO, campaigns, content, analytics, and growth systems.',
+  },
+  {
+    icon: '/assets/mega-icons/blockchain-color.svg',
+    label: 'Blockchain Development',
+    href: '/services',
+    description: 'Smart contracts, dApps, tokens, and Web3 integrations.',
+  },
+  {
+    icon: '/assets/mega-icons/mobile-color.svg',
+    label: 'Mobile App Development',
+    href: '/services/mobile-app-development',
+    description: 'Native and cross-platform apps with polished UX.',
+  },
+  {
+    icon: '/assets/mega-icons/ai-color.svg',
+    label: 'AI Development',
+    href: '/services/ai-development',
+    description: 'AI assistants, automation, prediction, and data products.',
+  },
+  {
+    icon: '/assets/mega-icons/saas-color.svg',
+    label: 'SaaS Development',
+    href: '/services/saas-development',
+    description: 'Subscription platforms, portals, admin systems, and cloud apps.',
+  },
 ];
 
 const Header = () => {
@@ -17,25 +49,54 @@ const Header = () => {
     <header className="header">
       <div className="header__container">
         <a href="/" className="header__logo" aria-label="Jervix home">
-          <img src="/assets/jervix-logo.png" alt="Jervix" />
+          <img src="/assets/logo.png" alt="Jervix" />
         </a>
 
         <nav className="header__nav" aria-label="Primary navigation">
           <ul>
-            {navLinks.map((link) => (
-              <li key={link.label}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/products">Products</a>
+            </li>
+            <li className="header__nav-item--mega">
+              <a href="/services" aria-haspopup="true">
+                Services
+                <span className="header__chevron" aria-hidden="true" />
+              </a>
+              <div className="header__mega-menu" role="menu">
+                <div className="header__mega-intro">
+                  <span>Services</span>
+                  <p>Digital solutions built around your growth goals.</p>
+                </div>
+                <div className="header__mega-links">
+                  {services.map((service) => (
+                    <a href={service.href} key={service.label} role="menuitem">
+                      <span className="header__mega-icon">
+                        <img src={service.icon} alt="" />
+                      </span>
+                      <span>
+                        <strong>{service.label}</strong>
+                        <small>{service.description}</small>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="/career">Career</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
           </ul>
         </nav>
 
         <div className="header__actions">
-          <a href="#pricingSection" className="header__link-button">
-            View Plans
-          </a>
           <a href="#demo" className="header__button" data-request-demo>
-            Request Demo
+            Get Quote
           </a>
         </div>
 
@@ -71,26 +132,44 @@ const Header = () => {
         </div>
 
         <ul className="header__mobile-list">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a href={link.href} onClick={closeMobileMenu}>
-                {link.label}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a href="/about" onClick={closeMobileMenu}>About Us</a>
+          </li>
+          <li>
+            <a href="/products" onClick={closeMobileMenu}>Products</a>
+          </li>
+          <li>
+            <details className="header__mobile-services" open>
+              <summary>
+                Services
+                <span className="header__chevron" aria-hidden="true" />
+              </summary>
+              <div>
+                {services.map((service) => (
+                  <a href={service.href} key={service.label} onClick={closeMobileMenu}>
+                    <img src={service.icon} alt="" />
+                    {service.label}
+                  </a>
+                ))}
+              </div>
+            </details>
+          </li>
+          <li>
+            <a href="/career" onClick={closeMobileMenu}>Career</a>
+          </li>
+          <li>
+            <a href="/contact" onClick={closeMobileMenu}>Contact</a>
+          </li>
         </ul>
 
         <div className="header__mobile-card">
-          <span>Starter from ₹1,999/month</span>
-          <p>Manage organization setup, projects, tasks, budgets, and performance.</p>
+          <span>Digital services partner</span>
+          <p>Web, mobile, blockchain, AI, SaaS, and digital marketing solutions.</p>
         </div>
 
         <div className="header__mobile-actions">
-          <a href="#pricing" className="header__link-button" onClick={closeMobileMenu}>
-            View Plans
-          </a>
           <a href="#demo" className="header__button" onClick={closeMobileMenu} data-request-demo>
-            Request Demo
+            Get Quote
           </a>
         </div>
       </nav>
