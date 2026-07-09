@@ -3,15 +3,19 @@ import type { FormEvent, MouseEvent as ReactMouseEvent } from 'react';
 import {
   careerEnquirySuccessMessage,
   careerRoles,
+  organizationSizes,
+  productEnquirySuccessMessage,
+  productEnquiryTypes,
   requestDemoSuccessMessage,
   serviceInterests,
   submitCareerLead,
+  submitProductLead,
   submitWebsiteLead,
   type SubmitStatus,
 } from './requestDemoApi';
 import './RequestDemo.scss';
 
-type EnquiryMode = 'consultation' | 'career';
+type EnquiryMode = 'consultation' | 'career' | 'product';
 
 export default function RequestDemo() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,14 +36,20 @@ export default function RequestDemo() {
   useEffect(() => {
     const openFromDemoTrigger = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null;
-      const trigger = target?.closest<HTMLElement>('a[href="#demo"], [data-request-demo], [data-career-enquiry]');
+      const trigger = target?.closest<HTMLElement>('a[href="#demo"], [data-request-demo], [data-career-enquiry], [data-product-enquiry]');
 
       if (!trigger) {
         return;
       }
 
       event.preventDefault();
-      setEnquiryMode(trigger.hasAttribute('data-career-enquiry') ? 'career' : 'consultation');
+      setEnquiryMode(
+        trigger.hasAttribute('data-career-enquiry')
+          ? 'career'
+          : trigger.hasAttribute('data-product-enquiry')
+            ? 'product'
+            : 'consultation',
+      );
       setSubmitStatus('idle');
       setSubmitMessage('');
       setIsOpen(true);
@@ -92,6 +102,8 @@ export default function RequestDemo() {
     try {
       if (enquiryMode === 'career') {
         await submitCareerLead(form);
+      } else if (enquiryMode === 'product') {
+        await submitProductLead(form);
       } else {
         await submitWebsiteLead(form);
       }
@@ -100,6 +112,8 @@ export default function RequestDemo() {
       setSubmitMessage(
         enquiryMode === 'career'
           ? careerEnquirySuccessMessage
+          : enquiryMode === 'product'
+            ? productEnquirySuccessMessage
           : requestDemoSuccessMessage,
       );
     } catch (error) {
@@ -141,16 +155,24 @@ export default function RequestDemo() {
         <div className="request-demo__content">
           <div className="request-demo__intro">
             <span className="request-demo__eyebrow">
-              {enquiryMode === 'career' ? 'Career Enquiry' : 'Service Consultation'}
+              {enquiryMode === 'career'
+                ? 'Career Enquiry'
+                : enquiryMode === 'product'
+                  ? 'Jervix One Enquiry'
+                  : 'Service Consultation'}
             </span>
             <h2 id="request-demo-title">
               {enquiryMode === 'career'
                 ? 'Apply for an internship role at Jervix.'
+                : enquiryMode === 'product'
+                  ? 'Tell us how Jervix One can support your team.'
                 : 'Tell us what you want to build or grow.'}
             </h2>
             <p>
               {enquiryMode === 'career'
                 ? 'Share your preferred role, skills, portfolio or resume link, and availability. Our team will review your profile for the current internship openings.'
+                : enquiryMode === 'product'
+                  ? 'Use this form for Jervix One demos, pricing, feature-fit questions, implementation support, or product-related enquiries.'
                 : 'Share your requirement and our team will help you choose the right approach for web, marketing, blockchain, mobile app, AI, or SaaS development.'}
             </p>
 
@@ -160,6 +182,12 @@ export default function RequestDemo() {
                   <span>Internship role enquiry</span>
                   <span>Profile review</span>
                   <span>Next-step coordination</span>
+                </>
+              ) : enquiryMode === 'product' ? (
+                <>
+                  <span>Jervix One demo guidance</span>
+                  <span>Product-fit discussion</span>
+                  <span>Implementation planning</span>
                 </>
               ) : (
                 <>
@@ -225,9 +253,9 @@ export default function RequestDemo() {
                   <label>
                     Resume / portfolio link
                     <input
-                      type="url"
+                      type="text"
                       name="portfolio"
-                      placeholder="https://drive.google.com/..."
+                      placeholder="Optional: resume, portfolio, Drive link, or LinkedIn"
                     />
                   </label>
 
@@ -247,6 +275,79 @@ export default function RequestDemo() {
                       name="message"
                       placeholder="Tell us why you are interested in this internship and your availability."
                       rows={3}
+                      required
+                    />
+                  </label>
+                </>
+              ) : enquiryMode === 'product' ? (
+                <>
+                  <label>
+                    Organization name
+                    <input type="text" name="organizationName" placeholder="Your organization" required />
+                  </label>
+
+                  <label>
+                    Your name
+                    <input type="text" name="name" placeholder="Your full name" required />
+                  </label>
+
+                  <label>
+                    Email
+                    <input type="email" name="email" placeholder="you@company.com" required />
+                  </label>
+
+                  <label>
+                    Phone
+                    <span className="request-demo__phone-field">
+                      <span className="request-demo__phone-prefix">+91</span>
+                      <input
+                        type="tel"
+                        name="phone"
+                        inputMode="numeric"
+                        placeholder="98765 43210"
+                        aria-label="Phone number"
+                        required
+                      />
+                    </span>
+                  </label>
+
+                  <label>
+                    Product enquiry type
+                    <select name="enquiryType" defaultValue="" required>
+                      <option value="" disabled>
+                        Select enquiry type
+                      </option>
+                      {productEnquiryTypes.map((type) => (
+                        <option key={type}>{type}</option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label>
+                    Organization size
+                    <select name="organizationSize" defaultValue="">
+                      <option value="">Select organization size</option>
+                      {organizationSizes.map((size) => (
+                        <option key={size}>{size}</option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label>
+                    Expected timeline
+                    <input
+                      type="text"
+                      name="timeline"
+                      placeholder="Example: This month, next quarter, exploring"
+                    />
+                  </label>
+
+                  <label>
+                    Product requirement
+                    <textarea
+                      name="requirement"
+                      placeholder="Tell us what you want to know about Jervix One, your team workflow, modules needed, or implementation questions."
+                      rows={4}
                       required
                     />
                   </label>
@@ -312,6 +413,8 @@ export default function RequestDemo() {
                   ? 'Submitting...'
                   : enquiryMode === 'career'
                     ? 'Submit Career Enquiry'
+                    : enquiryMode === 'product'
+                      ? 'Submit Jervix One Enquiry'
                     : 'Request Consultation'}
               </button>
             </fieldset>

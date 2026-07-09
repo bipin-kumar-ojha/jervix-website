@@ -20,7 +20,7 @@ export default function HomeHero() {
       </div>
 
       <div className="home-hero__visual" aria-hidden="true">
-        <img src="/assets/jervix-ai-hero.png" alt="" />
+        <img src="/assets/jervix-home-culture-trust-hero.png" alt="" />
       </div>
     </section>
   );

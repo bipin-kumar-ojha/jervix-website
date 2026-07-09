@@ -28,6 +28,7 @@ type HeaderMenuPageData = {
   stats: PageStat[];
   featureEyebrow: string;
   featureTitle: string;
+  featureDescription?: string;
   features: PageCard[];
   spotlightTitle: string;
   spotlightText: string;
@@ -140,20 +141,26 @@ const pageData: Record<string, HeaderMenuPageData> = {
     ],
     featureEyebrow: "Jervix One",
     featureTitle: "A platform for structure, accountability, and day-to-day execution.",
+    featureDescription:
+      "Bring people, responsibilities, activity, and workflow visibility into one clean operating layer for everyday team execution.",
     features: [
       {
+        icon: "/assets/jervix-icon/role-management-icon.png",
         title: "Team and role clarity",
         description: "Create cleaner ownership across departments, teams, designations, and workflows.",
       },
       {
+        icon: "/assets/jervix-icon/activity-logs-icon.png",
         title: "Activity tracking",
         description: "Keep important work visible with records, logs, updates, and useful operational context.",
       },
       {
+        icon: "/assets/jervix-icon/task-management-icon.png",
         title: "Workflow support",
         description: "Bring task management, reporting, and process transparency into a single operating system.",
       },
       {
+        icon: "/assets/workflow-icons/launch-color.svg",
         title: "Custom product enquiries",
         description: "Need a different product or module? Share your requirement and we will discuss the next step.",
       },
@@ -337,16 +344,17 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
             <a
               href="#demo"
               className="menu-page__button menu-page__button--primary"
-              data-request-demo={data.slug === "career" ? undefined : true}
+              data-request-demo={data.slug === "career" || data.slug === "products" ? undefined : true}
               data-career-enquiry={data.slug === "career" ? true : undefined}
+              data-product-enquiry={data.slug === "products" ? true : undefined}
             >
               {data.primaryAction}
             </a>
             <a
               href={data.slug === "contact" ? "mailto:info@jervix.com" : data.slug === "about" ? "/services" : "#demo"}
               className="menu-page__button menu-page__button--secondary"
-              data-request-demo={data.slug === "products" ? true : undefined}
               data-career-enquiry={data.slug === "career" ? true : undefined}
+              data-product-enquiry={data.slug === "products" ? true : undefined}
             >
               {data.secondaryAction}
             </a>
@@ -391,6 +399,7 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
         <div className="menu-page__section-head">
           <span>{data.featureEyebrow}</span>
           <h2>{data.featureTitle}</h2>
+          {data.featureDescription ? <p>{data.featureDescription}</p> : null}
         </div>
         <div className="menu-page__feature-grid">
           {data.features.map((feature) => (
@@ -417,8 +426,9 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
           <p>{data.spotlightText}</p>
           <a
             href="#demo"
-            data-request-demo={data.slug === "career" ? undefined : true}
+            data-request-demo={data.slug === "career" || data.slug === "products" ? undefined : true}
             data-career-enquiry={data.slug === "career" ? true : undefined}
+            data-product-enquiry={data.slug === "products" ? true : undefined}
           >
             Send Enquiry
           </a>
@@ -433,10 +443,15 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
         </div>
         <a
           href="#demo"
-          data-request-demo={data.slug === "career" ? undefined : true}
+          data-request-demo={data.slug === "career" || data.slug === "products" ? undefined : true}
           data-career-enquiry={data.slug === "career" ? true : undefined}
+          data-product-enquiry={data.slug === "products" ? true : undefined}
         >
-          {data.slug === "career" ? "Submit Career Enquiry" : "Request Consultation"}
+          {data.slug === "career"
+            ? "Submit Career Enquiry"
+            : data.slug === "products"
+              ? "Submit Jervix One Enquiry"
+              : "Request Consultation"}
         </a>
       </section>
     </main>

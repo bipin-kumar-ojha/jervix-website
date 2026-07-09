@@ -35,7 +35,8 @@
   }
 }
 
-.request-demo__dialog[data-enquiry-mode="career"] {
+.request-demo__dialog[data-enquiry-mode="career"],
+.request-demo__dialog[data-enquiry-mode="product"] {
   max-width: 860px;
   width: min(100%, 860px);
 }

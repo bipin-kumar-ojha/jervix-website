@@ -25,6 +25,26 @@ export const careerRoles = [
 export const careerEnquirySuccessMessage =
   'Thank you for sharing your career enquiry. Our team will review your profile and contact you if there is a suitable next step.';
 
+export const productEnquiryTypes = [
+  'Jervix One demo',
+  'Jervix One pricing',
+  'Jervix One implementation',
+  'Jervix One feature fit',
+  'Custom product requirement',
+];
+
+export const organizationSizes = [
+  '1-10 employees',
+  '11-50 employees',
+  '51-200 employees',
+  '201-500 employees',
+  '500+ employees',
+  'Not sure yet',
+];
+
+export const productEnquirySuccessMessage =
+  'Thank you for your Jervix One enquiry. Our product team will review your requirement and contact you with the next step.';
+
 const defaultWebsiteLeadEndpoint = import.meta.env.DEV
   ? 'http://localhost:3000/api/website-leads'
   : 'https://api.jervix.com/api/website-leads';
@@ -99,5 +119,43 @@ export async function submitCareerLead(form: HTMLFormElement) {
 
   if (!response.ok) {
     throw new Error(result?.message || 'Unable to submit your career enquiry right now.');
+  }
+}
+
+export async function submitProductLead(form: HTMLFormElement) {
+  const formData = new FormData(form);
+  const phone = String(formData.get('phone') || '').trim();
+  const enquiryType = String(formData.get('enquiryType') || '').trim();
+  const organizationSize = String(formData.get('organizationSize') || '').trim();
+  const timeline = String(formData.get('timeline') || '').trim();
+  const requirement = String(formData.get('requirement') || '').trim();
+
+  const response = await fetch(websiteLeadEndpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      leadType: 'product',
+      productName: 'Jervix One',
+      organizationName: String(formData.get('organizationName') || '').trim(),
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
+      serviceInterest: `Jervix One - ${enquiryType}`,
+      projectBrief: [
+        'Product: Jervix One',
+        `Enquiry type: ${enquiryType}`,
+        organizationSize ? `Organization size: ${organizationSize}` : '',
+        timeline ? `Timeline: ${timeline}` : '',
+        requirement ? `Requirement: ${requirement}` : '',
+      ].filter(Boolean).join('\n'),
+    }),
+  });
+
+  const result = await response.json().catch(() => null) as LeadResponse | null;
+
+  if (!response.ok) {
+    throw new Error(result?.message || 'Unable to submit your Jervix One enquiry right now.');
   }
 }

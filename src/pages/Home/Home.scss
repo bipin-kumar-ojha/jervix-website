@@ -140,7 +140,7 @@
 }
 
 .home-hero__visual::before {
-  background: linear-gradient(120deg, #ffffff 0 27%, transparent 27% 100%);
+  background: linear-gradient(120deg, #f6fbfe 0 27%, #a78a8a00 27% 100%);
   content: "";
   inset: 0;
   position: absolute;
@@ -156,36 +156,120 @@
 }
 
 .client-strip {
-  align-items: center;
-  background: #ffffff;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(15, 49, 87, 0.08), transparent 26%),
+    linear-gradient(90deg, #ffffff 0%, #f6fbff 50%, #ffffff 100%);
   border-top: 1px solid rgba(17, 19, 26, 0.06);
+  border-bottom: 1px solid rgba(17, 19, 26, 0.06);
   box-shadow: 0 -10px 30px rgba(17, 19, 26, 0.04);
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(6, minmax(160px, 1fr));
   overflow: hidden;
-  padding-block: 1.05rem;
+  padding-block: 1rem;
+}
+
+.client-strip__inner {
+  align-items: center;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 1fr);
+}
+
+.client-strip__intro {
+  border-right: 1px solid rgba(15, 49, 87, 0.1);
+  padding-right: 1.25rem;
+}
+
+.client-strip__intro span {
+  color: var(--brand);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.32rem;
+  text-transform: uppercase;
+}
+
+.client-strip__intro strong {
+  color: #11131a;
+  display: block;
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  line-height: 1.28;
+}
+
+.client-strip__carousel {
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.client-strip__carousel::before,
+.client-strip__carousel::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(2rem, 8vw, 6rem);
+  z-index: 2;
+}
+
+.client-strip__carousel::before {
+  background: linear-gradient(90deg, #f9fdff, rgba(249, 253, 255, 0));
+  left: 0;
+}
+
+.client-strip__carousel::after {
+  background: linear-gradient(270deg, #ffffff, rgba(255, 255, 255, 0));
+  right: 0;
+}
+
+.client-strip__track {
+  align-items: center;
+  display: flex;
+  gap: 0.85rem;
+  width: max-content;
+  animation: clientStripScroll 30s linear infinite;
+}
+
+.client-strip:hover .client-strip__track {
+  animation-play-state: paused;
 }
 
 .client-strip a {
   align-items: center;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 49, 87, 0.09);
+  border-radius: 999px;
   color: #252936;
-  display: flex;
-  font-size: clamp(0.95rem, 1.2vw, 1.12rem);
-  font-weight: 900;
-  gap: 0.85rem;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  font-weight: 820;
+  gap: 0.7rem;
   min-width: 0;
+  padding: 0.5rem 0.9rem 0.5rem 0.55rem;
   text-decoration: none;
   white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(15, 49, 87, 0.06);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.client-strip a:hover {
+  border-color: rgba(15, 49, 87, 0.18);
+  box-shadow: 0 14px 30px rgba(15, 49, 87, 0.09);
+  color: var(--brand);
+  transform: translateY(-2px);
 }
 
 .client-strip__icon {
   align-items: center;
+  background: #eef7ff;
+  border-radius: 999px;
   display: inline-flex;
   flex: 0 0 auto;
-  height: 42px;
+  height: 44px;
   justify-content: center;
-  width: 42px;
+  padding: 0.34rem;
+  width: 44px;
 }
 
 .client-strip__icon img {
@@ -195,8 +279,24 @@
   width: 100%;
 }
 
-.client-strip span {
-  color: #252936;
+.client-strip__sr-list {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@keyframes clientStripScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.425rem));
+  }
 }
 
 .section {
@@ -1030,13 +1130,22 @@
   }
 
   .client-strip {
-    display: flex;
-    overflow-x: auto;
-    padding-inline: 1rem;
+    padding-block: 1rem;
   }
 
-  .client-strip a {
-    flex: 0 0 auto;
+  .client-strip__inner {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .client-strip__intro {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  .client-strip__carousel::before,
+  .client-strip__carousel::after {
+    width: 2rem;
   }
 
   .about-section,
@@ -1076,6 +1185,16 @@
 
   .contact-cta::before {
     inset: 45% 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-strip__carousel {
+    overflow-x: auto;
+  }
+
+  .client-strip__track {
+    animation: none;
   }
 }
 

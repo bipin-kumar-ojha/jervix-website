@@ -160,12 +160,14 @@ export const industries = [
 ];
 
 export const clientSolutions = [
-  { icon: "/assets/generated-icons/strategy.svg", label: "Strategy" },
-  { icon: "/assets/generated-icons/web.svg", label: "Web Platforms" },
-  { icon: "/assets/generated-icons/mobile.svg", label: "Mobile Apps" },
-  { icon: "/assets/generated-icons/ai.svg", label: "AI Solutions" },
-  { icon: "/assets/generated-icons/blockchain.svg", label: "Blockchain" },
-  { icon: "/assets/generated-icons/marketing.svg", label: "Marketing Growth" },
+  { icon: "/assets/workflow-icons/strategy-color.svg", label: "Clear Digital Strategy" },
+  { icon: "/assets/mega-icons/web-color.svg", label: "Conversion-Ready Websites" },
+  { icon: "/assets/mega-icons/mobile-color.svg", label: "Mobile App Experiences" },
+  { icon: "/assets/mega-icons/ai-color.svg", label: "Smart AI Automation" },
+  { icon: "/assets/mega-icons/blockchain-color.svg", label: "Trusted Web3 Systems" },
+  { icon: "/assets/mega-icons/marketing-color.svg", label: "Measurable Growth Campaigns" },
+  { icon: "/assets/workflow-icons/build-color.svg", label: "Reliable Product Delivery" },
+  { icon: "/assets/mega-icons/saas-color.svg", label: "Scalable SaaS Platforms" },
 ];
 
 export const techStackGroups = [
