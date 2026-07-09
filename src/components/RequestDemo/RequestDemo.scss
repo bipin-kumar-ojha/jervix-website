@@ -35,6 +35,11 @@
   }
 }
 
+.request-demo__dialog[data-enquiry-mode="career"] {
+  max-width: 860px;
+  width: min(100%, 860px);
+}
+
 .request-demo__close {
   align-items: center;
   background: rgba(255, 255, 255, 0.92);

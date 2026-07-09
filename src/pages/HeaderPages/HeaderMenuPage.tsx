@@ -334,13 +334,19 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
           <h1>{data.title}</h1>
           <p>{data.description}</p>
           <div className="menu-page__actions">
-            <a href="#demo" className="menu-page__button menu-page__button--primary" data-request-demo>
+            <a
+              href="#demo"
+              className="menu-page__button menu-page__button--primary"
+              data-request-demo={data.slug === "career" ? undefined : true}
+              data-career-enquiry={data.slug === "career" ? true : undefined}
+            >
               {data.primaryAction}
             </a>
             <a
               href={data.slug === "contact" ? "mailto:info@jervix.com" : data.slug === "about" ? "/services" : "#demo"}
               className="menu-page__button menu-page__button--secondary"
-              data-request-demo={data.slug === "products" || data.slug === "career" ? true : undefined}
+              data-request-demo={data.slug === "products" ? true : undefined}
+              data-career-enquiry={data.slug === "career" ? true : undefined}
             >
               {data.secondaryAction}
             </a>
@@ -409,7 +415,11 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
           <span>{data.eyebrow}</span>
           <h2>{data.spotlightTitle}</h2>
           <p>{data.spotlightText}</p>
-          <a href="#demo" data-request-demo>
+          <a
+            href="#demo"
+            data-request-demo={data.slug === "career" ? undefined : true}
+            data-career-enquiry={data.slug === "career" ? true : undefined}
+          >
             Send Enquiry
           </a>
         </div>
@@ -421,8 +431,12 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
           <h2>{data.ctaTitle}</h2>
           <p>{data.ctaText}</p>
         </div>
-        <a href="#demo" data-request-demo>
-          Request Consultation
+        <a
+          href="#demo"
+          data-request-demo={data.slug === "career" ? undefined : true}
+          data-career-enquiry={data.slug === "career" ? true : undefined}
+        >
+          {data.slug === "career" ? "Submit Career Enquiry" : "Request Consultation"}
         </a>
       </section>
     </main>
