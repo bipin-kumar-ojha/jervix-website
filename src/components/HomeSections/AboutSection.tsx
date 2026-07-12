@@ -9,15 +9,22 @@ export default function AboutSection() {
       </div>
       <div className="about-section__content">
         <p className="eyebrow">Who We Are</p>
-        <h2>Your strategic partner for intelligent digital solutions.</h2>
+        <h2>Engineering Digital Products. Building Future Talent.</h2>
         <p>
-          Jervix brings product thinking, engineering discipline, and growth strategy together. From
-          first idea to launch and optimization, we shape practical technology solutions that are built
-          around your customers, your operations, and your next stage of growth.
+          Jervix Technologies is an AI and Software Development company delivering scalable digital
+          solutions for startups, SMEs and enterprises. We build business software, web
+          applications, mobile apps, SaaS products, cloud solutions, and automation systems with a
+          practical engineering mindset.
+        </p>
+        <p>
+          Alongside our client services, we invest in developing future software professionals
+          through structured internship and mentorship programs.
         </p>
         <div className="about-section__tags" aria-label="Jervix capabilities">
-          <span>Web Development</span>
           <span>AI Development</span>
+          <span>Custom Software</span>
+          <span>SaaS Products</span>
+          <span>Cloud Solutions</span>
           <span>Mobile Apps</span>
         </div>
       </div>

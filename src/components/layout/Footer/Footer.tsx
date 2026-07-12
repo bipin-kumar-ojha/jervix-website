@@ -2,33 +2,34 @@ import "./Footer.scss";
 
 const footerColumns = [
   {
-    title: "Company",
+    title: "Quick Links",
     links: [
-      ["About Us", "/about"],
-      ["Why Jervix", "/about"],
-      ["Industries", "/services"],
-      ["Our Process", "/about"],
+      ["Services", "/services"],
+      ["Solutions", "/solutions"],
+      ["Industries", "/industries"],
+      ["About", "/about"],
+      ["Careers", "/careers"],
       ["Contact", "/contact"],
     ],
   },
   {
     title: "Services",
     links: [
-      ["Web Development", "/services/web-development"],
-      ["Digital Marketing", "/services/digital-marketing"],
-      ["Blockchain Development", "/services"],
-      ["Mobile App Development", "/services/mobile-app-development"],
       ["AI Development", "/services/ai-development"],
+      ["Custom Software", "/services/web-development"],
+      ["Web Applications", "/services/web-development"],
+      ["Mobile Applications", "/services/mobile-app-development"],
+      ["SaaS Development", "/services/saas-development"],
     ],
   },
   {
-    title: "Hire",
+    title: "Solutions",
     links: [
-      ["Frontend Developer", "/career"],
-      ["Backend Developer", "/career"],
-      ["AI Engineer", "/career"],
-      ["UI/UX Designer", "/career"],
-      ["Digital Marketer", "/career"],
+      ["Enterprise Software", "/contact"],
+      ["Cloud Solutions", "/contact"],
+      ["IT Consulting", "/contact"],
+      ["Dedicated Teams", "/contact"],
+      ["Digital Transformation", "/contact"],
     ],
   },
   {
@@ -44,11 +45,11 @@ const footerColumns = [
   {
     title: "Industries",
     links: [
-      ["Healthcare", "/services"],
-      ["Real Estate", "/services"],
-      ["Ecommerce", "/services"],
-      ["Finance", "/services"],
-      ["Education", "/services"],
+      ["Healthcare", "/industries"],
+      ["Real Estate", "/industries"],
+      ["Ecommerce", "/industries"],
+      ["Finance", "/industries"],
+      ["Education", "/industries"],
     ],
   },
   {

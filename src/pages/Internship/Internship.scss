@@ -1,0 +1,81 @@
+.internship-page { background:#fff; color:#0b0c0e; overflow:hidden; }
+.internship-page * { box-sizing:border-box; }
+.internship-page .intern-new-shell { margin:auto; width:min(calc(100% - 8vw),1560px); }
+.internship-page .internship-hero { align-items:center; background:#111820; display:flex; min-height:min(760px,calc(100vh - 82px)); overflow:hidden; padding:clamp(4rem,9vw,7rem) clamp(1.25rem,12vw,12rem); position:relative; }
+.internship-page .internship-hero::before { background:linear-gradient(90deg,rgba(5,10,14,.8),rgba(5,10,14,.55) 40%,rgba(5,10,14,.08)),linear-gradient(180deg,rgba(5,10,14,.25),rgba(5,10,14,.48)); content:""; inset:0; position:absolute; z-index:1; }
+.internship-page .internship-hero__motion { height:100%; inset:0; object-fit:cover; position:absolute; width:100%; }
+.internship-page .internship-hero__light { border-radius:50%; filter:blur(26px); opacity:.3; position:absolute; z-index:1; }
+.internship-page .internship-hero__light--one { background:#ffe391; height:210px; right:8%; top:18%; width:320px; }
+.internship-page .internship-hero__light--two { background:#5cadff; bottom:18%; height:170px; left:42%; width:260px; }
+.internship-page .internship-hero__content { max-width:1120px; position:relative; width:100%; z-index:2; }
+.internship-page .internship-hero__label { color:#fff; font-size:1.1rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
+.internship-page .internship-hero__rule { background:rgba(255,255,255,.3); display:block; height:1px; margin:1.1rem 0 2.7rem; }
+.internship-page .internship-hero .section-kicker { color:#fff; font-size:1.2rem; font-weight:700; margin:0 0 1rem; }
+.internship-page .internship-hero h1 { color:#fff; font-size:clamp(3rem,7vw,6.8rem); font-weight:380; line-height:1.05; margin:0; }
+.internship-page .internship-actions { display:flex; flex-wrap:wrap; gap:.85rem; margin-top:2rem; }
+.internship-page .internship-actions a { border:1px solid rgba(255,255,255,.5); border-radius:999px; color:#fff; font-weight:800; padding:.9rem 1.4rem; text-decoration:none; }
+.internship-page .internship-hero .internship-actions .primary-action,
+.internship-page .internship-hero .internship-actions .primary-action:hover,
+.internship-page .internship-hero .internship-actions .primary-action:focus-visible {
+  background:#fff;
+  color:#0f3157;
+  -webkit-text-fill-color:#0f3157;
+}
+.internship-page .internship-hero .internship-actions .secondary-action,
+.internship-page .internship-hero .internship-actions .secondary-action:hover,
+.internship-page .internship-hero .internship-actions .secondary-action:focus-visible {
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  -webkit-text-fill-color:#fff;
+}
+
+.intern-intro { padding:clamp(5rem,9vw,10rem) 0; }
+.intern-intro__grid { align-items:center; display:grid; gap:clamp(3rem,8vw,9rem); grid-template-columns:.85fr 1.15fr; }
+.intern-intro__copy { max-width:620px; }
+.intern-intro__copy>span { display:block; font-size:.95rem; font-weight:800; letter-spacing:.18em; margin-bottom:1.5rem; text-transform:uppercase; }
+.intern-intro h2,.headstart-section h2,.why-jervix>div>h2 { font-size:clamp(2.3rem,4.2vw,4.3rem); font-weight:400; line-height:1.1; margin:0; }
+.intern-intro p { font-size:clamp(1.15rem,1.65vw,1.65rem); font-weight:560; line-height:1.65; margin:2rem 0 0; }
+.intern-intro img { border-radius:6px; display:block; height:clamp(360px,38vw,610px); object-fit:cover; width:100%; }
+
+.headstart-section { padding:0 0 clamp(5rem,8vw,9rem) 4vw; }
+.headstart-section__heading { align-items:center; display:flex; justify-content:space-between; padding:0 5vw 3rem 0; }
+.headstart-section__controls { display:flex; gap:1.4rem; }
+.headstart-section__controls button { background:none; border:0; cursor:pointer; font-size:2.6rem; padding:.25rem; }
+.headstart-cards { display:flex; gap:1.75rem; overflow-x:auto; padding-right:4vw; scrollbar-width:none; scroll-snap-type:x mandatory; }
+.headstart-cards::-webkit-scrollbar { display:none; }
+.headstart-card { border-radius:6px; flex:0 0 min(31vw,560px); height:clamp(500px,54vw,760px); min-width:340px; overflow:hidden; position:relative; scroll-snap-align:start; }
+.headstart-card>img { height:100%; object-fit:cover; width:100%; }
+.headstart-card__shade { background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.9)); inset:0; position:absolute; }
+.headstart-card__copy { bottom:0; color:#fff; left:0; padding:clamp(1.5rem,3vw,3rem); position:absolute; right:0; }
+.headstart-card h3 { color:#fff; font-size:clamp(1.8rem,2.8vw,3rem); font-weight:400; line-height:1.2; margin:0; }
+.headstart-card p { font-size:clamp(1rem,1.4vw,1.35rem); line-height:1.55; margin:1.2rem 0; }
+.headstart-card a { color:#fff; font-size:1rem; font-weight:850; letter-spacing:.12em; text-decoration:none; text-transform:uppercase; }
+.headstart-card a span { font-size:1.8rem; margin-right:.5rem; vertical-align:-.15rem; }
+
+.why-jervix { background:#050505; color:#fff; padding:clamp(4rem,7vw,7rem) 0; }
+.why-jervix>div>h2 { color:#fff; }
+.why-jervix__tabs { display:grid; gap:2.5rem; grid-template-columns:repeat(4,1fr); margin-top:2rem; }
+.why-jervix__tabs button { background:none; border:0; border-bottom:1px solid #666; color:#aaa; cursor:pointer; font-size:clamp(1rem,1.5vw,1.35rem); padding:1rem 0; }
+.why-jervix__tabs button.is-active { border-bottom:3px solid #2c86dc; color:#fff; }
+.why-jervix__content { align-items:center; display:grid; gap:clamp(3rem,8vw,9rem); grid-template-columns:1.1fr .9fr; margin:clamp(5rem,9vw,10rem) auto 0; max-width:1320px; }
+.why-jervix__content img { border-radius:5px; height:400px; object-fit:cover; width:100%; }
+.why-jervix__content h3 { color:#fff; font-size:clamp(2rem,3.2vw,3.4rem); font-weight:400; margin:0 0 2.5rem; }
+.why-jervix__content p { font-size:clamp(1.08rem,1.55vw,1.45rem); font-weight:650; line-height:1.6; margin:0; }
+
+.intern-future { background:#1d2122; color:#fff; display:grid; grid-template-columns:42% 58%; min-height:610px; }
+.intern-future>img { height:100%; object-fit:cover; width:100%; }
+.intern-future__copy { align-self:center; padding:clamp(3rem,8vw,8rem); }
+.intern-future h2 { color:#fff; font-size:clamp(3rem,5.5vw,6.3rem); font-weight:300; line-height:1.08; margin:0; }
+.intern-future p { color:#b9b9bd; font-size:clamp(1.1rem,1.6vw,1.5rem); font-weight:650; margin:2.5rem 0; }
+.intern-future a { border:1px solid #aaa; border-radius:999px; color:#fff; display:inline-block; font-size:1.2rem; font-weight:700; padding:1rem 3rem; text-decoration:none; }
+
+@media(max-width:800px){
+  .internship-page .intern-new-shell{width:min(calc(100% - 2rem),1560px)}
+  .intern-intro__grid,.why-jervix__content,.intern-future{grid-template-columns:1fr}
+  .intern-intro__grid{gap:2.5rem}.intern-intro p{font-size:1.05rem}.intern-intro img{height:360px}
+  .headstart-section{padding-left:1rem}.headstart-section__heading{align-items:flex-end;padding-right:1rem}.headstart-section__controls{gap:.5rem}.headstart-section__controls button{font-size:2rem}
+  .headstart-card{flex-basis:84vw;height:560px}
+  .why-jervix__tabs{gap:.5rem;grid-template-columns:repeat(2,1fr)}.why-jervix__content{margin-top:4rem}.why-jervix__content img{height:300px}
+  .intern-future>img{height:390px}.intern-future__copy{padding:4rem 1.25rem 5rem}.intern-future h2{font-size:clamp(2.7rem,13vw,4rem)}
+  .internship-page .internship-hero{padding-inline:1.25rem}.internship-page .internship-actions{align-items:stretch;flex-direction:column}.internship-page .internship-actions a{text-align:center}
+}

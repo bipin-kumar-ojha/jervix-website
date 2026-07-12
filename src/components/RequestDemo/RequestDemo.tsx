@@ -156,30 +156,30 @@ export default function RequestDemo() {
           <div className="request-demo__intro">
             <span className="request-demo__eyebrow">
               {enquiryMode === 'career'
-                ? 'Career Enquiry'
+                ? 'Candidate Application'
                 : enquiryMode === 'product'
                   ? 'Jervix One Enquiry'
                   : 'Service Consultation'}
             </span>
             <h2 id="request-demo-title">
               {enquiryMode === 'career'
-                ? 'Apply for an internship role at Jervix.'
+                ? 'Apply to grow your career with Jervix.'
                 : enquiryMode === 'product'
                   ? 'Tell us how Jervix One can support your team.'
                 : 'Tell us what you want to build or grow.'}
             </h2>
             <p>
               {enquiryMode === 'career'
-                ? 'Share your preferred role, skills, portfolio or resume link, and availability. Our team will review your profile for the current internship openings.'
+                ? 'Share your preferred opportunity, skills, portfolio or resume link, and availability. Our team will review your application and contact you when there is a relevant next step.'
                 : enquiryMode === 'product'
                   ? 'Use this form for Jervix One demos, pricing, feature-fit questions, implementation support, or product-related enquiries.'
-                : 'Share your requirement and our team will help you choose the right approach for web, marketing, blockchain, mobile app, AI, or SaaS development.'}
+                : 'Share your requirement and our team will help you choose the right approach for AI, custom software, web applications, mobile apps, SaaS, cloud, or enterprise software.'}
             </p>
 
             <div className="request-demo__highlights" aria-label="Demo highlights">
               {enquiryMode === 'career' ? (
                 <>
-                  <span>Internship role enquiry</span>
+                  <span>Candidate application</span>
                   <span>Profile review</span>
                   <span>Next-step coordination</span>
                 </>
@@ -207,7 +207,7 @@ export default function RequestDemo() {
                     Applying for
                     <select name="role" defaultValue="" required>
                       <option value="" disabled>
-                        Select an internship role
+                        Select a role or initiative
                       </option>
                       {careerRoles.map((role) => (
                         <option key={role}>{role}</option>
@@ -273,7 +273,7 @@ export default function RequestDemo() {
                     Message
                     <textarea
                       name="message"
-                      placeholder="Tell us why you are interested in this internship and your availability."
+                      placeholder="Tell us why you are interested in this role or initiative and your availability."
                       rows={3}
                       required
                     />
@@ -412,7 +412,7 @@ export default function RequestDemo() {
                 {isSubmitting
                   ? 'Submitting...'
                   : enquiryMode === 'career'
-                    ? 'Submit Career Enquiry'
+                    ? 'Submit Application'
                     : enquiryMode === 'product'
                       ? 'Submit Jervix One Enquiry'
                     : 'Request Consultation'}

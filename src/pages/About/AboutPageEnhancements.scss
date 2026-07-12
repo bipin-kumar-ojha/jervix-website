@@ -1,0 +1,96 @@
+.about-journey .about-heading,
+.about-promises .about-heading {
+  margin-inline: auto;
+  max-width: 920px;
+  text-align: center;
+}
+
+.about-journey article {
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(15, 49, 87, 0.05);
+  min-height: 310px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.about-journey article:hover {
+  border-color: rgba(40, 125, 185, 0.28);
+  box-shadow: 0 22px 48px rgba(15, 49, 87, 0.11);
+  transform: translateY(-6px);
+}
+
+.about-card-icon {
+  align-items: center;
+  background: linear-gradient(145deg, #fff, #edf7fd);
+  border: 1px solid rgba(15, 49, 87, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 49, 87, 0.08);
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 70px;
+}
+
+.about-card-icon img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.about-journey h3,
+.about-promises h3 {
+  margin-top: 1.6rem;
+}
+
+.about-promises {
+  background: radial-gradient(circle at 8% 12%, rgba(40, 125, 185, 0.11), transparent 28%), linear-gradient(135deg, #f4f9fc, #fff);
+  border: 1px solid rgba(15, 49, 87, 0.09);
+  border-radius: 24px;
+  margin-bottom: clamp(6rem, 9vw, 9rem);
+  padding: clamp(3rem, 6vw, 5rem);
+}
+
+.about-promises__grid {
+  gap: 1.2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-promises article {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 49, 87, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 14px 35px rgba(15, 49, 87, 0.06);
+  min-height: 280px;
+  padding: 1.7rem;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-promises article::after {
+  background: linear-gradient(180deg, #2f8cca, #72c4da);
+  border-radius: 10px;
+  content: "";
+  inset: 1.4rem auto 1.4rem 0;
+  position: absolute;
+  width: 4px;
+}
+
+.about-promises article:hover {
+  box-shadow: 0 22px 45px rgba(15, 49, 87, 0.12);
+  transform: translateY(-5px);
+}
+
+.about-promises .about-card-icon {
+  height: 64px;
+  width: 64px;
+}
+
+@media (max-width: 1000px) {
+  .about-promises__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+  .about-promises { border-radius: 16px; padding: 2rem 1rem; }
+  .about-promises__grid { grid-template-columns: 1fr; }
+  .about-journey article, .about-promises article { min-height: auto; }
+}

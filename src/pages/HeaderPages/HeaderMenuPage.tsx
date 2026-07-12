@@ -44,79 +44,79 @@ const pageData: Record<string, HeaderMenuPageData> = {
   about: {
     slug: "about",
     eyebrow: "About Jervix",
-    title: "A Digital Partner for Practical Business Growth",
+    title: "Engineering Digital Products. Building Future Talent.",
     description:
-      "Jervix Technologies helps growing teams plan, build, launch, and improve digital products, websites, automation systems, and customer growth workflows.",
+      "Jervix Technologies is an AI and Software Development company delivering scalable digital solutions for startups, SMEs and enterprises.",
     image: "/assets/jervix-who-we-are.png",
     imageAlt: "Jervix team planning digital product workflows",
     primaryAction: "Start a Conversation",
     secondaryAction: "Explore Services",
-    introTitle: "We connect strategy, engineering, and growth execution.",
+    introTitle: "We engineer software systems that help businesses operate, scale, and modernize.",
     introText:
-      "Our work starts with business goals, user needs, and operational reality. From there we shape clean digital systems that can be launched, measured, and improved with confidence.",
+      "Our work spans AI development, custom software, web applications, mobile applications, SaaS products, cloud solutions, enterprise software, IT consulting, and dedicated development teams. Alongside our client services, we invest in developing future software professionals through structured internship and mentorship programs.",
     cards: [
       {
         icon: "/assets/workflow-icons/discovery-color.svg",
-        title: "Discovery First",
-        description: "We understand your goals, users, current systems, and constraints before proposing a solution.",
+        title: "AI and software engineering",
+        description: "We design intelligent applications, automation systems, platforms, dashboards, and integrations for real business needs.",
       },
       {
         icon: "/assets/workflow-icons/build-color.svg",
-        title: "Structured Delivery",
-        description: "Every project is planned around scope, milestones, feedback cycles, and launch readiness.",
+        title: "Structured delivery",
+        description: "Every project is planned around architecture, milestones, review cycles, quality checks, and launch readiness.",
       },
       {
         icon: "/assets/workflow-icons/launch-color.svg",
-        title: "Long-Term Support",
-        description: "We support improvements after launch so your digital investment keeps becoming more useful.",
+        title: "Long-term technology partner",
+        description: "We support improvements after launch so your digital investment keeps becoming more stable, useful, and scalable.",
       },
     ],
     stats: [
-      { value: "6+", label: "Digital service capabilities" },
-      { value: "360°", label: "Strategy to launch support" },
-      { value: "100%", label: "Custom-built approach" },
+      { value: "8+", label: "Technology capabilities" },
+      { value: "360°", label: "Discovery to launch support" },
+      { value: "AI", label: "Automation-ready engineering" },
     ],
     featureEyebrow: "How We Think",
-    featureTitle: "Technology should make work clearer, faster, and easier to scale.",
+    featureTitle: "Technology should make business systems clearer, faster, and easier to scale.",
     features: [
       {
         title: "Business-first planning",
-        description: "We connect features, content, and workflows to outcomes your team can actually measure.",
+        description: "We connect features, workflows, data, and integrations to outcomes your team can measure.",
       },
       {
-        title: "Clean product thinking",
-        description: "We keep user journeys simple while giving the backend enough structure to grow.",
+        title: "Clean product engineering",
+        description: "We keep user journeys simple while giving the architecture enough structure to grow.",
       },
       {
-        title: "Marketing-aware builds",
-        description: "We consider SEO, analytics, campaigns, conversion paths, and follow-up workflows early.",
+        title: "AI and cloud readiness",
+        description: "We plan products with automation, data structure, hosting, security, and integration needs in mind.",
       },
       {
         title: "Reliable communication",
-        description: "You get clear updates, practical recommendations, and realistic delivery expectations.",
+        description: "Clients get clear updates, practical recommendations, and realistic delivery expectations.",
       },
     ],
-    spotlightTitle: "Built for businesses that need execution, not just ideas.",
+    spotlightTitle: "Built for businesses that need dependable software execution.",
     spotlightText:
-      "Whether you need a website, SaaS platform, AI workflow, mobile app, blockchain solution, or campaign system, Jervix brings the same calm delivery discipline to the work.",
+      "Whether you need AI automation, custom software, a SaaS platform, enterprise workflow, web application, mobile app, or dedicated development support, Jervix brings structured engineering discipline to the work.",
     spotlightImage: "/assets/jervix-execution-delivery.png",
     spotlightAlt: "Digital product delivery team planning websites, AI workflows, mobile apps, and campaign systems",
-    ctaTitle: "Want to know how Jervix can support your next project?",
-    ctaText: "Tell us what you want to build and we will help you shape the right roadmap.",
+    ctaTitle: "Want to know how Jervix can support your next software project?",
+    ctaText: "Tell us what you want to build and we will help you shape the right technology roadmap.",
   },
   products: {
     slug: "products",
-    eyebrow: "Products",
-    title: "Jervix One: Our Current Product for Modern Teams",
+    eyebrow: "Solutions",
+    title: "Software Solutions for Modern Business Teams",
     description:
-      "Jervix One is built to help organizations structure work, manage teams, track activity, and improve operational visibility from one practical platform.",
+      "Jervix Technologies builds software solutions and product platforms that help organizations structure work, improve visibility, and modernize operations.",
     image: "/assets/jervix-one-product-hero.png",
     imageAlt: "Jervix One product dashboard shown on laptop and tablet devices",
-    primaryAction: "Enquire About Jervix One",
-    secondaryAction: "Discuss More Products",
-    introTitle: "One product today, more solutions shaped around real business needs.",
+    primaryAction: "Discuss a Solution",
+    secondaryAction: "Ask About Jervix One",
+    introTitle: "Product platforms and custom solutions shaped around real business needs.",
     introText:
-      "Jervix One is our current product focus. If you need product details, demos, pricing, implementation support, or want to discuss a new product idea, send us an enquiry and our team will guide you.",
+      "Jervix One is our current flagship solution. We also help companies plan custom platforms, dashboards, workflow systems, and business software around their operational requirements.",
     cards: [
       {
         icon: "/assets/jervix-icon/structure-icon.png",
@@ -139,7 +139,7 @@ const pageData: Record<string, HeaderMenuPageData> = {
       { value: "24/7", label: "Operational visibility mindset" },
       { value: "100%", label: "Enquiry-led product guidance" },
     ],
-    featureEyebrow: "Jervix One",
+    featureEyebrow: "Solutions",
     featureTitle: "A platform for structure, accountability, and day-to-day execution.",
     featureDescription:
       "Bring people, responsibilities, activity, and workflow visibility into one clean operating layer for everyday team execution.",
@@ -165,7 +165,7 @@ const pageData: Record<string, HeaderMenuPageData> = {
         description: "Need a different product or module? Share your requirement and we will discuss the next step.",
       },
     ],
-    spotlightTitle: "Interested in Jervix One or another product idea?",
+    spotlightTitle: "Interested in Jervix One or a custom software solution?",
     spotlightText:
       "We currently highlight Jervix One as our product. For product demos, rollout questions, feature fit, or future product enquiries, contact our team and we will respond with the right guidance.",
     spotlightImage: "/assets/jervix-one-implementation.png",
@@ -175,80 +175,80 @@ const pageData: Record<string, HeaderMenuPageData> = {
   },
   career: {
     slug: "career",
-    eyebrow: "Career",
-    title: "Build Useful Digital Products With a Practical Team",
+    eyebrow: "Careers",
+    title: "Build Your Career With an AI and Software Engineering Team",
     description:
-      "Jervix is hiring interns across business development, full-stack development, blockchain, Solidity, UI/UX, social media marketing, HR, and accounts.",
+      "Join Jervix Technologies to work on AI solutions, custom software, web applications, SaaS products, cloud systems, and enterprise workflows.",
     image: "/assets/jervix-career-interns-hero.png",
-    imageAlt: "Interns and mentors collaborating in a bright technology workspace",
-    primaryAction: "Send Career Enquiry",
-    secondaryAction: "Learn About Jervix",
-    introTitle: "Current internship openings at Jervix.",
+    imageAlt: "Jervix technology team collaborating in a bright software workspace",
+    primaryAction: "Apply as a Candidate",
+    secondaryAction: "View Internship Program",
+    introTitle: "Why join Jervix",
     introText:
-      "We are looking for curious interns who want hands-on exposure to real projects, team workflows, client communication, product thinking, marketing execution, and business operations.",
+      "We are building a practical engineering culture where developers, designers, consultants, and growth-focused team members can work on meaningful software systems for businesses. Our team values learning, ownership, clear communication, and steady career growth.",
     cards: [
       {
         icon: "/assets/generated-icons/web.svg",
-        title: "Full Stack Developer Intern",
-        description: "Work on frontend, backend, APIs, dashboards, and practical web application features.",
+        title: "Software engineering work",
+        description: "Build frontend, backend, APIs, dashboards, integrations, automation systems, and scalable web applications.",
       },
       {
-        icon: "/assets/mega-icons/blockchain-color.svg",
-        title: "Blockchain Developer Intern",
-        description: "Support blockchain concepts, Web3 integrations, decentralized workflows, and project research.",
+        icon: "/assets/mega-icons/ai-color.svg",
+        title: "Learning environment",
+        description: "Grow through project exposure, code reviews, technical discussions, documentation, and senior guidance.",
       },
       {
-        icon: "/assets/generated-icons/blockchain.svg",
-        title: "Solidity Developer Intern",
-        description: "Learn and assist with smart contract logic, Solidity basics, testing, and blockchain documentation.",
+        icon: "/assets/workflow-icons/strategy-color.svg",
+        title: "Career growth",
+        description: "Develop stronger product thinking, communication, delivery habits, technical depth, and leadership readiness.",
       },
     ],
     stats: [
-      { value: "8", label: "Current intern openings" },
-      { value: "360°", label: "Technology and business exposure" },
-      { value: "1:1", label: "Application enquiry review" },
+      { value: "AI", label: "Modern software projects" },
+      { value: "360°", label: "Engineering and business exposure" },
+      { value: "1:1", label: "Profile review process" },
     ],
-    featureEyebrow: "Open Roles",
-    featureTitle: "Internship roles currently open at Jervix.",
+    featureEyebrow: "Open Positions",
+    featureTitle: "Open positions across engineering, product, design, growth, and operations.",
     features: [
       {
-        icon: "/assets/generated-icons/strategy.svg",
-        title: "Business Development Executive Intern",
-        description: "Support lead research, outreach, client communication, proposal coordination, and sales follow-up.",
+        icon: "/assets/mega-icons/web-color.svg",
+        title: "Frontend Developer",
+        description: "Build responsive interfaces, dashboards, product screens, and client-facing web application experiences.",
+      },
+      {
+        icon: "/assets/generated-icons/web.svg",
+        title: "Backend Developer",
+        description: "Develop APIs, database models, business logic, integrations, authentication, and reliable service layers.",
+      },
+      {
+        icon: "/assets/mega-icons/ai-color.svg",
+        title: "AI Engineer",
+        description: "Work on automation, assistants, data workflows, model integrations, and intelligent product features.",
       },
       {
         icon: "/assets/mega-icons/mobile-color.svg",
-        title: "UI/UX Designer Intern",
-        description: "Assist with user flows, wireframes, interface layouts, design systems, and product screens.",
+        title: "Mobile App Developer",
+        description: "Create mobile applications and connected experiences for customers, employees, and field teams.",
       },
       {
         icon: "/assets/mega-icons/marketing-color.svg",
-        title: "Social Media Marketing Intern",
-        description: "Help plan posts, captions, content calendars, campaign ideas, and brand communication.",
+        title: "UI/UX Designer",
+        description: "Design user flows, wireframes, product screens, design systems, and polished digital experiences.",
       },
       {
         icon: "/assets/workflow-icons/discovery-color.svg",
-        title: "HR Intern",
-        description: "Assist with hiring coordination, candidate communication, onboarding support, and team records.",
-      },
-      {
-        icon: "/assets/jervix-icon/reporting-icon.png",
-        title: "Account Intern",
-        description: "Support invoices, expense records, basic reporting, documentation, and account coordination.",
-      },
-      {
-        icon: "/assets/mega-icons/web-color.svg",
-        title: "Full Stack, Blockchain & Solidity Interns",
-        description: "Technical interns can apply for full-stack development, blockchain development, or Solidity-focused work.",
+        title: "Business Development Executive",
+        description: "Support lead research, outreach, client communication, proposal coordination, and sales follow-up.",
       },
     ],
-    spotlightTitle: "Looking for your next role or internship?",
+    spotlightTitle: "Industry Internship Program",
     spotlightText:
-      "Share your profile, area of interest, portfolio, and availability. If there is a fit, our team will reach out with next steps.",
+      "At Jervix Technologies we believe in nurturing future software professionals through structured mentorship, practical learning and project exposure.",
     spotlightImage: "/assets/jervix-who-we-are.png",
     spotlightAlt: "Collaborative Jervix work environment",
-    ctaTitle: "Send your career enquiry to Jervix.",
-    ctaText: "Tell us your skills, interests, and the kind of work you want to grow into.",
+    ctaTitle: "Explore careers or early career initiatives at Jervix.",
+    ctaText: "Share your profile, role interest, portfolio, resume link, and availability. Our team will review your enquiry and respond when there is a relevant fit.",
   },
   contact: {
     slug: "contact",
@@ -256,8 +256,8 @@ const pageData: Record<string, HeaderMenuPageData> = {
     title: "Tell Us What You Want to Build",
     description:
       "Share your project, product, website, automation, AI, mobile app, blockchain, SaaS, or marketing requirement. We will help you plan the right next step.",
-    image: "/assets/jervix-ai-hero.png",
-    imageAlt: "Digital project consultation visual",
+    image: "/assets/jervix-contact-consultation-hero.png",
+    imageAlt: "Jervix technology consultant discussing a digital project with a client",
     primaryAction: "Request Consultation",
     secondaryAction: "Email Us",
     introTitle: "Start with a simple conversation.",
@@ -308,15 +308,16 @@ const pageData: Record<string, HeaderMenuPageData> = {
     spotlightTitle: "Prefer email?",
     spotlightText:
       "Reach us at info@jervix.com with your requirement. For faster routing, include your name, company, service interest, and a short project brief.",
-    spotlightImage: "/assets/hero-banner.jpeg",
-    spotlightAlt: "Contact and consultation workspace",
+    spotlightImage: "/assets/jervix-contact-email-section.png",
+    spotlightAlt: "Business professional composing a project enquiry email to Jervix",
     ctaTitle: "Ready to begin?",
     ctaText: "Request a consultation and we will help you convert the idea into a practical roadmap.",
   },
 };
 
 function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
-  const pageUrl = `${siteUrl}/${data.slug}`;
+  const pagePath = data.slug === "career" ? "careers" : data.slug === "products" ? "solutions" : data.slug;
+  const pageUrl = `${siteUrl}/${pagePath}`;
   const title = `${data.title} | Jervix Technologies`;
 
   return (
@@ -351,9 +352,16 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
               {data.primaryAction}
             </a>
             <a
-              href={data.slug === "contact" ? "mailto:info@jervix.com" : data.slug === "about" ? "/services" : "#demo"}
+              href={
+                data.slug === "contact"
+                  ? "mailto:info@jervix.com"
+                  : data.slug === "about"
+                    ? "/services"
+                    : data.slug === "career"
+                      ? "/careers/internship"
+                      : "#demo"
+              }
               className="menu-page__button menu-page__button--secondary"
-              data-career-enquiry={data.slug === "career" ? true : undefined}
               data-product-enquiry={data.slug === "products" ? true : undefined}
             >
               {data.secondaryAction}
@@ -395,7 +403,7 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
         ))}
       </section>
 
-      <section className="menu-page__features">
+      <section className="menu-page__features" id={data.slug === "career" ? "open-positions" : undefined}>
         <div className="menu-page__section-head">
           <span>{data.featureEyebrow}</span>
           <h2>{data.featureTitle}</h2>
@@ -409,14 +417,20 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
                   <img src={feature.icon} alt="" />
                 </span>
               ) : null}
+              {data.slug === "career" ? <span className="menu-page__role-type">Open role</span> : null}
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
+              {data.slug === "career" ? (
+                <a className="menu-page__role-action" href="#demo" data-career-enquiry>
+                  Apply now <span aria-hidden="true">→</span>
+                </a>
+              ) : null}
             </article>
           ))}
         </div>
       </section>
 
-      <section className="menu-page__spotlight">
+      <section className="menu-page__spotlight" id={data.slug === "career" ? "internship-program" : undefined}>
         <div className="menu-page__spotlight-image">
           <img src={data.spotlightImage} alt={data.spotlightAlt} />
         </div>
@@ -425,12 +439,12 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
           <h2>{data.spotlightTitle}</h2>
           <p>{data.spotlightText}</p>
           <a
-            href="#demo"
+            href={data.slug === "career" ? "/careers/internship" : "#demo"}
             data-request-demo={data.slug === "career" || data.slug === "products" ? undefined : true}
-            data-career-enquiry={data.slug === "career" ? true : undefined}
+            data-career-enquiry={undefined}
             data-product-enquiry={data.slug === "products" ? true : undefined}
           >
-            Send Enquiry
+            {data.slug === "career" ? "Learn More" : "Send Enquiry"}
           </a>
         </div>
       </section>

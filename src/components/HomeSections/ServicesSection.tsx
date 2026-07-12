@@ -5,10 +5,11 @@ export default function ServicesSection() {
     <section className="section page-container services-section" id="services">
       <div className="section__intro">
         <p className="eyebrow">Services</p>
-        <h2>What Services We Provide.</h2>
+        <h2>AI and software development services for serious business systems.</h2>
         <p>
-          A focused set of digital services designed to help you attract customers, automate
-          workflows, and build products that are ready for the future.
+          We plan, design, and engineer custom digital platforms for companies that need reliable
+          software, modern user experiences, automation, cloud infrastructure, and dedicated
+          development support.
         </p>
       </div>
 

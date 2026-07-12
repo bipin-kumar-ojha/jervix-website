@@ -1,10 +1,13 @@
 export const serviceInterests = [
-  'Web Development',
-  'Digital Marketing',
-  'Blockchain Development',
-  'Mobile App Development',
   'AI Development',
+  'Custom Software Development',
+  'Web Application Development',
+  'Mobile Application Development',
   'SaaS Development',
+  'Cloud Solutions',
+  'Enterprise Software',
+  'IT Consulting',
+  'Dedicated Development Team',
   'Not sure yet',
 ];
 
@@ -12,18 +15,19 @@ export const requestDemoSuccessMessage =
   'Thank you for sharing your project details. Our team will review your service requirement and contact you shortly with the next steps.';
 
 export const careerRoles = [
-  'Business Development Executive Intern',
-  'Full Stack Developer Intern',
-  'Blockchain Developer Intern',
-  'Solidity Developer Intern',
-  'UI/UX Designer Intern',
-  'Social Media Marketing Intern',
-  'HR Intern',
-  'Account Intern',
+  'Frontend Developer',
+  'Backend Developer',
+  'Full Stack Developer',
+  'AI Engineer',
+  'Mobile App Developer',
+  'UI/UX Designer',
+  'Business Development Executive',
+  'Digital Marketing Executive',
+  'Internship Program',
 ];
 
 export const careerEnquirySuccessMessage =
-  'Thank you for sharing your career enquiry. Our team will review your profile and contact you if there is a suitable next step.';
+  'Thank you for submitting your application. Our team will review your profile and contact you if there is a suitable next step.';
 
 export const productEnquiryTypes = [
   'Jervix One demo',

@@ -12,6 +12,48 @@ type ServicePageTemplateProps = {
   service: ServicePageData;
 };
 
+const processIcons = [
+  "/assets/workflow-icons/discovery-color.svg",
+  "/assets/workflow-icons/strategy-color.svg",
+  "/assets/workflow-icons/build-color.svg",
+  "/assets/workflow-icons/launch-color.svg",
+];
+
+const whyIcons = [
+  "/assets/jervix-icon/structure-icon.png",
+  "/assets/jervix-icon/transparency-icon.png",
+  "/assets/jervix-icon/role-management-icon.png",
+  "/assets/jervix-icon/reporting-icon.png",
+  "/assets/jervix-icon/activity-logs-icon.png",
+  "/assets/jervix-icon/task-management-icon.png",
+];
+
+function getToolIcon(tool: string) {
+  const normalizedTool = tool.toLowerCase();
+
+  if (normalizedTool.includes("ai") || normalizedTool.includes("openai") || normalizedTool.includes("automation")) {
+    return "/assets/mega-icons/ai-color.svg";
+  }
+
+  if (normalizedTool.includes("mobile") || normalizedTool.includes("react native") || normalizedTool.includes("flutter")) {
+    return "/assets/mega-icons/mobile-color.svg";
+  }
+
+  if (normalizedTool.includes("blockchain") || normalizedTool.includes("web3") || normalizedTool.includes("solidity")) {
+    return "/assets/mega-icons/blockchain-color.svg";
+  }
+
+  if (normalizedTool.includes("marketing") || normalizedTool.includes("seo") || normalizedTool.includes("campaign")) {
+    return "/assets/mega-icons/marketing-color.svg";
+  }
+
+  if (normalizedTool.includes("saas") || normalizedTool.includes("cloud") || normalizedTool.includes("api")) {
+    return "/assets/mega-icons/saas-color.svg";
+  }
+
+  return "/assets/mega-icons/web-color.svg";
+}
+
 function buildServiceSchema(service: ServicePageData, canonicalUrl: string) {
   return {
     "@context": "https://schema.org",
@@ -134,7 +176,11 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
         <div className="service-detail__steps">
           {service.process.map((step, index) => (
             <article className="service-detail__step" key={step.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div className="service-detail__step-top">
+                <span className="service-detail__step-icon">
+                  <img src={processIcons[index % processIcons.length]} alt="" />
+                </span>
+              </div>
               <h3>{step.title}</h3>
               <p>{step.description}</p>
             </article>
@@ -148,8 +194,11 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
           <h2>{service.differentiatorsTitle}</h2>
         </div>
         <div className="service-detail__grid">
-          {service.differentiators.map((item) => (
+          {service.differentiators.map((item, index) => (
             <article className="service-detail__info-card" key={item.title}>
+              <span className="service-detail__info-icon">
+                <img src={whyIcons[index % whyIcons.length]} alt="" />
+              </span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </article>
@@ -168,7 +217,12 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
         </div>
         <ul className="service-detail__tools">
           {service.tools.map((tool) => (
-            <li key={tool}>{tool}</li>
+            <li key={tool}>
+              <span className="service-detail__tool-icon">
+                <img src={getToolIcon(tool)} alt="" />
+              </span>
+              <span>{tool}</span>
+            </li>
           ))}
         </ul>
       </section>
@@ -180,10 +234,13 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
         </div>
         <div className="service-detail__faqs">
           {service.faqs.map((faq) => (
-            <article className="service-detail__faq" key={faq.question}>
-              <h3>{faq.question}</h3>
+            <details className="service-detail__faq" key={faq.question}>
+              <summary>
+                <span>{faq.question}</span>
+                <span className="service-detail__faq-toggle" aria-hidden="true" />
+              </summary>
               <p>{faq.answer}</p>
-            </article>
+            </details>
           ))}
         </div>
       </section>

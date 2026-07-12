@@ -7,7 +7,8 @@ export default function ContactCta() {
           <h2>Ready to turn your next digital idea into a real product?</h2>
           <p>
             Share your goals with Jervix. We&apos;ll map the right strategy, technology stack, launch
-            plan, and growth path for your website, app, AI, blockchain, SaaS, or marketing project.
+            plan, and growth path for your AI, custom software, web application, mobile app, SaaS,
+            cloud, or enterprise software project.
           </p>
           <div className="contact-cta__actions">
             <a href="#demo" className="primary-action" data-request-demo>
@@ -32,9 +33,9 @@ export default function ContactCta() {
             <span>Web</span>
             <span>Mobile</span>
             <span>AI</span>
-            <span>Blockchain</span>
             <span>SaaS</span>
-            <span>Marketing</span>
+            <span>Cloud</span>
+            <span>Enterprise</span>
           </div>
         </div>
       </div>

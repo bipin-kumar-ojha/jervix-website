@@ -1,53 +1,53 @@
 export const services = [
   {
+    icon: "/assets/mega-icons/ai-color.svg",
+    title: "AI Development",
+    kicker: "Intelligent business systems",
+    description:
+      "AI assistants, automation, prediction tools, and workflow intelligence built around your real business data and processes.",
+  },
+  {
     icon: "/assets/mega-icons/web-color.svg",
-    title: "Web Development",
-    kicker: "Scalable digital platforms",
+    title: "Custom Software Development",
+    kicker: "Business-specific platforms",
     description:
-      "Fast, secure websites and web apps built around your brand, conversion goals, and day-to-day operations.",
-  },
-  {
-    icon: "/assets/mega-icons/marketing-color.svg",
-    title: "Digital Marketing",
-    kicker: "Growth that compounds",
-    description:
-      "Search, social, content, and performance campaigns shaped by clear funnels, useful analytics, and creative testing.",
-  },
-  {
-    icon: "/assets/mega-icons/blockchain-color.svg",
-    title: "Blockchain Development",
-    kicker: "Trusted decentralized systems",
-    description:
-      "Smart contracts, token platforms, dApps, and Web3 integrations engineered for transparency and reliability.",
+      "Tailored web applications, portals, dashboards, APIs, and workflow systems designed for your operations.",
   },
   {
     icon: "/assets/mega-icons/mobile-color.svg",
-    title: "Mobile App Development",
-    kicker: "Products people keep using",
+    title: "Web & Mobile App Development",
+    kicker: "Products people can use anywhere",
     description:
-      "Native and cross-platform mobile applications with polished UX, practical features, and clean release workflows.",
-  },
-  {
-    icon: "/assets/mega-icons/ai-color.svg",
-    title: "AI Development",
-    kicker: "Automation with intelligence",
-    description:
-      "Custom AI assistants, workflow automation, prediction tools, and data-driven products for modern teams.",
+      "Responsive web apps and mobile experiences with clean UX, secure integrations, and release-ready engineering.",
   },
   {
     icon: "/assets/mega-icons/saas-color.svg",
-    title: "SaaS Development",
-    kicker: "Cloud-ready subscription products",
+    title: "SaaS Product Development",
+    kicker: "Cloud-ready product engineering",
     description:
-      "SaaS platforms, customer portals, admin dashboards, billing-ready workflows, and scalable cloud products.",
+      "Subscription platforms, admin systems, user roles, dashboards, integrations, billing workflows, and product roadmaps.",
+  },
+  {
+    icon: "/assets/workflow-icons/launch-color.svg",
+    title: "Cloud & Enterprise Solutions",
+    kicker: "Reliable systems at scale",
+    description:
+      "Cloud deployment, enterprise software, integrations, reporting systems, and scalable infrastructure planning.",
+  },
+  {
+    icon: "/assets/workflow-icons/strategy-color.svg",
+    title: "IT Consulting & Dedicated Teams",
+    kicker: "Engineering capacity for growth",
+    description:
+      "Technology roadmaps, architecture guidance, product planning, and dedicated developers for long-term delivery.",
   },
 ];
 
 export const stats = [
-  ["5+", "Core service verticals"],
+  ["8+", "Technology service capabilities"],
   ["360°", "Strategy to launch support"],
-  ["24/7", "Digital-first delivery mindset"],
-  ["100%", "Custom-built solutions"],
+  ["AI", "Automation-first engineering"],
+  ["100%", "Custom software approach"],
 ] as const;
 
 export const valuePillars = [
@@ -55,25 +55,25 @@ export const valuePillars = [
     icon: "/assets/workflow-icons/strategy-color.svg",
     title: "Business-First Thinking",
     description:
-      "We connect every feature to a clear business purpose, user need, or operational improvement.",
+      "We connect every feature to business goals, users, operations, cost, and measurable impact.",
   },
   {
     icon: "/assets/mega-icons/web-color.svg",
     title: "Scalable Engineering",
     description:
-      "We build clean digital foundations that can grow with new users, services, integrations, and teams.",
+      "We build maintainable applications, APIs, cloud foundations, and integrations that can grow with your company.",
   },
   {
     icon: "/assets/mega-icons/ai-color.svg",
-    title: "Smart Automation",
+    title: "AI-Ready Architecture",
     description:
-      "We use AI, data, and workflow automation where they can save time, reduce manual work, and improve decisions.",
+      "We apply AI, data, and automation where they can reduce manual work, improve decisions, and unlock new capabilities.",
   },
   {
-    icon: "/assets/mega-icons/marketing-color.svg",
-    title: "Growth-Ready Execution",
+    icon: "/assets/workflow-icons/build-color.svg",
+    title: "Dedicated Delivery Teams",
     description:
-      "We plan digital products with performance, conversion, analytics, and long-term marketing needs in mind.",
+      "We bring focused engineers, clear communication, review cycles, and delivery discipline to each project.",
   },
 ];
 
@@ -160,14 +160,14 @@ export const industries = [
 ];
 
 export const clientSolutions = [
-  { icon: "/assets/workflow-icons/strategy-color.svg", label: "Clear Digital Strategy" },
-  { icon: "/assets/mega-icons/web-color.svg", label: "Conversion-Ready Websites" },
-  { icon: "/assets/mega-icons/mobile-color.svg", label: "Mobile App Experiences" },
-  { icon: "/assets/mega-icons/ai-color.svg", label: "Smart AI Automation" },
-  { icon: "/assets/mega-icons/blockchain-color.svg", label: "Trusted Web3 Systems" },
-  { icon: "/assets/mega-icons/marketing-color.svg", label: "Measurable Growth Campaigns" },
-  { icon: "/assets/workflow-icons/build-color.svg", label: "Reliable Product Delivery" },
-  { icon: "/assets/mega-icons/saas-color.svg", label: "Scalable SaaS Platforms" },
+  { icon: "/assets/mega-icons/ai-color.svg", label: "AI Development Company" },
+  { icon: "/assets/mega-icons/web-color.svg", label: "Custom Software Development" },
+  { icon: "/assets/generated-icons/web.svg", label: "Web Application Development" },
+  { icon: "/assets/mega-icons/mobile-color.svg", label: "Mobile Application Development" },
+  { icon: "/assets/mega-icons/saas-color.svg", label: "SaaS Product Development" },
+  { icon: "/assets/workflow-icons/launch-color.svg", label: "Cloud Solutions" },
+  { icon: "/assets/workflow-icons/build-color.svg", label: "Enterprise Software" },
+  { icon: "/assets/workflow-icons/strategy-color.svg", label: "Dedicated Development Teams" },
 ];
 
 export const techStackGroups = [
@@ -220,24 +220,24 @@ export const techStackGroups = [
     ],
   },
   {
-    title: "Digital Marketing",
-    description: "Campaign, analytics, SEO, and conversion tools for measurable customer growth.",
+    title: "Cloud & DevOps",
+    description: "Deployment, hosting, CDN, observability, and cloud infrastructure for stable software launches.",
     tools: [
       {
-        name: "Google Ads",
-        icon: "https://cdn.simpleicons.org/googleads/4285F4",
+        name: "AWS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       },
       {
-        name: "Google Analytics",
-        icon: "https://cdn.simpleicons.org/googleanalytics/E37400",
+        name: "Google Cloud",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg",
       },
       {
-        name: "Meta",
-        icon: "https://cdn.simpleicons.org/meta/0467DF",
+        name: "Azure",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
       },
       {
-        name: "Semrush",
-        icon: "https://cdn.simpleicons.org/semrush/FF642D",
+        name: "Cloudflare",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
       },
     ],
   },
