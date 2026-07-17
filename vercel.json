@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/api/website-leads",
-      "destination": "https://api.jervix.com/api/website-leads"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

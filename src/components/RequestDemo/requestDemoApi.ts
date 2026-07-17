@@ -50,7 +50,7 @@ export const productEnquirySuccessMessage =
 
 const defaultWebsiteLeadEndpoint = import.meta.env.DEV
   ? 'http://localhost:3000/api/website-leads'
-  : '/api/website-leads';
+  : 'https://api.jervix.com/api/website-leads';
 
 const websiteLeadEndpoint =
   import.meta.env.VITE_WEBSITE_LEAD_ENDPOINT || defaultWebsiteLeadEndpoint;
@@ -61,12 +61,7 @@ type LeadResponse = {
 
 export type SubmitStatus = 'idle' | 'success' | 'error';
 
-const requestTimeoutMs = 20_000;
-
 async function postWebsiteLead(payload: Record<string, string>) {
-  const controller = new AbortController();
-  const timeoutId = window.setTimeout(() => controller.abort(), requestTimeoutMs);
-
   try {
     const response = await fetch(websiteLeadEndpoint, {
       method: 'POST',
@@ -74,7 +69,6 @@ async function postWebsiteLead(payload: Record<string, string>) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
-      signal: controller.signal,
     });
 
     const result = await response.json().catch(() => null) as LeadResponse | null;
@@ -83,17 +77,11 @@ async function postWebsiteLead(payload: Record<string, string>) {
       throw new Error(result?.message || 'Unable to submit your request right now.');
     }
   } catch (error) {
-    if (error instanceof DOMException && error.name === 'AbortError') {
-      throw new Error('The request took too long. Please try again in a moment.');
-    }
-
     if (error instanceof TypeError) {
       throw new Error('Unable to reach the server. Please check your connection and try again.');
     }
 
     throw error;
-  } finally {
-    window.clearTimeout(timeoutId);
   }
 }
 
