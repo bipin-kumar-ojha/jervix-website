@@ -50,7 +50,7 @@ export const productEnquirySuccessMessage =
 
 const defaultWebsiteLeadEndpoint = import.meta.env.DEV
   ? 'http://localhost:3000/api/website-leads'
-  : 'https://api.jervix.com/api/website-leads';
+  : 'https://jervixone-api.onrender.com/api/website-leads';
 
 const websiteLeadEndpoint =
   import.meta.env.VITE_WEBSITE_LEAD_ENDPOINT || defaultWebsiteLeadEndpoint;
