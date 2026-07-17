@@ -104,7 +104,6 @@ export async function submitWebsiteLead(form: HTMLFormElement) {
 export async function submitCareerLead(form: HTMLFormElement) {
   const formData = new FormData(form);
   const phone = String(formData.get('phone') || '').trim();
-  const formattedPhone = phone.startsWith('+91') ? phone : `+91 ${phone}`;
   const role = String(formData.get('role') || '').trim();
   const currentStatus = String(formData.get('currentStatus') || '').trim();
   const portfolio = String(formData.get('portfolio') || '').trim();
@@ -121,7 +120,7 @@ export async function submitCareerLead(form: HTMLFormElement) {
       body: JSON.stringify({
         name: String(formData.get('name') || '').trim(),
         email: String(formData.get('email') || '').trim(),
-        phone: `'${formattedPhone}`,
+        phone: `'${phone}`,
         role,
         currentStatus,
         portfolio,
