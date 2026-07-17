@@ -50,7 +50,7 @@ export const productEnquirySuccessMessage =
 
 const defaultWebsiteLeadEndpoint = import.meta.env.DEV
   ? 'http://localhost:3000/api/website-leads'
-  : 'https://api.jervix.com/api/website-leads';
+  : '/api/website-leads';
 
 const websiteLeadEndpoint =
   import.meta.env.VITE_WEBSITE_LEAD_ENDPOINT || defaultWebsiteLeadEndpoint;
@@ -61,30 +61,54 @@ type LeadResponse = {
 
 export type SubmitStatus = 'idle' | 'success' | 'error';
 
+const requestTimeoutMs = 20_000;
+
+async function postWebsiteLead(payload: Record<string, string>) {
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), requestTimeoutMs);
+
+  try {
+    const response = await fetch(websiteLeadEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+
+    const result = await response.json().catch(() => null) as LeadResponse | null;
+
+    if (!response.ok) {
+      throw new Error(result?.message || 'Unable to submit your request right now.');
+    }
+  } catch (error) {
+    if (error instanceof DOMException && error.name === 'AbortError') {
+      throw new Error('The request took too long. Please try again in a moment.');
+    }
+
+    if (error instanceof TypeError) {
+      throw new Error('Unable to reach the server. Please check your connection and try again.');
+    }
+
+    throw error;
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
+}
+
 export async function submitWebsiteLead(form: HTMLFormElement) {
   const formData = new FormData(form);
   const phone = String(formData.get('phone') || '').trim();
 
-  const response = await fetch(websiteLeadEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      organizationName: String(formData.get('organizationName') || '').trim(),
-      name: String(formData.get('name') || '').trim(),
-      email: String(formData.get('email') || '').trim(),
-      phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
-      serviceInterest: String(formData.get('serviceInterest') || '').trim(),
-      projectBrief: String(formData.get('projectBrief') || '').trim(),
-    }),
+  await postWebsiteLead({
+    organizationName: String(formData.get('organizationName') || '').trim(),
+    name: String(formData.get('name') || '').trim(),
+    email: String(formData.get('email') || '').trim(),
+    phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
+    serviceInterest: String(formData.get('serviceInterest') || '').trim(),
+    projectBrief: String(formData.get('projectBrief') || '').trim(),
   });
-
-  const result = await response.json().catch(() => null) as LeadResponse | null;
-
-  if (!response.ok) {
-    throw new Error(result?.message || 'Unable to submit your request right now.');
-  }
 }
 
 export async function submitCareerLead(form: HTMLFormElement) {
@@ -96,33 +120,21 @@ export async function submitCareerLead(form: HTMLFormElement) {
   const skills = String(formData.get('skills') || '').trim();
   const message = String(formData.get('message') || '').trim();
 
-  const response = await fetch(websiteLeadEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      leadType: 'career',
-      organizationName: 'Career Enquiry',
-      name: String(formData.get('name') || '').trim(),
-      email: String(formData.get('email') || '').trim(),
-      phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
-      serviceInterest: role,
-      projectBrief: [
-        `Career role: ${role}`,
-        currentStatus ? `Current status: ${currentStatus}` : '',
-        portfolio ? `Portfolio / resume: ${portfolio}` : '',
-        skills ? `Skills / tools: ${skills}` : '',
-        message ? `Message: ${message}` : '',
-      ].filter(Boolean).join('\n'),
-    }),
+  await postWebsiteLead({
+    leadType: 'career',
+    organizationName: 'Career Enquiry',
+    name: String(formData.get('name') || '').trim(),
+    email: String(formData.get('email') || '').trim(),
+    phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
+    serviceInterest: role,
+    projectBrief: [
+      `Career role: ${role}`,
+      currentStatus ? `Current status: ${currentStatus}` : '',
+      portfolio ? `Portfolio / resume: ${portfolio}` : '',
+      skills ? `Skills / tools: ${skills}` : '',
+      message ? `Message: ${message}` : '',
+    ].filter(Boolean).join('\n'),
   });
-
-  const result = await response.json().catch(() => null) as LeadResponse | null;
-
-  if (!response.ok) {
-    throw new Error(result?.message || 'Unable to submit your career enquiry right now.');
-  }
 }
 
 export async function submitProductLead(form: HTMLFormElement) {
@@ -133,32 +145,20 @@ export async function submitProductLead(form: HTMLFormElement) {
   const timeline = String(formData.get('timeline') || '').trim();
   const requirement = String(formData.get('requirement') || '').trim();
 
-  const response = await fetch(websiteLeadEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      leadType: 'product',
-      productName: 'Jervix One',
-      organizationName: String(formData.get('organizationName') || '').trim(),
-      name: String(formData.get('name') || '').trim(),
-      email: String(formData.get('email') || '').trim(),
-      phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
-      serviceInterest: `Jervix One - ${enquiryType}`,
-      projectBrief: [
-        'Product: Jervix One',
-        `Enquiry type: ${enquiryType}`,
-        organizationSize ? `Organization size: ${organizationSize}` : '',
-        timeline ? `Timeline: ${timeline}` : '',
-        requirement ? `Requirement: ${requirement}` : '',
-      ].filter(Boolean).join('\n'),
-    }),
+  await postWebsiteLead({
+    leadType: 'product',
+    productName: 'Jervix One',
+    organizationName: String(formData.get('organizationName') || '').trim(),
+    name: String(formData.get('name') || '').trim(),
+    email: String(formData.get('email') || '').trim(),
+    phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
+    serviceInterest: `Jervix One - ${enquiryType}`,
+    projectBrief: [
+      'Product: Jervix One',
+      `Enquiry type: ${enquiryType}`,
+      organizationSize ? `Organization size: ${organizationSize}` : '',
+      timeline ? `Timeline: ${timeline}` : '',
+      requirement ? `Requirement: ${requirement}` : '',
+    ].filter(Boolean).join('\n'),
   });
-
-  const result = await response.json().catch(() => null) as LeadResponse | null;
-
-  if (!response.ok) {
-    throw new Error(result?.message || 'Unable to submit your Jervix One enquiry right now.');
-  }
 }
