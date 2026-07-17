@@ -54,6 +54,9 @@ const defaultWebsiteLeadEndpoint =
 const websiteLeadEndpoint =
   import.meta.env.VITE_WEBSITE_LEAD_ENDPOINT || defaultWebsiteLeadEndpoint;
 
+const candidateLeadEndpoint =
+  'https://script.google.com/macros/s/AKfycbx9EWOhzkMbyv5FyfuRkVugJ2o56lCzr1yK5y8csx2wnaO6VGBp9I1quF9JEAnGTB0ZTw/exec';
+
 type LeadResponse = {
   message?: string;
 };
@@ -107,21 +110,27 @@ export async function submitCareerLead(form: HTMLFormElement) {
   const skills = String(formData.get('skills') || '').trim();
   const message = String(formData.get('message') || '').trim();
 
-  await postWebsiteLead({
-    leadType: 'career',
-    organizationName: 'Career Enquiry',
-    name: String(formData.get('name') || '').trim(),
-    email: String(formData.get('email') || '').trim(),
-    phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
-    serviceInterest: role,
-    projectBrief: [
-      `Career role: ${role}`,
-      currentStatus ? `Current status: ${currentStatus}` : '',
-      portfolio ? `Portfolio / resume: ${portfolio}` : '',
-      skills ? `Skills / tools: ${skills}` : '',
-      message ? `Message: ${message}` : '',
-    ].filter(Boolean).join('\n'),
-  });
+  try {
+    await fetch(candidateLeadEndpoint, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify({
+        name: String(formData.get('name') || '').trim(),
+        email: String(formData.get('email') || '').trim(),
+        phone: phone.startsWith('+91') ? phone : `+91 ${phone}`,
+        role,
+        currentStatus,
+        portfolio,
+        skills,
+        message,
+      }),
+    });
+  } catch {
+    throw new Error('Unable to save your application. Please try again.');
+  }
 }
 
 export async function submitProductLead(form: HTMLFormElement) {
