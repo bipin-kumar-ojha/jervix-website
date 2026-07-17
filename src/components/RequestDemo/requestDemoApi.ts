@@ -15,15 +15,14 @@ export const requestDemoSuccessMessage =
   'Thank you for sharing your project details. Our team will review your service requirement and contact you shortly with the next steps.';
 
 export const careerRoles = [
-  'Frontend Developer',
-  'Backend Developer',
-  'Full Stack Developer',
-  'AI Engineer',
-  'Mobile App Developer',
-  'UI/UX Designer',
-  'Business Development Executive',
-  'Digital Marketing Executive',
-  'Internship Program',
+  'Business Development Executive Intern',
+  'Full Stack Developer Intern',
+  'Blockchain Developer Intern',
+  'Solidity Developer Intern',
+  'UI/UX Designer Intern',
+  'Social Media Marketing Intern',
+  'HR Intern',
+  'Account Intern',
 ];
 
 export const careerEnquirySuccessMessage =
