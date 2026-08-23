@@ -207,7 +207,7 @@ export default function RequestDemo() {
                     Applying for
                     <select name="role" defaultValue="" required>
                       <option value="" disabled>
-                        Select a role or initiative
+                        Select an open position
                       </option>
                       {careerRoles.map((role) => (
                         <option key={role}>{role}</option>
@@ -245,7 +245,7 @@ export default function RequestDemo() {
                     <input
                       type="text"
                       name="currentStatus"
-                      placeholder="Student, fresher, final year, etc."
+                      placeholder="Fresher, experienced developer, current company / designation, etc."
                       required
                     />
                   </label>
@@ -273,7 +273,7 @@ export default function RequestDemo() {
                     Message
                     <textarea
                       name="message"
-                      placeholder="Tell us why you are interested in this role or initiative and your availability."
+                      placeholder="Tell us why you are interested in this role and your availability."
                       rows={3}
                       required
                     />

@@ -309,16 +309,6 @@
     padding-inline: 1.35rem;
   }
 
-  &__button--internship {
-    background: #fff;
-    border: 1px solid var(--header-brand);
-    box-shadow: none;
-    color: var(--header-brand);
-    white-space: nowrap;
-
-    &:hover { background: rgba(15, 49, 87, .06); }
-  }
-
   &__hamburger {
     align-items: center;
     background: #ffffff;

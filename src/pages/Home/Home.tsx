@@ -79,10 +79,10 @@ export default function Home() {
       <section className="careers-mini page-container" id="careers">
         <div>
           <p className="eyebrow">Careers at Jervix</p>
-          <h2>We build software for businesses and talent for the future.</h2>
+          <h2>We build software for businesses and empower ambitious engineers.</h2>
           <p>
-            Alongside our client engineering work, Jervix invests in young software professionals
-            through mentorship, learning culture, and early career development initiatives.
+            Alongside our client engineering work, Jervix fosters a high-impact learning culture,
+            mentorship, and career growth for engineering talent.
           </p>
         </div>
         <a href="/careers" className="secondary-action">

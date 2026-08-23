@@ -40,21 +40,6 @@ const services = [
   },
 ];
 
-const careerLinks = [
-  {
-    icon: '/assets/workflow-icons/build-color.svg',
-    label: 'Current Openings',
-    href: '/careers#open-positions',
-    description: 'Explore software, product, design, marketing, and operations roles.',
-  },
-  {
-    icon: '/assets/industry-icons/education.svg',
-    label: 'Internship Program',
-    href: '/careers/internship',
-    description: 'Early career development through mentorship and project exposure.',
-  },
-];
-
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -106,18 +91,8 @@ const Header = () => {
             <li>
               <a href="/about">About</a>
             </li>
-            <li className="header__nav-item--mega header__nav-item--careers">
-              <a href="/careers" aria-haspopup="true">
-                Careers
-                <span className="header__chevron" aria-hidden="true" />
-              </a>
-              <div className="header__dropdown" role="menu">
-                {careerLinks.map((link) => (
-                  <a href={link.href} key={link.label} role="menuitem">
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+            <li>
+              <a href="/careers">Careers</a>
             </li>
             <li>
               <a href="/contact">Contact</a>
@@ -126,9 +101,6 @@ const Header = () => {
         </nav>
 
         <div className="header__actions">
-          <a href="/internship/register" className="header__button header__button--internship">
-            Internship Register
-          </a>
           <a href="#demo" className="header__button" data-request-demo>
             Get Quote
           </a>
@@ -195,20 +167,7 @@ const Header = () => {
             <a href="/about" onClick={closeMobileMenu}>About</a>
           </li>
           <li>
-            <details className="header__mobile-services">
-              <summary>
-                Careers
-                <span className="header__chevron" aria-hidden="true" />
-              </summary>
-              <div>
-                {careerLinks.map((link) => (
-                  <a href={link.href} key={link.label} onClick={closeMobileMenu}>
-                    <img src={link.icon} alt="" />
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </details>
+            <a href="/careers" onClick={closeMobileMenu}>Careers</a>
           </li>
           <li>
             <a href="/contact" onClick={closeMobileMenu}>Contact</a>
@@ -221,9 +180,6 @@ const Header = () => {
         </div>
 
         <div className="header__mobile-actions">
-          <a href="/internship/register" className="header__button header__button--internship" onClick={closeMobileMenu}>
-            Internship Register
-          </a>
           <a href="#demo" className="header__button" onClick={closeMobileMenu} data-request-demo>
             Get Quote
           </a>

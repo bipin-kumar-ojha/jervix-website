@@ -44,7 +44,7 @@ const pageData: Record<string, HeaderMenuPageData> = {
   about: {
     slug: "about",
     eyebrow: "About Jervix",
-    title: "Engineering Digital Products. Building Future Talent.",
+    title: "Engineering Digital Products & Intelligent Systems",
     description:
       "Jervix Technologies is an AI and Software Development company delivering scalable digital solutions for startups, SMEs and enterprises.",
     image: "/assets/jervix-who-we-are.png",
@@ -53,7 +53,7 @@ const pageData: Record<string, HeaderMenuPageData> = {
     secondaryAction: "Explore Services",
     introTitle: "We engineer software systems that help businesses operate, scale, and modernize.",
     introText:
-      "Our work spans AI development, custom software, web applications, mobile applications, SaaS products, cloud solutions, enterprise software, IT consulting, and dedicated development teams. Alongside our client services, we invest in developing future software professionals through structured internship and mentorship programs.",
+      "Our work spans AI development, custom software, web applications, mobile applications, SaaS products, cloud solutions, enterprise software, IT consulting, and dedicated development teams. Alongside our client services, we foster a culture of continuous learning, professional development, and technical excellence.",
     cards: [
       {
         icon: "/assets/workflow-icons/discovery-color.svg",
@@ -98,74 +98,74 @@ const pageData: Record<string, HeaderMenuPageData> = {
     ],
     spotlightTitle: "Built for businesses that need dependable software execution.",
     spotlightText:
-      "Whether you need AI automation, custom software, a SaaS platform, enterprise workflow, web application, mobile app, or dedicated development support, Jervix brings structured engineering discipline to the work.",
+      "Whether you are launching a new product, upgrading an enterprise system, or building an AI capability, Jervix Technologies brings structured execution to every phase of engineering.",
     spotlightImage: "/assets/jervix-execution-delivery.png",
-    spotlightAlt: "Digital product delivery team planning websites, AI workflows, mobile apps, and campaign systems",
-    ctaTitle: "Want to know how Jervix can support your next software project?",
-    ctaText: "Tell us what you want to build and we will help you shape the right technology roadmap.",
+    spotlightAlt: "Jervix delivery milestones, review cycles, and execution flow",
+    ctaTitle: "Tell us about your product or software requirement.",
+    ctaText: "We can help you evaluate scope, system design, timeline, and the most practical development roadmap.",
   },
   products: {
     slug: "products",
-    eyebrow: "Solutions",
-    title: "Software Solutions for Modern Business Teams",
+    eyebrow: "Products",
+    title: "Jervix One: Workforce, Project & Organization Management Platform",
     description:
-      "Jervix Technologies builds software solutions and product platforms that help organizations structure work, improve visibility, and modernize operations.",
+      "An all-in-one business operations platform designed to help teams structure departments, manage tasks, record activity, track attendance, and scale workflows.",
     image: "/assets/jervix-one-product-hero.png",
-    imageAlt: "Jervix One product dashboard shown on laptop and tablet devices",
-    primaryAction: "Discuss a Solution",
-    secondaryAction: "Ask About Jervix One",
-    introTitle: "Product platforms and custom solutions shaped around real business needs.",
+    imageAlt: "Jervix One platform interface showcase across devices",
+    primaryAction: "Request Product Demo",
+    secondaryAction: "Explore Product Fit",
+    introTitle: "Built for modern organizations that need visibility and control.",
     introText:
-      "Jervix One is our current flagship solution. We also help companies plan custom platforms, dashboards, workflow systems, and business software around their operational requirements.",
+      "Jervix One simplifies daily business operations by bringing team hierarchy, task coordination, performance visibility, and administrative controls into one connected environment.",
     cards: [
       {
         icon: "/assets/jervix-icon/structure-icon.png",
-        title: "Organization Structure",
-        description: "Set up departments, teams, roles, and reporting clarity for growing operations.",
+        title: "Workforce & team hierarchy",
+        description: "Define departments, designations, permissions, and reporting lines so responsibilities stay clear across the company.",
       },
       {
         icon: "/assets/jervix-icon/task-management-icon.png",
-        title: "Task Management",
-        description: "Track work, responsibilities, progress, and handoffs without losing context.",
+        title: "Task & project execution",
+        description: "Assign work, track module milestones, monitor delivery status, and reduce operational follow-up.",
       },
       {
         icon: "/assets/jervix-icon/reporting-icon.png",
-        title: "Reports & Visibility",
-        description: "Give leaders cleaner insight into work activity, performance, and execution gaps.",
+        title: "Operational reporting",
+        description: "Gain real-time visibility into attendance, logs, activity timelines, and overall team performance.",
       },
     ],
     stats: [
-      { value: "1", label: "Current flagship product" },
-      { value: "24/7", label: "Operational visibility mindset" },
-      { value: "100%", label: "Enquiry-led product guidance" },
+      { value: "1", label: "Unified management platform" },
+      { value: "Role", label: "Based access control" },
+      { value: "Live", label: "Activity tracking" },
     ],
-    featureEyebrow: "Solutions",
-    featureTitle: "A platform for structure, accountability, and day-to-day execution.",
+    featureEyebrow: "Platform Capabilities",
+    featureTitle: "Everything growing companies need to manage teams and workflows effectively.",
     featureDescription:
       "Bring people, responsibilities, activity, and workflow visibility into one clean operating layer for everyday team execution.",
     features: [
       {
         icon: "/assets/jervix-icon/role-management-icon.png",
-        title: "Team and role clarity",
-        description: "Create cleaner ownership across departments, teams, designations, and workflows.",
+        title: "Role-Based Access Control",
+        description: "Manage permissions by designation, department, or administrative level with complete security.",
       },
       {
         icon: "/assets/jervix-icon/activity-logs-icon.png",
-        title: "Activity tracking",
-        description: "Keep important work visible with records, logs, updates, and useful operational context.",
+        title: "Activity & Work Logs",
+        description: "Keep audit trails of project progress, operational tasks, and status changes across teams.",
       },
       {
         icon: "/assets/jervix-icon/task-management-icon.png",
-        title: "Workflow support",
-        description: "Bring task management, reporting, and process transparency into a single operating system.",
+        title: "Milestone Tracking",
+        description: "Break complex business delivery into clear stages, review checkpoints, and deliverables.",
       },
       {
         icon: "/assets/workflow-icons/launch-color.svg",
-        title: "Custom product enquiries",
-        description: "Need a different product or module? Share your requirement and we will discuss the next step.",
+        title: "Fast Organization Onboarding",
+        description: "Set up company accounts, departments, and user roles quickly without complicated implementation.",
       },
     ],
-    spotlightTitle: "Interested in Jervix One or a custom software solution?",
+    spotlightTitle: "Transform how your organization works every day.",
     spotlightText:
       "We currently highlight Jervix One as our product. For product demos, rollout questions, feature fit, or future product enquiries, contact our team and we will respond with the right guidance.",
     spotlightImage: "/assets/jervix-one-implementation.png",
@@ -182,7 +182,7 @@ const pageData: Record<string, HeaderMenuPageData> = {
     image: "/assets/jervix-career-interns-hero.png",
     imageAlt: "Jervix technology team collaborating in a bright software workspace",
     primaryAction: "Apply as a Candidate",
-    secondaryAction: "View Internship Program",
+    secondaryAction: "Explore Openings",
     introTitle: "Why join Jervix",
     introText:
       "We are building a practical engineering culture where developers, designers, consultants, and growth-focused team members can work on meaningful software systems for businesses. Our team values learning, ownership, clear communication, and steady career growth.",
@@ -242,13 +242,13 @@ const pageData: Record<string, HeaderMenuPageData> = {
         description: "Support lead research, outreach, client communication, proposal coordination, and sales follow-up.",
       },
     ],
-    spotlightTitle: "Industry Internship Program",
+    spotlightTitle: "Life & Growth at Jervix",
     spotlightText:
-      "At Jervix Technologies we believe in nurturing future software professionals through structured mentorship, practical learning and project exposure.",
+      "At Jervix Technologies, we foster a collaborative, high-learning engineering culture with modern technology stacks, mentorship, and opportunities to build impactful digital solutions.",
     spotlightImage: "/assets/jervix-who-we-are.png",
     spotlightAlt: "Collaborative Jervix work environment",
-    ctaTitle: "Explore careers or early career initiatives at Jervix.",
-    ctaText: "Share your profile, role interest, portfolio, resume link, and availability. Our team will review your enquiry and respond when there is a relevant fit.",
+    ctaTitle: "Explore career opportunities at Jervix.",
+    ctaText: "Share your profile, role interest, portfolio, resume link, and experience. Our team will review your application and connect with you.",
   },
   contact: {
     slug: "contact",
@@ -358,7 +358,7 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
                   : data.slug === "about"
                     ? "/services"
                     : data.slug === "career"
-                      ? "/careers/internship"
+                      ? "#open-positions"
                       : "#demo"
               }
               className="menu-page__button menu-page__button--secondary"
@@ -430,7 +430,7 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
         </div>
       </section>
 
-      <section className="menu-page__spotlight" id={data.slug === "career" ? "internship-program" : undefined}>
+      <section className="menu-page__spotlight" id={data.slug === "career" ? "life-at-jervix" : undefined}>
         <div className="menu-page__spotlight-image">
           <img src={data.spotlightImage} alt={data.spotlightAlt} />
         </div>
@@ -439,12 +439,12 @@ function HeaderMenuPage({ data }: { data: HeaderMenuPageData }) {
           <h2>{data.spotlightTitle}</h2>
           <p>{data.spotlightText}</p>
           <a
-            href={data.slug === "career" ? "/careers/internship" : "#demo"}
+            href={data.slug === "career" ? "#open-positions" : "#demo"}
             data-request-demo={data.slug === "career" || data.slug === "products" ? undefined : true}
             data-career-enquiry={undefined}
             data-product-enquiry={data.slug === "products" ? true : undefined}
           >
-            {data.slug === "career" ? "Learn More" : "Send Enquiry"}
+            {data.slug === "career" ? "View Openings" : "Send Enquiry"}
           </a>
         </div>
       </section>
