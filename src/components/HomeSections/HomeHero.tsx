@@ -20,8 +20,14 @@ export default function HomeHero() {
         </div>
       </div>
 
-      <div className="home-hero__visual" aria-hidden="true">
-        <img src="/assets/jervix-home-culture-trust-hero.png" alt="" />
+      <div className="home-hero__visual">
+        <img
+          src="/assets/jervix-home-culture-trust-hero.png"
+          alt="Jervix AI and software engineering team collaborating on digital solutions"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
       </div>
     </section>
   );

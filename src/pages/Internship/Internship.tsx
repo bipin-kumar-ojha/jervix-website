@@ -82,7 +82,7 @@ export default function Internship() {
           <p className="section-kicker">Start your professional journey</p>
           <h1>Turn your potential into a career with impact</h1>
           <div className="internship-actions">
-            <a className="primary-action" href="#demo" data-career-enquiry>Apply Now</a>
+            <a className="primary-action" href="/internship/register">Apply Now</a>
             <a className="secondary-action" href="#intern-with-jervix">View Program Details</a>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function Internship() {
         <div className="intern-future__copy">
           <h2>Greater futures<br />through innovation</h2>
           <p>Watching the world of next-tech unfold? It&apos;s time to be part of it.</p>
-          <a href="#demo" data-career-enquiry>Join us</a>
+          <a href="/internship/register">Join us</a>
         </div>
       </section>
     </main>

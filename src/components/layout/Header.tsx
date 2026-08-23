@@ -126,6 +126,9 @@ const Header = () => {
         </nav>
 
         <div className="header__actions">
+          <a href="/internship/register" className="header__button header__button--internship">
+            Internship Register
+          </a>
           <a href="#demo" className="header__button" data-request-demo>
             Get Quote
           </a>
@@ -218,6 +221,9 @@ const Header = () => {
         </div>
 
         <div className="header__mobile-actions">
+          <a href="/internship/register" className="header__button header__button--internship" onClick={closeMobileMenu}>
+            Internship Register
+          </a>
           <a href="#demo" className="header__button" onClick={closeMobileMenu} data-request-demo>
             Get Quote
           </a>

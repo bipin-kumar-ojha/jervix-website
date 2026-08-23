@@ -34,7 +34,7 @@
   align-items: stretch;
   background: linear-gradient(90deg, #eef9ff 0%, #f7fbff 45%, #ffffff 100%);
   display: grid;
-  grid-template-columns: minmax(420px, 0.9fr) minmax(560px, 1.15fr);
+  grid-template-columns: minmax(320px, 0.95fr) minmax(360px, 1.05fr);
   min-height: 640px;
   overflow: hidden;
   padding: 0;
@@ -134,25 +134,32 @@
     linear-gradient(125deg, transparent 0 15%, rgba(255, 255, 255, 0.62) 15% 100%),
     linear-gradient(135deg, #f4f2ff, #ffffff);
   display: flex;
+  height: 100%;
+  min-height: 480px;
   min-width: 0;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .home-hero__visual::before {
-  background: linear-gradient(120deg, #f6fbfe 0 27%, #a78a8a00 27% 100%);
+  background: linear-gradient(120deg, #f6fbfe 0 24%, rgba(246, 251, 254, 0) 28% 100%);
   content: "";
   inset: 0;
+  pointer-events: none;
   position: absolute;
   z-index: 1;
 }
 
 .home-hero__visual img {
+  display: block;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.08) rotate(-1deg);
+  position: relative;
+  transform: scale(1.04);
   width: 100%;
+  z-index: 0;
 }
 
 .client-strip {
@@ -1190,8 +1197,8 @@
 
 @media (max-width: 1080px) {
   .home-hero {
-    grid-template-columns: minmax(340px, 1fr) minmax(380px, 0.95fr);
-    min-height: 590px;
+    grid-template-columns: minmax(300px, 1fr) minmax(320px, 1fr);
+    min-height: 560px;
   }
 
   .value-pillars {
@@ -1237,7 +1244,8 @@
   }
 
   .home-hero__visual {
-    min-height: 340px;
+    height: 360px;
+    min-height: 300px;
   }
 
   .client-strip {

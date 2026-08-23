@@ -11,17 +11,23 @@ import AboutPage from './pages/About/AboutPage';
 import ServicesPage from './pages/Services/ServicesPage';
 import ServiceDetailPage from './pages/Services/ServiceDetailPage';
 import IndustriesPage from './pages/Industries/IndustriesPage';
+import InternshipRegister from './pages/InternshipPortal/InternshipRegister';
+import CandidateDashboard from './pages/InternshipPortal/CandidateDashboard';
+import { useLocation } from 'react-router-dom';
 
 function App() {
+  const location = useLocation();
+  const isCandidatePortal = location.pathname.startsWith('/candidate/dashboard');
  
   return (
     <>
-      {/* <UnderDevelopmentPopup /> */}
-      <Header />
+      {!isCandidatePortal && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/careers/internship" element={<Internship />} />
         <Route path="/internship" element={<Internship />} />
+        <Route path="/internship/register" element={<InternshipRegister />} />
+        <Route path="/candidate/dashboard" element={<CandidateDashboard />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/solutions" element={<ProductsPage />} />
@@ -33,8 +39,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
       </Routes>
-      <RequestDemo />
-      <Footer/>
+      {!isCandidatePortal && <RequestDemo />}
+      {!isCandidatePortal && <Footer/>}
     </>
   )
 }
