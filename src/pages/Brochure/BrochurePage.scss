@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.brochure-page {
+  /* Brand Theme Tokens (McKinsey Digital + Stripe + Palantir aesthetic) */
+  --brand-navy: #173668;
+  --brand-navy-dark: #0d2244;
+  --brand-navy-deep: #09172e;
+  --brand-orange: #f95721;
+  --brand-orange-hover: #e04410;
+  --brand-orange-glow: rgba(249, 87, 33, 0.2);
+  --brand-slate: #475569;
+  --brand-slate-light: #64748b;
+  --brand-offwhite: #f8fafc;
+  --brand-white: #ffffff;
+  --brand-border: rgba(23, 54, 104, 0.12);
+  --brand-border-strong: rgba(23, 54, 104, 0.24);
+  --brand-shadow: 0 20px 45px rgba(13, 34, 68, 0.07);
+  --brand-shadow-hover: 0 28px 60px rgba(13, 34, 68, 0.14);
+
+  --font-serif: 'Newsreader', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  background: var(--brand-white);
+  color: #0f172a;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.brochure-shell {
+  margin-inline: auto;
+  width: min(calc(100% - clamp(2rem, 5vw, 6rem)), 1320px);
+}
+
+.brochure-kicker {
+  color: var(--brand-orange);
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+}
+
+.brochure-section-head {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+
+  h2 {
+    color: var(--brand-navy-dark);
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+
+  p {
+    color: var(--brand-slate);
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.65;
+    margin: 0 auto;
+    max-width: 720px;
+  }
+}
+
+/* =========================================================
+   Buttons & CTAs
+   ========================================================= */
+.brochure-btn {
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  gap: 0.65rem;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &--primary {
+    background: var(--brand-navy);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 28px rgba(23, 54, 104, 0.25);
+    color: #ffffff;
+
+    &:hover {
+      background: var(--brand-navy-dark);
+      box-shadow: 0 18px 36px rgba(23, 54, 104, 0.35);
+      color: #ffffff;
+    }
+  }
+
+  &--accent {
+    background: var(--brand-orange);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 28px var(--brand-orange-glow);
+    color: #ffffff;
+
+    &:hover {
+      background: var(--brand-orange-hover);
+      box-shadow: 0 18px 36px rgba(249, 87, 33, 0.35);
+      color: #ffffff;
+    }
+  }
+
+  &--outline {
+    background: #ffffff;
+    border: 1.5px solid var(--brand-border-strong);
+    color: var(--brand-navy);
+
+    &:hover {
+      background: var(--brand-offwhite);
+      border-color: var(--brand-navy);
+      color: var(--brand-navy-dark);
+    }
+  }
+
+  &--model {
+    background: var(--brand-navy);
+    border: 0;
+    color: #ffffff;
+    font-size: 0.88rem;
+    min-height: 44px;
+    padding: 0.7rem 1.2rem;
+    width: 100%;
+
+    &:hover {
+      background: var(--brand-orange);
+      color: #ffffff;
+    }
+  }
+
+  &--cta-primary {
+    background: var(--brand-orange);
+    border: 0;
+    box-shadow: 0 14px 30px rgba(249, 87, 33, 0.3);
+    color: #ffffff;
+
+    &:hover {
+      background: var(--brand-orange-hover);
+      color: #ffffff;
+    }
+  }
+
+  &--cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+  }
+}
+
+/* =========================================================
+   SECTION 1: HERO & BRAND PROMISE
+   ========================================================= */
+.brochure-hero {
+  background:
+    radial-gradient(ellipse 70% 60% at 85% 0%, rgba(249, 87, 33, 0.06), transparent 70%),
+    radial-gradient(ellipse 50% 50% at 15% 100%, rgba(23, 54, 104, 0.05), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--brand-border);
+  padding: clamp(3.5rem, 6vw, 6rem) 0 clamp(3rem, 5vw, 4.5rem);
+  position: relative;
+
+  &__sub-kicker {
+    color: var(--brand-slate);
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin-bottom: 1.6rem;
+  }
+
+  &__title {
+    color: var(--brand-navy-dark);
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+    max-width: 1080px;
+  }
+
+  &__subtitle {
+    color: var(--brand-slate);
+    font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+    line-height: 1.75;
+    margin: 0 0 2.4rem;
+    max-width: 960px;
+
+    strong {
+      color: var(--brand-navy);
+      font-weight: 700;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0 1.6rem;
+  }
+
+  &__tagline {
+    color: var(--brand-slate-light);
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+/* Reusable chip list (hero tags, etc.) */
+.brochure-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.brochure-chip {
+  background: rgba(23, 54, 104, 0.06);
+  border: 1px solid var(--brand-border);
+  border-radius: 999px;
+  color: var(--brand-navy-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+/* Global Reach / Industries chip rows (used inside the dark contact card) */
+.brochure-footprint {
+  align-items: center;
+  background: var(--brand-navy-deep);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(9, 23, 46, 0.2);
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
+  padding: 1.2rem 1.8rem;
+
+  &__label {
+    color: #94a3b8;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  &__item {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    color: #f1f5f9;
+    display: inline-flex;
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+  }
+
+  &--inline {
+    align-items: flex-start;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.8rem;
+    padding: 0;
+  }
+}
+
+
+/* =========================================================
+   Generic Section Wrapper (used by most content sections)
+   ========================================================= */
+.brochure-section {
+  padding: clamp(3.5rem, 6vw, 6rem) 0;
+
+  &--tint {
+    background: var(--brand-offwhite);
+    border-block: 1px solid var(--brand-border);
+  }
+}
+
+.brochure-note {
+  border-top: 1px solid var(--brand-border);
+  color: var(--brand-slate);
+  font-size: 0.98rem;
+  font-style: italic;
+  line-height: 1.7;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  text-align: center;
+}
+
+.brochure-mono-label {
+  color: var(--brand-navy);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Reusable info-card grid (About / Services / What We Build / Cloud, Enterprise & Design) */
+.brochure-cards-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.brochure-info-card {
+  background: #ffffff;
+  border: 1px solid var(--brand-border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  transition: all 200ms ease;
+
+  &:hover {
+    border-color: var(--brand-navy);
+    box-shadow: var(--brand-shadow);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    color: var(--brand-navy-dark);
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 750;
+    line-height: 1.35;
+    margin: 0 0 0.65rem;
+  }
+
+  p {
+    color: var(--brand-slate);
+    font-size: 0.94rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+}
+
+.brochure-section--tint .brochure-info-card {
+  background: #ffffff;
+}
+
+/* About: stats row */
+.brochure-stats-row {
+  border-top: 1px solid var(--brand-border);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: clamp(2rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.brochure-stat {
+  strong {
+    color: var(--brand-navy);
+    display: block;
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  span {
+    color: var(--brand-slate);
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+}
+
+/* AI Development & Custom Software: two-column checklist */
+.brochure-split {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.brochure-split__col {
+  background: var(--brand-offwhite);
+  border: 1px solid var(--brand-border);
+  border-radius: 16px;
+  padding: clamp(1.8rem, 3vw, 2.4rem);
+
+  h3 {
+    color: var(--brand-navy-dark);
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 750;
+    margin: 0 0 1.2rem;
+  }
+}
+
+.brochure-check-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    align-items: flex-start;
+    color: #334155;
+    display: flex;
+    font-size: 0.92rem;
+    gap: 0.65rem;
+    line-height: 1.55;
+
+    &::before {
+      color: var(--brand-orange);
+      content: '✓';
+      flex-shrink: 0;
+      font-weight: 800;
+    }
+  }
+}
+
+/* Technology Stack: category rows */
+.brochure-stack {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.brochure-stack-row {
+  align-items: center;
+  border-bottom: 1px solid var(--brand-border);
+  display: grid;
+  gap: 0.6rem 1.5rem;
+  grid-template-columns: minmax(160px, 220px) 1fr;
+  padding-block: 1rem;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.brochure-callout {
+  background: #ffffff;
+  border-left: 3px solid var(--brand-orange);
+  border-radius: 0 12px 12px 0;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding: 1.4rem 1.8rem;
+
+  strong {
+    color: var(--brand-navy-dark);
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    color: var(--brand-slate);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+}
+
+/* How We Work: agile practices */
+.brochure-agile-block {
+  background: var(--brand-offwhite);
+  border: 1px solid var(--brand-border);
+  border-radius: 16px;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding: clamp(1.6rem, 3vw, 2.2rem);
+
+  > .brochure-mono-label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.brochure-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.brochure-tech-badge {
+  background: #ffffff;
+  border: 1px solid var(--brand-border);
+  border-radius: 6px;
+  color: var(--brand-navy);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+}
+
+/* =========================================================
+   How We Work: 6-stage delivery grid
+   ========================================================= */
+.brochure-lifecycle-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.brochure-stage-card {
+  background: #ffffff;
+  border: 1.5px solid var(--brand-border);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(23, 54, 104, 0.04);
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem;
+  position: relative;
+  transition: all 220ms ease;
+
+  &:hover {
+    border-color: var(--brand-orange);
+    box-shadow: 0 16px 36px rgba(249, 87, 33, 0.1);
+    transform: translateY(-3px);
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+  }
+
+  &__title {
+    color: var(--brand-navy-dark);
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 750;
+    line-height: 1.3;
+    margin: 0 0 0.65rem;
+  }
+
+  &__desc {
+    color: var(--brand-slate);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.brochure-stage-number {
+  color: var(--brand-navy);
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* =========================================================
+   SECTION 5: CONTACT & ESTIMATION CENTER
+   ========================================================= */
+.brochure-contact-center {
+  background: var(--brand-offwhite);
+  border-top: 1px solid var(--brand-border);
+  padding: clamp(3.5rem, 6vw, 6rem) 0;
+}
+
+.brochure-contact-card {
+  background: var(--brand-navy-deep);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 28px 70px rgba(9, 23, 46, 0.3);
+  color: #ffffff;
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  padding: clamp(2rem, 5vw, 4rem);
+
+  &__main {
+    h2 {
+      color: #ffffff;
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3vw, 2.8rem);
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      line-height: 1.18;
+      margin: 0.85rem 0 1.2rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 0 2.2rem;
+      max-width: 620px;
+    }
+  }
+}
+
+.brochure-contact-badge {
+  background: rgba(249, 87, 33, 0.2);
+  border: 1px solid rgba(249, 87, 33, 0.4);
+  border-radius: 999px;
+  color: #ff8a65;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  padding: 0.35rem 0.95rem;
+  text-transform: uppercase;
+}
+
+.brochure-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brochure-contact-details {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+
+  h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: var(--font-mono);
+    font-size: 0.86rem;
+    font-weight: 750;
+    letter-spacing: 0.14em;
+    margin: 0 0 1.4rem;
+    padding-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+}
+
+.brochure-contact-list {
+  display: grid;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    align-items: flex-start;
+    display: flex;
+    gap: 0.85rem;
+
+    label {
+      color: #94a3b8;
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    a, span {
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    a:hover {
+      color: var(--brand-orange);
+    }
+  }
+}
+
+.brochure-contact-icon {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   Responsive Breakpoints
+   ========================================================= */
+@media (max-width: 1024px) {
+  .brochure-contact-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .brochure-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .brochure-hero__actions {
+    flex-direction: column;
+
+    .brochure-btn {
+      width: 100%;
+    }
+  }
+
+  .brochure-contact-actions {
+    flex-direction: column;
+
+    .brochure-btn {
+      width: 100%;
+    }
+  }
+
+  .brochure-stack-row {
+    grid-template-columns: 1fr;
+  }
+
+  .brochure-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+/* =========================================================
+   Print Optimization Media Query
+   ========================================================= */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .header,
+  .footer,
+  .request-demo-modal,
+  .brochure-hero__actions,
+  .brochure-contact-center {
+    display: none !important;
+  }
+
+  .brochure-page {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .brochure-hero {
+    background: none !important;
+    border: none !important;
+    padding: 1rem 0 !important;
+  }
+
+  .brochure-cards-grid {
+    gap: 1rem !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .brochure-info-card,
+  .brochure-stage-card {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}

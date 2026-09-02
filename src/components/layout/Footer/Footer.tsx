@@ -2,14 +2,13 @@ import "./Footer.scss";
 
 const footerColumns = [
   {
-    title: "Quick Links",
+    title: "Explore",
     links: [
       ["Services", "/services"],
       ["Solutions", "/solutions"],
       ["Industries", "/industries"],
       ["About", "/about"],
       ["Careers", "/careers"],
-      ["Contact", "/contact"],
     ],
   },
   {
@@ -23,74 +22,43 @@ const footerColumns = [
     ],
   },
   {
-    title: "Solutions",
-    links: [
-      ["Enterprise Software", "/contact"],
-      ["Cloud Solutions", "/contact"],
-      ["IT Consulting", "/contact"],
-      ["Dedicated Teams", "/contact"],
-      ["Digital Transformation", "/contact"],
-    ],
-  },
-  {
     title: "Resources",
     links: [
-      ["Blog", "/blog"],
+      ["Brochure & Capability Deck", "/brochure"],
       ["Case Study", "/contact"],
       ["Technology Stack", "/services"],
-      ["Service Pages", "/services"],
-      ["Request Demo", "/contact"],
-    ],
-  },
-  {
-    title: "Industries",
-    links: [
       ["Healthcare", "/industries"],
       ["Real Estate", "/industries"],
-      ["Ecommerce", "/industries"],
-      ["Finance", "/industries"],
-      ["Education", "/industries"],
-    ],
-  },
-  {
-    title: "Launch",
-    links: [
-      ["MVP Planning", "/contact"],
-      ["Product Strategy", "/contact"],
-      ["Automation Roadmap", "/contact"],
-      ["Growth Support", "/contact"],
-      ["SaaS Consulting", "/contact"],
+      ["Contact us", "/contact"],
     ],
   },
 ];
 
-const contactLinks = [
+const contactDetails = [
   {
-    className: "footer__contact-button--phone",
     icon: "phone",
-    label: "Request a Call",
-    href: "#contact",
+    label: "Call Us",
+    value: "+91 89202 78132",
+    href: "tel:+918920278132",
   },
   {
-    className: "footer__contact-button--mail",
     icon: "mail",
-    label: "info@jervix.com",
+    label: "General Enquiries",
+    value: "info@jervix.com",
     href: "mailto:info@jervix.com",
   },
   {
-    className: "footer__contact-button--chat",
-    icon: "chat",
-    label: "Start Consultation",
-    href: "#contact",
+    icon: "mail",
+    label: "Sales",
+    value: "sales@jervix.com",
+    href: "mailto:sales@jervix.com",
   },
 ];
 
 const socialLinks = [
-  ["facebook", "#", "Facebook"],
-  ["x", "#", "X"],
-  ["youtube", "#", "YouTube"],
-  ["instagram", "#", "Instagram"],
-  ["linkedin", "#", "LinkedIn"],
+  ["youtube", "https://www.youtube.com/@JervixTechnologies", "YouTube"],
+  ["instagram", "https://www.instagram.com/jervix_technologies", "Instagram"],
+  ["linkedin", "https://www.linkedin.com/company/jervix/", "LinkedIn"],
 ];
 
 function ContactIcon({ type }: { type: string }) {
@@ -98,15 +66,6 @@ function ContactIcon({ type }: { type: string }) {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 7h16v10H4V7Zm1.4 1.4L12 13.2l6.6-4.8M5.4 15.6l4.4-3.2m8.8 3.2-4.4-3.2" />
-      </svg>
-    );
-  }
-
-  if (type === "chat") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 4.5a7.4 7.4 0 0 0-6.4 11.1L4.8 20l4.1-1.1A7.4 7.4 0 1 0 12 4.5Z" />
-        <path d="M8.8 10.2c.6 2 2.4 3.7 4.6 4.4l1.2-1.2 1.8.6c-.1 1.1-.9 2-2 2-3.2 0-6.4-3-6.4-6.2 0-1.1.8-1.9 1.9-2l.6 1.7-1.7.7Z" />
       </svg>
     );
   }
@@ -119,22 +78,6 @@ function ContactIcon({ type }: { type: string }) {
 }
 
 function SocialIcon({ type }: { type: string }) {
-  if (type === "facebook") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.5-3.91 3.77-3.91 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.9h2.78l-.44 2.91h-2.34V22C18.34 21.24 22 17.08 22 12.06Z" />
-      </svg>
-    );
-  }
-
-  if (type === "x") {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M18.25 3h3.07l-6.7 7.66L22.5 21h-6.17l-4.83-6.32L5.97 21H2.9l7.16-8.19L2.5 3h6.33l4.37 5.78L18.25 3Zm-1.08 16.18h1.7L7.9 4.72H6.08l11.09 14.46Z" />
-      </svg>
-    );
-  }
-
   if (type === "youtube") {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -162,6 +105,22 @@ const Footer = () => (
   <footer className="footer">
     <div className="footer__inner">
       <div className="footer__top">
+        <div className="footer__brand">
+          <a href="/" className="footer__logo" aria-label="Jervix home">
+            <img src="/assets/logo-white.png" alt="Jervix" />
+          </a>
+          <p>
+            AI and software engineering partner for growing businesses — from idea to impact.
+          </p>
+          <div className="footer__social" aria-label="Social links">
+            {socialLinks.map(([type, href, name]) => (
+              <a href={href} aria-label={name} key={name} target="_blank" rel="noreferrer">
+                <SocialIcon type={type} />
+              </a>
+            ))}
+          </div>
+        </div>
+
         <nav className="footer__directory" aria-label="Footer navigation">
           {footerColumns.map((column) => (
             <div className="footer__column" key={column.title}>
@@ -178,45 +137,36 @@ const Footer = () => (
         </nav>
 
         <div className="footer__contact" aria-label="Contact Jervix">
-          <h2>Contact Us</h2>
-          <div className="footer__contact-list">
-            {contactLinks.map((item) => (
-              <a
-                className={`footer__contact-button ${item.className}`}
-                href={item.href}
-                key={item.label}
-                data-request-demo={item.href === "#contact" ? true : undefined}
-              >
-                <span>
+          <h2>Get in Touch</h2>
+          <ul className="footer__contact-list">
+            {contactDetails.map((item) => (
+              <li key={item.label}>
+                <span className="footer__contact-icon">
                   <ContactIcon type={item.icon} />
                 </span>
-                {item.label}
-              </a>
+                <span>
+                  <span className="footer__contact-label">{item.label}</span>
+                  <a href={item.href}>{item.value}</a>
+                </span>
+              </li>
             ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="footer__meta">
-        <div className="footer__social" aria-label="Social links">
-          {socialLinks.map(([type, href, name]) => (
-            <a href={href} aria-label={name} key={name}>
-              <SocialIcon type={type} />
-            </a>
-          ))}
+          </ul>
+          <a className="footer__cta" href="#demo" data-request-demo>
+            Book a free consultation <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </div>
 
     <div className="footer__bottom">
-      <span>Made with care from India</span>
+      <span>© {new Date().getFullYear()} Jervix Technologies. All rights reserved.</span>
       <nav aria-label="Legal links">
         <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <a href="#">Terms &amp; Conditions</a>
         <a href="#">Help</a>
         <a href="/sitemap.xml">Sitemap</a>
       </nav>
-      <span>Copyright © 2026 Jervix. All rights reserved.</span>
+      <span>Made with care from India</span>
     </div>
   </footer>
 );

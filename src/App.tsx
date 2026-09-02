@@ -11,6 +11,8 @@ import ServicesPage from './pages/Services/ServicesPage';
 import ServiceDetailPage from './pages/Services/ServiceDetailPage';
 import IndustriesPage from './pages/Industries/IndustriesPage';
 
+import BrochurePage from './pages/Brochure/BrochurePage';
+
 function App() {
   return (
     <>
@@ -23,6 +25,7 @@ function App() {
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/:slug" element={<ServiceDetailPage />} />
+        <Route path="/brochure" element={<BrochurePage />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/careers" element={<CareerPage />} />
         <Route path="/careers/internship" element={<Navigate to="/careers" replace />} />

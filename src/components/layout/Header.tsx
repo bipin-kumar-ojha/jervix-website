@@ -92,6 +92,9 @@ const Header = () => {
               <a href="/about">About</a>
             </li>
             <li>
+              <a href="/brochure">Prospectus</a>
+            </li>
+            <li>
               <a href="/careers">Careers</a>
             </li>
             <li>
@@ -132,9 +135,6 @@ const Header = () => {
           <a href="/" className="header__mobile-logo" onClick={closeMobileMenu}>
             <img src="/assets/logo.png" alt="Jervix" />
           </a>
-          <button className="header__mobile-close" aria-label="Close menu" onClick={closeMobileMenu} type="button">
-            ×
-          </button>
         </div>
 
         <ul className="header__mobile-list">
@@ -165,6 +165,9 @@ const Header = () => {
           </li>
           <li>
             <a href="/about" onClick={closeMobileMenu}>About</a>
+          </li>
+          <li>
+            <a href="/brochure" onClick={closeMobileMenu}>Prospectus</a>
           </li>
           <li>
             <a href="/careers" onClick={closeMobileMenu}>Careers</a>
