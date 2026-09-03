@@ -1,17 +1,17 @@
 .features {
-  --feature-green-950: #143c6c;
-  --feature-green-900: #143c6c;
-  --feature-green-700: #143c6c;
-  --feature-coral: #ef614d;
-  --feature-gold: #f6c95c;
-  --feature-cream: #fff8ed;
-  --feature-mint: #eef7f2;
-  --feature-line: #dce8e2;
-  --feature-muted: #5e6e68;
+  --feature-green-950: #0a2540;
+  --feature-green-900: #0a2540;
+  --feature-green-700: #0a2540;
+  --feature-coral: #2f80ed;
+  --feature-gold: #2f80ed;
+  --feature-cream: #ffffff;
+  --feature-mint: #ffffff;
+  --feature-line: rgba(10, 37, 64, 0.14);
+  --feature-muted: #0a2540;
 
   background:
-    linear-gradient(90deg, rgba(6, 75, 58, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, #fffaf1 0%, #f1f8f4 100%);
+    linear-gradient(90deg, rgba(10, 37, 64, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   background-size: 44px 44px, auto;
   color: var(--feature-green-950);
   padding: clamp(3.5rem, 6vw, 5.75rem) clamp(1rem, 4vw, 4.5rem);
@@ -31,7 +31,7 @@
 
   &__badge {
     background: #ffffff;
-    border: 1px solid rgba(239, 97, 77, 0.22);
+    border: 1px solid rgba(47, 128, 237, 0.22);
     border-radius: 999px;
     color: var(--feature-coral);
     display: inline-flex;
@@ -67,9 +67,9 @@
 
   &__card {
     background: #ffffff;
-    border: 1px solid rgba(6, 75, 58, 0.12);
+    border: 1px solid rgba(10, 37, 64, 0.12);
     border-radius: 8px;
-    box-shadow: 0 16px 42px rgba(6, 75, 58, 0.08);
+    box-shadow: 0 16px 42px rgba(10, 37, 64, 0.08);
     display: flex;
     flex-direction: column;
     min-height: 255px;
@@ -88,8 +88,8 @@
     }
 
     &:hover {
-      border-color: rgba(6, 75, 58, 0.28);
-      box-shadow: 0 22px 55px rgba(6, 75, 58, 0.13);
+      border-color: rgba(10, 37, 64, 0.28);
+      box-shadow: 0 22px 55px rgba(10, 37, 64, 0.13);
       transform: translateY(-3px);
     }
 
@@ -106,7 +106,7 @@
     }
 
     &--performance::before {
-      background: #2f8fba;
+      background: #2f80ed;
     }
   }
 
@@ -118,7 +118,7 @@
   }
 
   &__card-number {
-    color: rgba(6, 75, 58, 0.42);
+    color: rgba(10, 37, 64, 0.42);
     font-size: 0.86rem;
     font-weight: 900;
     line-height: 1;
@@ -152,7 +152,7 @@
   }
 
   &__card-text {
-    color: #465750;
+    color: #0a2540;
     font-size: 0.96rem;
     line-height: 1.68;
     margin: 0;

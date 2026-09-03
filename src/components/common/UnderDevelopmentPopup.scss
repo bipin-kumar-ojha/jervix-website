@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(30, 41, 59, 0.65);
+  background: rgba(10, 37, 64, 0.65);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -13,9 +13,9 @@
 }
 
 .under-dev-popup {
-  background: #fff;
+  background: #ffffff;
   border-radius: 1.2rem;
-  box-shadow: 0 8px 32px rgba(16, 24, 40, 0.18);
+  box-shadow: 0 8px 32px rgba(10, 37, 64, 0.18);
   padding: 2.2rem 2.8rem 2rem 2.8rem;
   max-width: 98vw;
   width: 540px;
@@ -34,11 +34,11 @@
 .under-dev-popup__icon--excite svg {
   width: 64px;
   height: 64px;
-  filter: drop-shadow(0 2px 12px #38bdf855);
+  filter: drop-shadow(0 2px 12px rgba(47, 128, 237, 0.333));
 }
 
 .under-dev-popup__brand {
-  color: #0f66ab;
+  color: #2f80ed;
   font-weight: 700;
   font-size: 1.13em;
   letter-spacing: -0.5px;
@@ -46,7 +46,7 @@
 
 .under-dev-popup__highlight {
   display: block;
-  color: #0891b2;
+  color: #2f80ed;
   font-weight: 600;
   margin-top: 0.5rem;
   font-size: 1.08em;
@@ -62,26 +62,26 @@
   justify-content: center;
 }
 .under-dev-popup__features li {
-  background: #e0f7fa;
-  color: #0f66ab;
+  background: #ffffff;
+  color: #2f80ed;
   border-radius: 999px;
   padding: 0.45rem 1.1rem;
   font-size: 1.01rem;
   font-weight: 500;
-  box-shadow: 0 1px 6px #38bdf822;
+  box-shadow: 0 1px 6px rgba(47, 128, 237, 0.133);
   margin-bottom: 0.2rem;
 }
 
 .under-dev-popup h2 {
   margin-bottom: 1.1rem;
-  color: #0f66ab;
+  color: #2f80ed;
   font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
 .under-dev-popup__main-msg {
-  color: #1e293b;
+  color: #0a2540;
   font-size: 1.13rem;
   font-weight: 600;
   margin-bottom: 1.1rem;
@@ -89,26 +89,26 @@
 }
 
 .under-dev-popup__sub-msg {
-  color: #64748b;
+  color: #0a2540;
   font-size: 1.01rem;
   margin-bottom: 2.1rem;
 }
 
 .under-dev-popup__close {
-  background: linear-gradient(90deg, #0f66ab 0%, #155dfc 100%);
-  color: #fff;
+  background: linear-gradient(90deg, #2f80ed 0%, #2f80ed 100%);
+  color: #ffffff;
   border: none;
   border-radius: 0.5rem;
   padding: 0.7rem 2.2rem;
   font-size: 1.08rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(15,102,171,0.08);
+  box-shadow: 0 2px 8px rgba(47, 128, 237, 0.08);
   transition: background 0.2s, box-shadow 0.2s;
 }
 .under-dev-popup__close:hover {
-  background: linear-gradient(90deg, #155dfc 0%, #0f66ab 100%);
-  box-shadow: 0 4px 16px rgba(21,93,252,0.13);
+  background: linear-gradient(90deg, #2f80ed 0%, #2f80ed 100%);
+  box-shadow: 0 4px 16px rgba(47, 128, 237, 0.13);
 }
 
 @keyframes popup-fade-in {

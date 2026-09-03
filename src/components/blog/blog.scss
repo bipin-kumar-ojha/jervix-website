@@ -1,15 +1,15 @@
 .blog {
-  --blog-blue: #143c6c;
-  --blog-coral: #ef614d;
-  --blog-gold: #f6c95c;
-  --blog-cream: #fff8ed;
-  --blog-mint: #eef7f2;
-  --blog-line: #dce8e2;
-  --blog-muted: #53635d;
-  --blog-ink: #17231f;
+  --blog-blue: #0a2540;
+  --blog-coral: #2f80ed;
+  --blog-gold: #2f80ed;
+  --blog-cream: #ffffff;
+  --blog-mint: #ffffff;
+  --blog-line: rgba(10, 37, 64, 0.14);
+  --blog-muted: #0a2540;
+  --blog-ink: #0a2540;
 
   background:
-    linear-gradient(180deg, #ffffff 0%, #fff8ed 100%);
+    linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   color: var(--blog-ink);
   padding: clamp(3.5rem, 6vw, 6rem) clamp(1rem, 4vw, 4.5rem);
 
@@ -28,8 +28,8 @@
   }
 
   &__badge {
-    background: rgba(239, 97, 77, 0.1);
-    border: 1px solid rgba(239, 97, 77, 0.2);
+    background: rgba(47, 128, 237, 0.1);
+    border: 1px solid rgba(47, 128, 237, 0.2);
     border-radius: 999px;
     color: var(--blog-coral);
     display: inline-flex;
@@ -78,7 +78,7 @@
     }
 
     &:hover {
-      background: #0f3159;
+      background: #0a2540;
       color: #ffffff;
       transform: translateY(-2px);
     }
@@ -92,9 +92,9 @@
 
   &__post {
     background: #ffffff;
-    border: 1px solid rgba(20, 60, 108, 0.12);
+    border: 1px solid rgba(10, 37, 64, 0.12);
     border-radius: 8px;
-    box-shadow: 0 18px 44px rgba(20, 60, 108, 0.08);
+    box-shadow: 0 18px 44px rgba(10, 37, 64, 0.08);
     color: var(--blog-blue);
     display: flex;
     flex-direction: column;
@@ -116,8 +116,8 @@
     }
 
     &:hover {
-      border-color: rgba(239, 97, 77, 0.35);
-      box-shadow: 0 24px 58px rgba(20, 60, 108, 0.14);
+      border-color: rgba(47, 128, 237, 0.35);
+      box-shadow: 0 24px 58px rgba(10, 37, 64, 0.14);
       color: var(--blog-blue);
       transform: translateY(-5px);
 
@@ -147,7 +147,7 @@
   }
 
   &__image-wrapper::after {
-    background: linear-gradient(180deg, transparent 45%, rgba(20, 60, 108, 0.4) 100%);
+    background: linear-gradient(180deg, transparent 45%, rgba(10, 37, 64, 0.4) 100%);
     content: "";
     inset: 0;
     position: absolute;
@@ -185,7 +185,7 @@
   }
 
   &__index {
-    color: rgba(20, 60, 108, 0.28);
+    color: rgba(10, 37, 64, 0.28);
     font-size: 0.82rem;
     font-weight: 900;
     margin-bottom: 0.75rem;
@@ -200,7 +200,7 @@
   }
 
   &__post-desc {
-    color: #4b5f57;
+    color: #0a2540;
     font-size: 0.94rem;
     line-height: 1.58;
     margin: 0;

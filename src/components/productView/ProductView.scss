@@ -1,22 +1,22 @@
 .product-view {
-  --product-blue: #143c6c;
-  --product-deep: #123762;
-  --product-coral: #ef614d;
-  --product-red: #d72f25;
-  --product-lime: #123762;
-  --product-gold: #ffa300;
-  --product-mint: #e8f1ee;
+  --product-blue: #0a2540;
+  --product-deep: #0a2540;
+  --product-coral: #2f80ed;
+  --product-red: #2f80ed;
+  --product-lime: #0a2540;
+  --product-gold: #2f80ed;
+  --product-mint: #ffffff;
   --product-cloud: #ffffff;
-  --product-muted: #34383a;
+  --product-muted: #0a2540;
 
-  background: linear-gradient(180deg, var(--product-mint) 0%, #eef6f3 100%);
+  background: linear-gradient(180deg, var(--product-mint) 0%, #ffffff 100%);
   color: var(--product-deep);
   overflow: hidden;
   padding: clamp(3.5rem, 7vw, 6.5rem) clamp(1rem, 5vw, 6rem);
   position: relative;
 
   &::after {
-    background: #fff8ed;
+    background: #ffffff;
     bottom: 0;
     content: "";
     height: 14px;
@@ -52,7 +52,7 @@
   }
 
   h2 {
-    color: #27292b;
+    color: #0a2540;
     font-size: clamp(2.35rem, 4.2vw, 4.25rem);
     font-weight: 900;
     letter-spacing: 0;
@@ -108,7 +108,7 @@
     }
 
     &:hover {
-      background: #0f3159;
+      background: #0a2540;
       color: #ffffff;
       transform: translateY(-2px);
     }
@@ -140,9 +140,9 @@
   &__logo-wrap {
     align-items: center;
     background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(20, 60, 108, 0.12);
+    border: 1px solid rgba(10, 37, 64, 0.12);
     border-radius: 125px;
-    box-shadow: 0 24px 56px rgba(20, 60, 108, 0.14);
+    box-shadow: 0 24px 56px rgba(10, 37, 64, 0.14);
     display: flex;
     padding: clamp(1rem, 2.4vw, 1.8rem);
     position: relative;
@@ -238,7 +238,7 @@
   }
 
   &__arrow {
-    border-bottom: 10px solid rgba(162, 197, 186, 0.72);
+    border-bottom: 10px solid rgba(10, 37, 64, 0.72);
     border-radius: 50%;
     bottom: 23%;
     height: 80px;
@@ -248,8 +248,8 @@
     width: 260px;
 
     &::before {
-      border-right: 10px solid rgba(162, 197, 186, 0.72);
-      border-top: 10px solid rgba(162, 197, 186, 0.72);
+      border-right: 10px solid rgba(10, 37, 64, 0.72);
+      border-top: 10px solid rgba(10, 37, 64, 0.72);
       content: "";
       height: 42px;
       position: absolute;

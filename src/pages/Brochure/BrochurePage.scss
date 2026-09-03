@@ -2,27 +2,27 @@
 
 .brochure-page {
   /* Brand system — aligned with site navy + mint accent */
-  --bro-navy: #0a2240;
-  --bro-navy-2: #123762;
-  --bro-ink: #10233c;
-  --bro-heading: #14263f;
-  --bro-body: #4b5c70;
-  --bro-body-soft: #6b7a8c;
+  --bro-navy: #0a2540;
+  --bro-navy-2: #0a2540;
+  --bro-ink: #0a2540;
+  --bro-heading: #0a2540;
+  --bro-body: #0a2540;
+  --bro-body-soft: #0a2540;
 
-  --bro-accent: #0f8a7e;
-  --bro-accent-strong: #0b6f66;
-  --bro-accent-mint: #72d5c2;
-  --bro-accent-soft: rgba(15, 138, 126, 0.1);
+  --bro-accent: #2f80ed;
+  --bro-accent-strong: #2f80ed;
+  --bro-accent-mint: #2f80ed;
+  --bro-accent-soft: rgba(47, 128, 237, 0.1);
 
   --bro-paper: #ffffff;
-  --bro-mist: #f4f7f9;
-  --bro-mist-2: #eef3f6;
-  --bro-line: rgba(18, 55, 98, 0.12);
-  --bro-line-soft: rgba(18, 55, 98, 0.08);
+  --bro-mist: #ffffff;
+  --bro-mist-2: #ffffff;
+  --bro-line: rgba(10, 37, 64, 0.12);
+  --bro-line-soft: rgba(10, 37, 64, 0.08);
 
-  --bro-shadow: 0 18px 40px -18px rgba(10, 34, 64, 0.22);
-  --bro-shadow-lg: 0 34px 70px -24px rgba(10, 34, 64, 0.32);
-  --bro-icon-grad: linear-gradient(150deg, rgba(114, 213, 194, 0.28), rgba(15, 138, 126, 0.12));
+  --bro-shadow: 0 18px 40px -18px rgba(10, 37, 64, 0.22);
+  --bro-shadow-lg: 0 34px 70px -24px rgba(10, 37, 64, 0.32);
+  --bro-icon-grad: linear-gradient(150deg, rgba(47, 128, 237, 0.28), rgba(47, 128, 237, 0.12));
 
   --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -57,8 +57,8 @@
   &__art {
     bottom: 0;
     height: auto;
-    -webkit-mask-image: linear-gradient(305deg, #000 4%, rgba(0, 0, 0, 0.35) 38%, transparent 68%);
-    mask-image: linear-gradient(305deg, #000 4%, rgba(0, 0, 0, 0.35) 38%, transparent 68%);
+    -webkit-mask-image: linear-gradient(305deg, #0a2540 4%, rgba(10, 37, 64, 0.35) 38%, transparent 68%);
+    mask-image: linear-gradient(305deg, #0a2540 4%, rgba(10, 37, 64, 0.35) 38%, transparent 68%);
     opacity: 0.15;
     pointer-events: none;
     position: absolute;
@@ -139,7 +139,7 @@
 %bro-icon-chip {
   align-items: center;
   background: var(--bro-icon-grad);
-  border: 1px solid rgba(15, 138, 126, 0.22);
+  border: 1px solid rgba(47, 128, 237, 0.22);
   border-radius: 12px;
   color: var(--bro-accent-strong);
   display: inline-flex;
@@ -185,30 +185,30 @@
 
   &--primary {
     background: var(--bro-navy);
-    box-shadow: 0 14px 30px -12px rgba(10, 34, 64, 0.55);
-    color: #fff;
+    box-shadow: 0 14px 30px -12px rgba(10, 37, 64, 0.55);
+    color: #ffffff;
 
     &:hover {
       background: var(--bro-navy-2);
-      box-shadow: 0 20px 40px -14px rgba(10, 34, 64, 0.6);
-      color: #fff;
+      box-shadow: 0 20px 40px -14px rgba(10, 37, 64, 0.6);
+      color: #ffffff;
     }
   }
 
   &--accent {
     background: var(--bro-accent);
-    box-shadow: 0 14px 30px -12px rgba(15, 138, 126, 0.5);
-    color: #fff;
+    box-shadow: 0 14px 30px -12px rgba(47, 128, 237, 0.5);
+    color: #ffffff;
 
     &:hover {
       background: var(--bro-accent-strong);
-      box-shadow: 0 20px 40px -14px rgba(15, 138, 126, 0.55);
-      color: #fff;
+      box-shadow: 0 20px 40px -14px rgba(47, 128, 237, 0.55);
+      color: #ffffff;
     }
   }
 
   &--outline {
-    background: #fff;
+    background: #ffffff;
     border-color: var(--bro-line);
     color: var(--bro-navy-2);
 
@@ -220,14 +220,14 @@
   }
 
   &--cta-primary {
-    background: linear-gradient(180deg, #7fdccb 0%, var(--bro-accent-mint) 100%);
+    background: linear-gradient(180deg, #2f80ed 0%, var(--bro-accent-mint) 100%);
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.4) inset,
-      0 18px 38px -14px rgba(114, 213, 194, 0.6);
-    color: #052033;
+      0 18px 38px -14px rgba(47, 128, 237, 0.6);
+    color: #0a2540;
 
     &:hover {
-      color: #052033;
+      color: #0a2540;
       filter: brightness(1.03);
     }
   }
@@ -235,12 +235,12 @@
   &--cta-secondary {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.28);
-    color: #fff;
+    color: #ffffff;
 
     &:hover {
       background: rgba(255, 255, 255, 0.12);
       border-color: rgba(255, 255, 255, 0.55);
-      color: #fff;
+      color: #ffffff;
     }
   }
 }
@@ -250,9 +250,9 @@
    ========================================================= */
 .brochure-hero {
   background:
-    radial-gradient(55% 55% at 92% 0%, rgba(15, 138, 126, 0.09), transparent 70%),
-    radial-gradient(50% 50% at 4% 100%, rgba(18, 55, 98, 0.06), transparent 62%),
-    linear-gradient(180deg, #fff 0%, var(--bro-mist) 100%);
+    radial-gradient(55% 55% at 92% 0%, rgba(47, 128, 237, 0.09), transparent 70%),
+    radial-gradient(50% 50% at 4% 100%, rgba(10, 37, 64, 0.06), transparent 62%),
+    linear-gradient(180deg, #ffffff 0%, var(--bro-mist) 100%);
   border-bottom: 1px solid var(--bro-line);
   overflow: hidden;
   padding: clamp(2.75rem, 5.5vw, 4.75rem) 0 clamp(3rem, 5vw, 4.5rem);
@@ -367,7 +367,7 @@
 
   &__badge {
     align-items: center;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid var(--bro-line);
     border-radius: 14px;
     bottom: -1.1rem;
@@ -414,7 +414,7 @@
 }
 
 .brochure-chip {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--bro-line);
   border-radius: 999px;
   color: var(--bro-navy-2);
@@ -433,7 +433,7 @@
 }
 
 .brochure-info-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--bro-line);
   border-radius: 18px;
   overflow: hidden;
@@ -456,7 +456,7 @@
   }
 
   &:hover {
-    border-color: rgba(15, 138, 126, 0.4);
+    border-color: rgba(47, 128, 237, 0.4);
     box-shadow: var(--bro-shadow);
     transform: translateY(-3px);
 
@@ -467,7 +467,7 @@
 
     .brochure-info-card__icon {
       background: linear-gradient(150deg, var(--bro-accent-mint), var(--bro-accent));
-      color: #fff;
+      color: #ffffff;
     }
   }
 
@@ -510,7 +510,7 @@
 }
 
 .brochure-stat {
-  background: #fff;
+  background: #ffffff;
   padding: clamp(1.5rem, 3vw, 2.25rem) 1.5rem;
 
   strong {
@@ -545,7 +545,7 @@
 }
 
 .brochure-split__col {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--bro-line);
   border-radius: 20px;
   padding: clamp(1.7rem, 3vw, 2.3rem);
@@ -618,7 +618,7 @@
 
 .brochure-stack-card {
   align-items: center;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--bro-line);
   border-radius: 16px;
   column-gap: 0.9rem;
@@ -629,7 +629,7 @@
   transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 
   &:hover {
-    border-color: rgba(15, 138, 126, 0.4);
+    border-color: rgba(47, 128, 237, 0.4);
     box-shadow: var(--bro-shadow);
     transform: translateY(-3px);
   }
@@ -670,7 +670,7 @@
   align-items: flex-start;
   background: var(--bro-navy);
   border-radius: 16px;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   gap: 1.1rem;
   margin-top: clamp(2rem, 4vw, 2.75rem);
@@ -688,8 +688,8 @@
 
   &__icon {
     align-items: center;
-    background: rgba(114, 213, 194, 0.16);
-    border: 1px solid rgba(114, 213, 194, 0.28);
+    background: rgba(47, 128, 237, 0.16);
+    border: 1px solid rgba(47, 128, 237, 0.28);
     border-radius: 12px;
     color: var(--bro-accent-mint);
     display: inline-flex;
@@ -705,7 +705,7 @@
   }
 
   strong {
-    color: #fff;
+    color: #ffffff;
     display: block;
     font-size: 1.02rem;
     font-weight: 700;
@@ -731,7 +731,7 @@
 }
 
 .brochure-stage-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--bro-line);
   border-radius: 16px;
   display: flex;
@@ -742,7 +742,7 @@
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 
   &::after {
-    color: rgba(18, 55, 98, 0.05);
+    color: rgba(10, 37, 64, 0.05);
     content: attr(data-step);
     font-size: 5rem;
     font-weight: 800;
@@ -754,7 +754,7 @@
   }
 
   &:hover {
-    border-color: rgba(15, 138, 126, 0.4);
+    border-color: rgba(47, 128, 237, 0.4);
     box-shadow: var(--bro-shadow);
     transform: translateY(-3px);
   }
@@ -810,7 +810,7 @@
 }
 
 .brochure-agile-block {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--bro-line);
   border-radius: 18px;
   margin-top: clamp(2rem, 4vw, 3rem);
@@ -835,12 +835,12 @@
 
 .brochure-contact-card {
   background:
-    radial-gradient(70% 60% at 100% 0%, rgba(114, 213, 194, 0.12), transparent 70%),
-    linear-gradient(160deg, #0b2444 0%, #071a32 100%);
+    radial-gradient(70% 60% at 100% 0%, rgba(47, 128, 237, 0.12), transparent 70%),
+    linear-gradient(160deg, #0a2540 0%, #0a2540 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   box-shadow: var(--bro-shadow-lg);
-  color: #fff;
+  color: #ffffff;
   display: grid;
   gap: clamp(2rem, 4vw, 3.25rem);
   grid-template-columns: minmax(320px, 1.15fr) minmax(280px, 0.85fr);
@@ -851,8 +851,8 @@
   &__art {
     bottom: 0;
     height: auto;
-    -webkit-mask-image: linear-gradient(310deg, #000, rgba(0, 0, 0, 0.3) 45%, transparent 75%);
-    mask-image: linear-gradient(310deg, #000, rgba(0, 0, 0, 0.3) 45%, transparent 75%);
+    -webkit-mask-image: linear-gradient(310deg, #0a2540, rgba(10, 37, 64, 0.3) 45%, transparent 75%);
+    mask-image: linear-gradient(310deg, #0a2540, rgba(10, 37, 64, 0.3) 45%, transparent 75%);
     opacity: 0.16;
     pointer-events: none;
     position: absolute;
@@ -867,7 +867,7 @@
     z-index: 1;
 
     h2 {
-      color: #fff;
+      color: #ffffff;
       font-family: var(--font-sans);
       font-size: clamp(1.7rem, 3vw, 2.55rem);
       font-weight: 700;
@@ -888,8 +888,8 @@
 
 .brochure-contact-badge {
   align-items: center;
-  background: rgba(114, 213, 194, 0.14);
-  border: 1px solid rgba(114, 213, 194, 0.32);
+  background: rgba(47, 128, 237, 0.14);
+  border: 1px solid rgba(47, 128, 237, 0.32);
   border-radius: 999px;
   color: var(--bro-accent-mint);
   display: inline-flex;
@@ -924,7 +924,7 @@
 
   h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    color: #fff;
+    color: #ffffff;
     font-family: var(--font-mono);
     font-size: 0.8rem;
     font-weight: 700;
@@ -948,7 +948,7 @@
     gap: 0.85rem;
 
     label {
-      color: #8ea6bd;
+      color: #0a2540;
       display: block;
       font-family: var(--font-mono);
       font-size: 0.68rem;
@@ -960,7 +960,7 @@
 
     a,
     span {
-      color: #fff;
+      color: #ffffff;
       font-size: 0.94rem;
       font-weight: 600;
       line-height: 1.4;
@@ -976,8 +976,8 @@
 
 .brochure-contact-icon {
   align-items: center;
-  background: rgba(114, 213, 194, 0.12);
-  border: 1px solid rgba(114, 213, 194, 0.22);
+  background: rgba(47, 128, 237, 0.12);
+  border: 1px solid rgba(47, 128, 237, 0.22);
   border-radius: 11px;
   color: var(--bro-accent-mint);
   display: inline-flex;
@@ -1003,7 +1003,7 @@
   margin-top: 1.75rem;
 
   &__label {
-    color: #8ea6bd;
+    color: #0a2540;
     font-family: var(--font-mono);
     font-size: 0.72rem;
     font-weight: 700;
@@ -1021,7 +1021,7 @@
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 999px;
-    color: #e8eef4;
+    color: #ffffff;
     display: inline-flex;
     font-size: 0.82rem;
     font-weight: 500;
@@ -1096,8 +1096,8 @@
    ========================================================= */
 @media print {
   body {
-    background: #fff !important;
-    color: #000 !important;
+    background: #ffffff !important;
+    color: #0a2540 !important;
   }
 
   .header,
@@ -1112,8 +1112,8 @@
   }
 
   .brochure-page {
-    background: #fff !important;
-    color: #000 !important;
+    background: #ffffff !important;
+    color: #0a2540 !important;
   }
 
   .brochure-hero {

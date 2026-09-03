@@ -1,10 +1,10 @@
 .subscription {
-  --sub-green-950: #143c6c;
-  --sub-green-900: #143c6c;
-  --sub-green-700: #143c6c;
-  --sub-coral: #ef614d;
-  --sub-gold: #f6c95c;
-  --sub-cream: #fff8ed;
+  --sub-green-950: #0a2540;
+  --sub-green-900: #0a2540;
+  --sub-green-700: #0a2540;
+  --sub-coral: #2f80ed;
+  --sub-gold: #2f80ed;
+  --sub-cream: #ffffff;
   --sub-line: rgba(255, 255, 255, 0.18);
 
   background: #ffffff;
@@ -13,7 +13,7 @@
   &__container {
     align-items: center;
     background:
-      radial-gradient(circle at 88% 18%, rgba(246, 201, 92, 0.18), transparent 24%),
+      radial-gradient(circle at 88% 18%, rgba(47, 128, 237, 0.18), transparent 24%),
       linear-gradient(135deg, var(--sub-green-950) 0%, var(--sub-green-900) 100%);
     border-radius: 8px;
     color: #ffffff;

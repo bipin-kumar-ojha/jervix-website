@@ -8,10 +8,10 @@ const UnderDevelopmentPopup = () => {
       <div className="under-dev-popup">
         <div className="under-dev-popup__icon under-dev-popup__icon--excite">
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="32" cy="32" r="32" fill="#E0F2FE"/>
-            <path d="M32 18V36" stroke="#0f66ab" strokeWidth="3" strokeLinecap="round"/>
-            <circle cx="32" cy="46" r="2.5" fill="#0f66ab"/>
-            <path d="M22 28C22 23.5817 25.5817 20 30 20H34C38.4183 20 42 23.5817 42 28" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round"/>
+            <circle cx="32" cy="32" r="32" fill="#2F80ED"/>
+            <path d="M32 18V36" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round"/>
+            <circle cx="32" cy="46" r="2.5" fill="#FFFFFF"/>
+            <path d="M22 28C22 23.5817 25.5817 20 30 20H34C38.4183 20 42 23.5817 42 28" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         </div>
         <h2>Something Big is Coming!</h2>

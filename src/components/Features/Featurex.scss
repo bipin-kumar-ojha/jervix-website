@@ -1,15 +1,15 @@
 .platform-features {
-  --pf-green-950: #143c6c;
-  --pf-green-900: #143c6c;
-  --pf-green-800: #143c6c;
-  --pf-coral: #ef614d;
-  --pf-gold: #f6c95c;
-  --pf-cream: #fff8ed;
-  --pf-mint: #eef7f2;
-  --pf-line: #dce8e2;
-  --pf-muted: #53635d;
+  --pf-green-950: #0a2540;
+  --pf-green-900: #0a2540;
+  --pf-green-800: #0a2540;
+  --pf-coral: #2f80ed;
+  --pf-gold: #2f80ed;
+  --pf-cream: #ffffff;
+  --pf-mint: #ffffff;
+  --pf-line: rgba(10, 37, 64, 0.14);
+  --pf-muted: #0a2540;
 
-  background: #f6fbf8;
+  background: #ffffff;
   color: var(--pf-green-950);
   padding: clamp(3.5rem, 6vw, 5.75rem) clamp(1rem, 4vw, 4.5rem);
 
@@ -25,7 +25,7 @@
 
   &__badge {
     background: #ffffff;
-    border: 1px solid rgba(239, 97, 77, 0.22);
+    border: 1px solid rgba(47, 128, 237, 0.22);
     border-radius: 999px;
     color: var(--pf-coral);
     display: inline-flex;
@@ -63,7 +63,7 @@
 
   &__summary {
     background:
-      linear-gradient(135deg, rgba(239, 97, 77, 0.14), transparent 38%),
+      linear-gradient(135deg, rgba(47, 128, 237, 0.14), transparent 38%),
       var(--pf-green-900);
     border-radius: 8px;
     color: #ffffff;
@@ -124,9 +124,9 @@
 
   &__list {
     background: #ffffff;
-    border: 1px solid rgba(6, 75, 58, 0.12);
+    border: 1px solid rgba(10, 37, 64, 0.12);
     border-radius: 8px;
-    box-shadow: 0 18px 50px rgba(6, 75, 58, 0.07);
+    box-shadow: 0 18px 50px rgba(10, 37, 64, 0.07);
     overflow: hidden;
   }
 
@@ -142,12 +142,12 @@
     }
 
     &:nth-child(even) {
-      background: #fbfdfb;
+      background: #ffffff;
     }
   }
 
   &__item-number {
-    color: rgba(6, 75, 58, 0.42);
+    color: rgba(10, 37, 64, 0.42);
     font-size: 0.82rem;
     font-weight: 900;
   }
@@ -181,7 +181,7 @@
     }
 
     p {
-      color: #4b5f57;
+      color: #0a2540;
       font-size: 0.94rem;
       line-height: 1.58;
       margin: 0;

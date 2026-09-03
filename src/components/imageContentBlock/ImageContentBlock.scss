@@ -1,20 +1,20 @@
 .image-content {
-  --image-content-ink: #123762;
-  --image-content-green: #123762;
-  --image-content-mint: #e8f1ee;
-  --image-content-accent: #123762;
-  --image-content-blue: #0c5d94;
-  --image-content-red: #d72f25;
-  --image-content-lime: #9bbb38;
-  --image-content-gold: #ffa300;
+  --image-content-ink: #0a2540;
+  --image-content-green: #0a2540;
+  --image-content-mint: #ffffff;
+  --image-content-accent: #0a2540;
+  --image-content-blue: #2f80ed;
+  --image-content-red: #2f80ed;
+  --image-content-lime: #2f80ed;
+  --image-content-gold: #2f80ed;
 
-  background: linear-gradient(180deg, var(--image-content-mint) 0%, #eef6f3 100%);
+  background: linear-gradient(180deg, var(--image-content-mint) 0%, #ffffff 100%);
   overflow: hidden;
   padding: clamp(3.5rem, 7vw, 6.5rem) clamp(1rem, 5vw, 6rem);
   position: relative;
 
   &::after {
-    background: #fff8ed;
+    background: #ffffff;
     bottom: 0;
     content: "";
     height: 14px;
@@ -59,7 +59,7 @@
   }
 
   &__text {
-    color: #34383a;
+    color: #0a2540;
     font-size: clamp(1.05rem, 1.7vw, 1.5rem);
     font-weight: 600;
     line-height: 1.4;
@@ -96,7 +96,7 @@
     }
 
     &:hover {
-      background: #004f39;
+      background: #2f80ed;
       color: #ffffff;
       transform: translateY(-2px);
     }
@@ -266,7 +266,7 @@
   }
 
   &__arrow {
-    border-bottom: 10px solid rgba(162, 197, 186, 0.7);
+    border-bottom: 10px solid rgba(10, 37, 64, 0.7);
     border-radius: 50%;
     bottom: 23%;
     height: 80px;
@@ -276,8 +276,8 @@
     width: 260px;
 
     &::before {
-      border-right: 10px solid rgba(162, 197, 186, 0.7);
-      border-top: 10px solid rgba(162, 197, 186, 0.7);
+      border-right: 10px solid rgba(10, 37, 64, 0.7);
+      border-top: 10px solid rgba(10, 37, 64, 0.7);
       content: "";
       height: 42px;
       position: absolute;

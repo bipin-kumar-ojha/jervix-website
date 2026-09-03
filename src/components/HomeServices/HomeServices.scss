@@ -1,16 +1,16 @@
 .home-services {
-  --home-services-blue: #143c6c;
-  --home-services-deep: #123762;
-  --home-services-coral: #ef614d;
-  --home-services-gold: #f6c95c;
-  --home-services-cream: #fff8ed;
-  --home-services-mint: #eef7f2;
-  --home-services-line: #dce8e2;
-  --home-services-muted: #53635d;
+  --home-services-blue: #0a2540;
+  --home-services-deep: #0a2540;
+  --home-services-coral: #2f80ed;
+  --home-services-gold: #2f80ed;
+  --home-services-cream: #ffffff;
+  --home-services-mint: #ffffff;
+  --home-services-line: rgba(10, 37, 64, 0.14);
+  --home-services-muted: #0a2540;
 
   background:
-    linear-gradient(90deg, rgba(6, 75, 58, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, #ffffff 0%, #fff8ed 100%);
+    linear-gradient(90deg, rgba(10, 37, 64, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   background-size: 44px 44px, auto;
   color: var(--home-services-blue);
   padding: clamp(3.5rem, 6vw, 5.75rem) clamp(1rem, 4vw, 4.5rem);
@@ -57,7 +57,7 @@
 
   &__badge {
     background: #ffffff;
-    border: 1px solid rgba(239, 97, 77, 0.24);
+    border: 1px solid rgba(47, 128, 237, 0.24);
     border-radius: 999px;
     margin-bottom: 0.85rem;
     padding: 0.48rem 0.8rem;
@@ -78,9 +78,9 @@
 
   &__card {
     background: #ffffff;
-    border: 1px solid rgba(6, 75, 58, 0.12);
+    border: 1px solid rgba(10, 37, 64, 0.12);
     border-radius: 8px;
-    box-shadow: 0 16px 42px rgba(6, 75, 58, 0.07);
+    box-shadow: 0 16px 42px rgba(10, 37, 64, 0.07);
     color: var(--home-services-blue);
     display: grid;
     gap: 0.72rem;
@@ -90,8 +90,8 @@
     transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 
     &:hover {
-      border-color: rgba(6, 75, 58, 0.28);
-      box-shadow: 0 22px 55px rgba(6, 75, 58, 0.12);
+      border-color: rgba(10, 37, 64, 0.28);
+      box-shadow: 0 22px 55px rgba(10, 37, 64, 0.12);
       color: var(--home-services-blue);
       transform: translateY(-3px);
     }
@@ -105,7 +105,7 @@
     }
 
     p {
-      color: #465750;
+      color: #0a2540;
       font-size: 0.94rem;
       line-height: 1.62;
       margin: 0;

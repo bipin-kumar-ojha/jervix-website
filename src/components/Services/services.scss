@@ -1,16 +1,16 @@
 .services {
-  --services-green-950: #143c6c;
-  --services-green-900: #143c6c;
-  --services-green-700: #143c6c;
-  --services-coral: #ef614d;
-  --services-gold: #f6c95c;
-  --services-cream: #fff8ed;
-  --services-mint: #eef7f2;
-  --services-line: #dce8e2;
-  --services-muted: #53635d;
+  --services-green-950: #0a2540;
+  --services-green-900: #0a2540;
+  --services-green-700: #0a2540;
+  --services-coral: #2f80ed;
+  --services-gold: #2f80ed;
+  --services-cream: #ffffff;
+  --services-mint: #ffffff;
+  --services-line: rgba(10, 37, 64, 0.14);
+  --services-muted: #0a2540;
 
   background:
-    linear-gradient(180deg, #ffffff 0%, #fff8ed 100%);
+    linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   color: var(--services-green-950);
   padding: clamp(3.5rem, 6vw, 5.75rem) clamp(1rem, 4vw, 4.5rem);
 
@@ -29,7 +29,7 @@
 
   &__badge {
     background: #ffffff;
-    border: 1px solid rgba(239, 97, 77, 0.24);
+    border: 1px solid rgba(47, 128, 237, 0.24);
     border-radius: 999px;
     color: var(--services-coral);
     display: inline-flex;
@@ -59,9 +59,9 @@
 
   &__grid {
     background: #ffffff;
-    border: 1px solid rgba(6, 75, 58, 0.13);
+    border: 1px solid rgba(10, 37, 64, 0.13);
     border-radius: 8px;
-    box-shadow: 0 18px 52px rgba(6, 75, 58, 0.07);
+    box-shadow: 0 18px 52px rgba(10, 37, 64, 0.07);
     overflow: hidden;
   }
 
@@ -78,7 +78,7 @@
     }
 
     &:nth-child(even) {
-      background: #fbfdfb;
+      background: #ffffff;
     }
   }
 
@@ -88,7 +88,7 @@
     gap: 0.9rem;
 
     > span {
-      color: rgba(6, 75, 58, 0.42);
+      color: rgba(10, 37, 64, 0.42);
       font-size: 0.82rem;
       font-weight: 900;
     }
@@ -125,7 +125,7 @@
 
   &__feature-item {
     align-items: center;
-    color: #465750;
+    color: #0a2540;
     display: flex;
     font-size: 0.92rem;
     font-weight: 800;

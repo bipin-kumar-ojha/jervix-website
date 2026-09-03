@@ -1,17 +1,17 @@
 .pricing {
-  --price-green-950: #143c6c;
-  --price-green-900: #143c6c;
-  --price-green-700: #143c6c;
-  --price-coral: #ef614d;
-  --price-gold: #f6c95c;
-  --price-cream: #fff8ed;
-  --price-mint: #eef7f2;
-  --price-line: #dce8e2;
-  --price-muted: #53635d;
+  --price-green-950: #0a2540;
+  --price-green-900: #0a2540;
+  --price-green-700: #0a2540;
+  --price-coral: #2f80ed;
+  --price-gold: #2f80ed;
+  --price-cream: #ffffff;
+  --price-mint: #ffffff;
+  --price-line: rgba(10, 37, 64, 0.14);
+  --price-muted: #0a2540;
 
   background:
-    radial-gradient(circle at 14% 12%, rgba(246, 201, 92, 0.22), transparent 24%),
-    linear-gradient(180deg, #eef7f2 0%, #ffffff 100%);
+    radial-gradient(circle at 14% 12%, rgba(47, 128, 237, 0.22), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   color: var(--price-green-950);
   padding: clamp(3.5rem, 6vw, 5.75rem) clamp(1rem, 4vw, 4.5rem);
 
@@ -23,7 +23,7 @@
 
   &__badge {
     background: #ffffff;
-    border: 1px solid rgba(239, 97, 77, 0.24);
+    border: 1px solid rgba(47, 128, 237, 0.24);
     border-radius: 999px;
     color: var(--price-coral);
     display: inline-flex;
@@ -62,9 +62,9 @@
 
   &__card {
     background: #ffffff;
-    border: 1px solid rgba(6, 75, 58, 0.13);
+    border: 1px solid rgba(10, 37, 64, 0.13);
     border-radius: 8px;
-    box-shadow: 0 16px 42px rgba(6, 75, 58, 0.07);
+    box-shadow: 0 16px 42px rgba(10, 37, 64, 0.07);
     display: flex;
     flex-direction: column;
     min-height: 540px;
@@ -73,8 +73,8 @@
     transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 
     &:hover {
-      border-color: rgba(6, 75, 58, 0.28);
-      box-shadow: 0 22px 55px rgba(6, 75, 58, 0.12);
+      border-color: rgba(10, 37, 64, 0.28);
+      box-shadow: 0 22px 55px rgba(10, 37, 64, 0.12);
       transform: translateY(-3px);
     }
 
@@ -168,7 +168,7 @@
     padding: 1.25rem 0 0;
 
     li {
-      color: #465750;
+      color: #0a2540;
       font-size: 0.94rem;
       font-weight: 800;
       line-height: 1.4;
@@ -223,7 +223,7 @@
 
     &--sales {
       background: #ffffff;
-      border: 1px solid rgba(6, 75, 58, 0.2);
+      border: 1px solid rgba(10, 37, 64, 0.2);
       color: var(--price-green-950);
     }
   }

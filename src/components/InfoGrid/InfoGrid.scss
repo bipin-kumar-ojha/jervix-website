@@ -1,10 +1,10 @@
 .info-grid {
-  --ig-blue: #143c6c;
-  --ig-coral: #ef614d;
-  --ig-cream: #fff8ed;
-  --ig-mint: #eef7f2;
-  --ig-line: #dce8e2;
-  --ig-muted: #53635d;
+  --ig-blue: #0a2540;
+  --ig-coral: #2f80ed;
+  --ig-cream: #ffffff;
+  --ig-mint: #ffffff;
+  --ig-line: rgba(10, 37, 64, 0.14);
+  --ig-muted: #0a2540;
 
   background: #ffffff;
   color: var(--ig-blue);
@@ -23,7 +23,7 @@
 
   &__badge {
     background: var(--ig-cream);
-    border: 1px solid rgba(239, 97, 77, 0.2);
+    border: 1px solid rgba(47, 128, 237, 0.2);
     border-radius: 999px;
     color: var(--ig-coral);
     display: inline-flex;
@@ -59,8 +59,8 @@
   }
 
   &__card {
-    background: #f7fbff;
-    border: 1px solid rgba(20, 60, 108, 0.12);
+    background: #ffffff;
+    border: 1px solid rgba(10, 37, 64, 0.12);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -69,21 +69,21 @@
     transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 
     &:hover {
-      border-color: rgba(20, 60, 108, 0.22);
-      box-shadow: 0 14px 34px rgba(20, 60, 108, 0.08);
+      border-color: rgba(10, 37, 64, 0.22);
+      box-shadow: 0 14px 34px rgba(10, 37, 64, 0.08);
       transform: translateY(-2px);
     }
 
     &:nth-child(2) {
-      background: #fff8ed;
+      background: #ffffff;
     }
 
     &:nth-child(3) {
-      background: #f2fbf6;
+      background: #ffffff;
     }
 
     &:nth-child(4) {
-      background: #fff5f3;
+      background: #ffffff;
     }
   }
 
@@ -105,7 +105,7 @@
   }
 
   &__block-desc {
-    color: #465750;
+    color: #0a2540;
     font-size: 0.92rem;
     line-height: 1.58;
     margin: 0.9rem 0 0;
