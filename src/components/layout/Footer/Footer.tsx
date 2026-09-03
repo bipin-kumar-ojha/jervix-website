@@ -103,18 +103,51 @@ function SocialIcon({ type }: { type: string }) {
 
 const Footer = () => (
   <footer className="footer">
+    <div className="footer__glow" aria-hidden="true" />
+
     <div className="footer__inner">
+      <div className="footer__cta">
+        <div className="footer__cta-copy">
+          <span className="footer__cta-eyebrow">Start a project</span>
+          <h2>
+            Let&rsquo;s build something
+            <span className="footer__cta-accent"> worth shipping.</span>
+          </h2>
+          <p>
+            Tell us where you want to be in 90 days. We&rsquo;ll map the fastest
+            route there with AI and software engineering.
+          </p>
+        </div>
+        <a className="footer__cta-button" href="#demo" data-request-demo>
+          <span>Book a free consultation</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+      </div>
+
       <div className="footer__top">
         <div className="footer__brand">
           <a href="/" className="footer__logo" aria-label="Jervix home">
             <img src="/assets/logo-white.png" alt="Jervix" />
           </a>
           <p>
-            AI and software engineering partner for growing businesses — from idea to impact.
+            AI and software engineering partner for growing businesses &mdash;
+            from idea to impact.
           </p>
+          <span className="footer__status">
+            <span className="footer__status-dot" aria-hidden="true" />
+            Available for new projects
+          </span>
           <div className="footer__social" aria-label="Social links">
             {socialLinks.map(([type, href, name]) => (
-              <a href={href} aria-label={name} key={name} target="_blank" rel="noreferrer">
+              <a
+                href={href}
+                aria-label={name}
+                key={name}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <SocialIcon type={type} />
               </a>
             ))}
@@ -124,11 +157,13 @@ const Footer = () => (
         <nav className="footer__directory" aria-label="Footer navigation">
           {footerColumns.map((column) => (
             <div className="footer__column" key={column.title}>
-              <h2>{column.title}</h2>
+              <h3>{column.title}</h3>
               <ul>
                 {column.links.map(([label, href]) => (
                   <li key={label}>
-                    <a href={href}>{label}</a>
+                    <a href={href}>
+                      <span>{label}</span>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -137,36 +172,38 @@ const Footer = () => (
         </nav>
 
         <div className="footer__contact" aria-label="Contact Jervix">
-          <h2>Get in Touch</h2>
+          <h3>Get in Touch</h3>
           <ul className="footer__contact-list">
             {contactDetails.map((item) => (
               <li key={item.label}>
                 <span className="footer__contact-icon">
                   <ContactIcon type={item.icon} />
                 </span>
-                <span>
+                <span className="footer__contact-body">
                   <span className="footer__contact-label">{item.label}</span>
                   <a href={item.href}>{item.value}</a>
                 </span>
               </li>
             ))}
           </ul>
-          <a className="footer__cta" href="#demo" data-request-demo>
-            Book a free consultation <span aria-hidden="true">→</span>
-          </a>
         </div>
       </div>
     </div>
 
     <div className="footer__bottom">
-      <span>© {new Date().getFullYear()} Jervix Technologies. All rights reserved.</span>
-      <nav aria-label="Legal links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms &amp; Conditions</a>
-        <a href="#">Help</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </nav>
-      <span>Made with care from India</span>
+      <div className="footer__inner footer__bottom-inner">
+        <span>
+          &copy; {new Date().getFullYear()} Jervix Technologies. All rights
+          reserved.
+        </span>
+        <nav aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Help</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </nav>
+        <span className="footer__made">Made with care from India</span>
+      </div>
     </div>
   </footer>
 );
